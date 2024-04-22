@@ -1,0 +1,6518 @@
+﻿namespace = deviantsgo_beast
+
+#0100 basic dog events for tier one
+deviantsgo_beast.0100 = { 
+	type = character_event
+	title = deviantsgo_beast.0100.t
+	desc = deviantsgo_beast.0100.a.desc
+	override_background = { reference =	ep2_dog_kennels }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0100.a
+		custom_tooltip = deviantsgo_beast.0100.a.tt
+        if = {
+			limit = { 
+				NOT = { has_trait = deviants_canine_lover_one } 
+				NOT = { has_trait = deviants_canine_lover_two } 
+				NOT = { has_trait = deviants_canine_lover_three } 
+			}
+			add_trait = deviants_canine_lover_one
+		}
+        start_dog_story_cycle_effect = yes
+	}		
+	# 
+	option = {
+		name = deviantsgo_beast.0100.b
+		custom_tooltip = deviantsgo_beast.0100.b.tt
+	}				
+}
+
+deviantsgo_beast.0101 = { 
+	type = character_event
+	title = deviantsgo_beast.0101.t
+	desc = deviantsgo_beast.0101.a.desc
+	override_background = { reference =	ep2_dog_kennels }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0101.a
+		custom_tooltip = deviantsgo_beast.0101.a.tt
+        start_dog_story_cycle_effect = yes
+	}		
+	# 
+	option = {
+		name = deviantsgo_beast.0101.b
+		custom_tooltip = deviantsgo_beast.0101.b.tt
+	}				
+}
+
+# A Little Moment of Peace and Quiet
+deviantsgo_beast.0210 = { 
+	type = character_event
+	title = deviantsgo_beast.0210.t
+	desc = deviantsgo_beast.0210.a.desc
+	override_background = { reference =	farmland }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0210.a
+		custom_tooltip = deviantsgo_beast.0210.a.tt
+        stress_impact = {
+            base = minor_stress_impact_loss
+        }
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 10
+			}
+        }
+	}					
+}
+# A Maiden in Trouble
+deviantsgo_beast.0220 = { 
+	type = character_event
+	title = deviantsgo_beast.0220.t
+	desc = deviantsgo_beast.0220.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# Charge
+	option = {
+		name = deviantsgo_beast.0220.a
+		custom_tooltip = deviantsgo_beast.0220.a.tt
+		trigger_event = deviantsgo_beast.0221
+	}		
+	# Stay and observe
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		name = deviantsgo_beast.0220.b
+		custom_tooltip = deviantsgo_beast.0220.b.tt
+		trigger_event = deviantsgo_beast.0222
+	}	
+    # Walk away quietly
+	option = {
+		name = deviantsgo_beast.0220.c
+		custom_tooltip = deviantsgo_beast.0220.c.tt
+		trigger_event = deviantsgo_beast.0223
+	}			
+}
+
+# A Maiden's Virtue Rescued
+deviantsgo_beast.0221 = { 
+	type = character_event
+	title = deviantsgo_beast.0221.t
+	desc = deviantsgo_beast.0221.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = celebrate_sword
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0221.a
+		custom_tooltip = deviantsgo_beast.0221.a.tt
+        add_prestige = 10
+        dynasty = { 
+            add_dynasty_prestige = 10
+        }
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 10
+			}
+        }
+	}					
+}
+# A Maiden's Ruin Bring Arousal
+deviantsgo_beast.0222 = { 
+	type = character_event
+	title = deviantsgo_beast.0222.t
+	desc = deviantsgo_beast.0222.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_1
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0222.a
+		custom_tooltip = deviantsgo_beast.0222.a.tt
+        stress_impact = {
+            base = minor_stress_impact_loss
+        }
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 15
+			}
+        }
+	}					
+}
+# Safety Above All Else
+deviantsgo_beast.0223 = { 
+	type = character_event
+	title = deviantsgo_beast.0223.t
+	desc = deviantsgo_beast.0223.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0220.a
+		custom_tooltip = deviantsgo_beast.0220.a.tt
+        stress_impact = {
+            base = minor_stress_impact_gain
+        }
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 5
+			}
+        }
+	}					
+}
+
+#Treasure Hunting in the Kitchen
+deviantsgo_beast.0230 = { 
+	type = character_event
+	title = deviantsgo_beast.0230.t
+	desc = deviantsgo_beast.0230.a.desc
+	override_background = { reference =	bp1_kitchen_western }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0230.a
+		custom_tooltip = deviantsgo_beast.0230.a.tt
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 10
+			}
+        }
+        stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	}						
+}
+#My Pet the Music Lover?
+deviantsgo_beast.0240 = { 
+	type = character_event
+	title = deviantsgo_beast.0240.t
+	desc = deviantsgo_beast.0240.a.desc
+	override_background = { reference =	market }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0240.a
+		custom_tooltip = deviantsgo_beast.0240.a.tt
+        add_gold = 4
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 10
+			}
+        }
+        stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	}						
+}
+
+#My pet the warrior
+deviantsgo_beast.0250 = { 
+	type = character_event
+	title = deviantsgo_beast.0250.t
+	desc = deviantsgo_beast.0250.a.desc
+	override_background = { reference =	army_camp }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0250.a
+		custom_tooltip = deviantsgo_beast.0250.a.tt
+		add_dread = 2
+        add_prestige = 2
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 5
+			}
+        }
+        stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	}						
+}
+# Tug of War
+deviantsgo_beast.0260 = { 
+	type = character_event
+	title = deviantsgo_beast.0260.t
+	desc = deviantsgo_beast.0260.a.desc
+	override_background = { reference =	courtyard }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = aggressive_unarmed
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0260.a
+		custom_tooltip = deviantsgo_beast.0260.a.tt
+		duel = {
+			skill = prowess
+			value = 10
+			# Success: win
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+				}
+				custom_tooltip = {
+					text = deviantsgo_beast.0260.aw.tt
+				}
+				trigger_event = deviantsgo_beast.0261
+			}
+			# lose
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					 	multiplier = -3.5
+						min = -49
+				}
+				custom_tooltip = {
+					text = deviantsgo_beast.0260.al.tt
+				}	
+				trigger_event = deviantsgo_beast.0262			
+			}
+		}
+	}						
+}
+
+# Call me the Mistress of Tug!
+deviantsgo_beast.0261 = { 
+	type = character_event
+	title = deviantsgo_beast.0261.t
+	desc = deviantsgo_beast.0261.a.desc
+	override_background = { reference =	courtyard }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = aggressive_unarmed
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0261.a
+		custom_tooltip = deviantsgo_beast.0261.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 5
+			}
+        }
+	}						
+}
+
+# My Pet the Triumph Dog?
+deviantsgo_beast.0262 = { 
+	type = character_event
+	title = deviantsgo_beast.0262.t
+	desc = deviantsgo_beast.0262.a.desc
+	override_background = { reference =	courtyard }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = eyeroll
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0262.a
+		custom_tooltip = deviantsgo_beast.0262.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 10
+			}
+        }
+	}						
+}
+
+# My pet the Hopscotch Chump 
+deviantsgo_beast.0270 = { 
+	type = character_event
+	title = deviantsgo_beast.0270.t
+	desc = deviantsgo_beast.0270.a.desc
+	override_background = { reference =	market }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0270.a
+		custom_tooltip = deviantsgo_beast.0270.a.tt
+		remove_short_term_gold = 1
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 10
+			}
+        }
+        stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	}						
+}
+#My pet the Baldric Destoryer
+deviantsgo_beast.0280 = { 
+	type = character_event
+	title = deviantsgo_beast.0280.t
+	desc = deviantsgo_beast.0280.a.desc
+	override_background = { reference =	armory }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = disapproval
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0280.a
+		custom_tooltip = deviantsgo_beast.0280.a.tt
+		remove_short_term_gold = 3
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 5
+			}
+        }
+        stress_impact = {
+            base = minor_stress_impact_gain
+        }
+	}						
+}
+#My pet the Pervy Sniffer
+deviantsgo_beast.0290 = { 
+	type = character_event
+	title = deviantsgo_beast.0290.t
+	desc = deviantsgo_beast.0290.a.desc
+	override_background = { reference =	bedchamber }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = disbelief
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0290.a
+		custom_tooltip = deviantsgo_beast.0290.a.tt
+		remove_short_term_gold = 1
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 10
+			}
+        }
+	}						
+}
+#My pet the Avid Listener
+deviantsgo_beast.0300 = { 
+	type = character_event
+	title = deviantsgo_beast.0300.t
+	desc = deviantsgo_beast.0300.a.desc
+	override_background = { reference =	sitting_room }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0300.a
+		custom_tooltip = deviantsgo_beast.0300.a.tt
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = 5
+			}
+        }
+        stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	}						
+}
+
+############################ tier one end events #######
+#0500 100 exp first trait, Sexual Awakening of Sort
+deviantsgo_beast.0500 = { 
+	type = character_event
+	title = deviantsgo_beast.0500.t
+	desc = deviantsgo_beast.0500.a.desc
+	override_background = { reference =	sitting_room }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+        outfit_tags = { no_clothes }
+	}
+    trigger = {
+        is_female = yes
+        has_trait_xp = {
+            trait = deviants_canine_lover_one
+            track = deviant_canine_lover_fame_one
+            value >= 100
+        }
+    }
+	# Wait and see what he will do
+	option = {
+		name = deviantsgo_beast.0500.a
+		custom_tooltip = deviantsgo_beast.0500.a.tt
+        trigger_event = deviantsgo_beast.0510
+	}						
+}
+
+# Sexual Awakening of Sort part two
+deviantsgo_beast.0510 = { 
+	type = character_event
+	title = deviantsgo_beast.0510.t
+	desc = deviantsgo_beast.0510.a.desc
+	override_background = { reference =	sitting_room }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+        outfit_tags = { no_clothes }
+	}
+	# Stand up and lower yourself on the ground
+	option = {
+        trigger = {
+            has_trait = deviants_horse_fucker
+        }
+		name = deviantsgo_beast.0510.a
+		custom_tooltip = deviantsgo_beast.0510.a.tt
+        trigger_event = deviantsgo_beast.0520
+	}		
+    # I want to be fucked and I want it now!
+	option = {
+        trigger = {
+            has_trait = lustful
+        }
+		name = deviantsgo_beast.0510.b
+		custom_tooltip = deviantsgo_beast.0510.b.tt
+        trigger_event = deviantsgo_beast.0530
+	}
+    # Maybe just little bit experimentation
+	option = {
+		name = deviantsgo_beast.0510.c
+		custom_tooltip = deviantsgo_beast.0510.c.tt
+        trigger_event = deviantsgo_beast.0540
+	}
+    # No, this is just plain wrong
+	option = {
+		name = deviantsgo_beast.0510.d
+		custom_tooltip = deviantsgo_beast.0510.d.tt
+        trigger_event = deviantsgo_beast.0550
+	}
+    # No, not happening and I am getting rid of you
+	option = {
+		name = deviantsgo_beast.0510.e
+		custom_tooltip = deviantsgo_beast.0510.e.tt
+        trigger_event = deviantsgo_beast.0560
+	}				
+}
+
+#0520 if Stand up and lower yourself on the ground
+deviantsgo_beast.0520 = { 
+	type = character_event
+	title = deviantsgo_beast.0520.t
+	desc = deviantsgo_beast.0520.a.desc
+	override_background = { reference =	deviantdoggyvagfuck }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.0520.a
+		custom_tooltip = deviantsgo_beast.0520.a.tt
+        stress_impact = {
+            base = medium_stress_impact_loss
+            lustful = medium_stress_impact_loss
+        }
+        remove_trait = deviants_canine_lover_one
+        add_trait_force_tooltip = deviants_canine_lover_three
+	}						
+}
+#0530 if I want to be fucked and I want it now
+deviantsgo_beast.0530 = { 
+	type = character_event
+	title = deviantsgo_beast.0530.t
+	desc = deviantsgo_beast.0530.a.desc
+	override_background = { reference =	deviantdoggyvagfuck }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.0530.a
+		custom_tooltip = deviantsgo_beast.0530.a.tt
+        stress_impact = {
+            base = minor_stress_impact_loss
+            lustful = medium_stress_impact_loss
+        }
+        remove_trait = deviants_canine_lover_one
+        add_trait_force_tooltip = deviants_canine_lover_three
+	}						
+}
+#0540 if Maybe just little bit experimentation
+deviantsgo_beast.0540 = { 
+	type = character_event
+	title = deviantsgo_beast.0540.t
+	desc = deviantsgo_beast.0540.a.desc
+	override_background = { reference =	sitting_room }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2 
+        outfit_tags = { no_clothes }
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0540.a
+		custom_tooltip = deviantsgo_beast.0540.a.tt
+        stress_impact = {
+            base = minor_stress_impact_loss
+            lustful = minor_stress_impact_loss
+        }
+        remove_trait = deviants_canine_lover_one
+        add_trait_force_tooltip = deviants_canine_lover_two
+	}						
+}
+#0550 if No, this is just plain wrong
+deviantsgo_beast.0550 = { 
+	type = character_event
+	title = deviantsgo_beast.0550.t
+	desc = deviantsgo_beast.0550.a.desc
+	override_background = { reference =	sitting_room }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = disgust
+        outfit_tags = { no_clothes }
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0550.a
+		custom_tooltip = deviantsgo_beast.0550.a.tt
+        stress_impact = {
+            base = minor_stress_impact_gain
+            lustful = medium_stress_impact_gain
+        }
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_one
+				track = deviant_canine_lover_fame_one
+				value = -100
+			}
+        }
+	}						
+}
+#0560 if No, not happening and I am getting rid of you
+deviantsgo_beast.0560 = { 
+	type = character_event
+	title = deviantsgo_beast.0560.t
+	desc = deviantsgo_beast.0560.a.desc
+	override_background = { reference =	sitting_room }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = anger
+        outfit_tags = { no_clothes }
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.0560.a
+		custom_tooltip = deviantsgo_beast.0560.a.tt
+        stress_impact = {
+            base = medium_stress_impact_gain
+            lustful = medium_stress_impact_gain
+        }
+        remove_trait = deviants_canine_lover_one
+        remove_dog_story_modifiers_effect = yes
+		remove_dog_name_effect = yes
+	}						
+}
+
+###################### tier 2 events #####################################
+#1000 Exercise in the Field events
+deviantsgo_beast.1000 = { 
+	type = character_event
+	title = deviantsgo_beast.1000.t
+	desc = deviantsgo_beast.1000.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+	immediate = { 
+		add_character_flag = deviant_dog_exercise_field_one
+	}
+	# Ignore him.
+	option = {
+		name = deviantsgo_beast.1000.a
+		custom_tooltip = deviantsgo_beast.1000.a.tt
+		trigger_event = deviantsgo_beast.1001
+	}	
+
+	# Shoo him away.
+	option = {
+		name = deviantsgo_beast.1000.b
+		custom_tooltip = deviantsgo_beast.1000.b.tt
+		trigger_event = deviantsgo_beast.1002
+	}					
+}
+
+#1001
+deviantsgo_beast.1001 = { 
+	type = character_event
+	title = deviantsgo_beast.1001.t
+	desc = deviantsgo_beast.1001.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = happiness 
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1001.a
+		custom_tooltip = deviantsgo_beast.1001.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 5
+			}
+        }
+	}					
+}
+#1002
+deviantsgo_beast.1002 = { 
+	type = character_event
+	title = deviantsgo_beast.1002.t
+	desc = deviantsgo_beast.1002.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = disgust  
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1002.a
+		custom_tooltip = deviantsgo_beast.1002.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	}					
+}
+
+#1010
+deviantsgo_beast.1010 = { 
+	type = character_event
+	title = deviantsgo_beast.1010.t
+	desc = deviantsgo_beast.1010.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	immediate = { 
+		add_character_flag = deviant_dog_exercise_field_two
+	}
+	# encourage him
+	option = {
+		trigger = {
+			has_trait = lustful
+		}
+		name = deviantsgo_beast.1010.a
+		custom_tooltip = deviantsgo_beast.1010.a.tt
+		trigger_event = deviantsgo_beast.1011
+	}	
+	# Ignore him.
+	option = {
+		name = deviantsgo_beast.1010.b
+		custom_tooltip = deviantsgo_beast.1010.b.tt
+		trigger_event = deviantsgo_beast.1012
+	}	
+
+	# Shoo him away.
+	option = {
+		name = deviantsgo_beast.1010.c
+		custom_tooltip = deviantsgo_beast.1010.c.tt
+		trigger_event = deviantsgo_beast.1013
+	}					
+}
+#1011
+deviantsgo_beast.1011 = { 
+	type = character_event
+	title = deviantsgo_beast.1011.t
+	desc = deviantsgo_beast.1011.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1011.a
+		custom_tooltip = deviantsgo_beast.1011.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 10
+			}
+        }
+	}					
+}
+#1012
+deviantsgo_beast.1012 = { 
+	type = character_event
+	title = deviantsgo_beast.1012.t
+	desc = deviantsgo_beast.1012.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1012.a
+		custom_tooltip = deviantsgo_beast.1012.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 5
+			}
+        }
+	}					
+}
+
+#1013
+deviantsgo_beast.1013 = { 
+	type = character_event
+	title = deviantsgo_beast.1013.t
+	desc = deviantsgo_beast.1013.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = disgust
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1013.a
+		custom_tooltip = deviantsgo_beast.1013.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	}					
+}
+
+#1020
+deviantsgo_beast.1020 = { 
+	type = character_event
+	title = deviantsgo_beast.1020.t
+	desc = deviantsgo_beast.1020.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	immediate = { 
+		add_character_flag = deviant_dog_exercise_field_three
+	}
+	# encourage him.
+	option = {
+		name = deviantsgo_beast.1020.a
+		custom_tooltip = deviantsgo_beast.1020.a.tt
+		trigger_event = deviantsgo_beast.1021
+	}	
+
+	# Shoo him away.
+	option = {
+		name = deviantsgo_beast.1020.b
+		custom_tooltip = deviantsgo_beast.1020.b.tt
+		trigger_event = deviantsgo_beast.1022
+	}					
+}
+#1021
+deviantsgo_beast.1021 = { 
+	type = character_event
+	title = deviantsgo_beast.1021.t
+	desc = deviantsgo_beast.1021.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+		outfit_tags = { no_clothes }
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1021.a
+		custom_tooltip = deviantsgo_beast.1021.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 10
+			}
+        }
+	}					
+}
+#1022
+deviantsgo_beast.1022 = { 
+	type = character_event
+	title = deviantsgo_beast.1022.t
+	desc = deviantsgo_beast.1022.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = disapproval
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1022.a
+		custom_tooltip = deviantsgo_beast.1022.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	}					
+}
+
+#1030
+deviantsgo_beast.1030 = { 
+	type = character_event
+	title = deviantsgo_beast.1030.t
+	desc = deviantsgo_beast.1030.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# Ignore him.
+	option = {
+		name = deviantsgo_beast.1030.a
+		custom_tooltip = deviantsgo_beast.1030.a.tt
+		trigger_event = deviantsgo_beast.1031
+	}	
+
+	# Shoo him away.
+	option = {
+		name = deviantsgo_beast.1030.b
+		custom_tooltip = deviantsgo_beast.1030.b.tt
+		trigger_event = deviantsgo_beast.1032
+	}					
+}
+#1031
+deviantsgo_beast.1031 = { 
+	type = character_event
+	title = deviantsgo_beast.1031.t
+	desc = deviantsgo_beast.1031.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1031.a
+		custom_tooltip = deviantsgo_beast.1031.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 10
+			}
+        }
+	}					
+}
+#1032
+deviantsgo_beast.1032 = { 
+	type = character_event
+	title = deviantsgo_beast.1032.t
+	desc = deviantsgo_beast.1032.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1032.a
+		custom_tooltip = deviantsgo_beast.1032.a.tt
+		stress_impact = {
+            base = minor_stress_impact_gain
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 2
+			}
+        }
+	}					
+}
+###### tier two, even chain two ###
+#1100 Business and Pleasure, Part One 
+deviantsgo_beast.1100 = { 
+	type = character_event
+	title = deviantsgo_beast.1100.t
+	desc = deviantsgo_beast.1100.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+	immediate = { 
+		add_character_flag = deviant_dog_study_business_one
+	}
+	# Ignore him.
+	option = {
+		name = deviantsgo_beast.1100.a
+		custom_tooltip = deviantsgo_beast.1100.a.tt
+		stress_impact = {
+            base = -3
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 4
+			}
+        }
+	}
+	# Shoo him away.
+	option = {
+		name = deviantsgo_beast.1100.b
+		custom_tooltip = deviantsgo_beast.1100.b.tt
+		stress_impact = {
+            base = -3
+        }
+	}					
+}
+
+#1110 Business and Pleasure, Part two
+deviantsgo_beast.1110 = { 
+	type = character_event
+	title = deviantsgo_beast.1110.t
+	desc = deviantsgo_beast.1110.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	immediate = { 
+		add_character_flag = deviant_dog_study_business_two
+	}
+	# encourage him.
+	option = {
+		name = deviantsgo_beast.1110.a
+		custom_tooltip = deviantsgo_beast.1110.a.tt
+		trigger_event = deviantsgo_beast.1111
+	} 
+	# Shoo him away.
+	option = {
+		name = deviantsgo_beast.1110.b
+		custom_tooltip = deviantsgo_beast.1110.b.tt
+		trigger_event = deviantsgo_beast.1112
+	}					
+}
+
+deviantsgo_beast.1111 = { 
+	type = character_event
+	title = deviantsgo_beast.1111.t
+	desc = deviantsgo_beast.1111.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# encourage him.
+	option = {
+		name = deviantsgo_beast.1111.a
+		custom_tooltip = deviantsgo_beast.1111.a.tt
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 5
+			}
+        }
+	} 					
+}
+
+deviantsgo_beast.1112 = { 
+	type = character_event
+	title = deviantsgo_beast.1112.t
+	desc = deviantsgo_beast.1112.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = dismissal
+	}
+	# encourage him.
+	option = {
+		name = deviantsgo_beast.1112.a
+		custom_tooltip = deviantsgo_beast.1112.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	} 					
+}
+
+#1120 Business and Pleasure, Part three
+deviantsgo_beast.1120 = { 
+	type = character_event
+	title = deviantsgo_beast.1120.t
+	desc = deviantsgo_beast.1120.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	immediate = { 
+		add_character_flag = deviant_dog_study_business_three
+	}
+	# stroke him.
+	option = {
+		name = deviantsgo_beast.1120.a
+		custom_tooltip = deviantsgo_beast.1120.a.tt
+		trigger_event = deviantsgo_beast.1121
+	} 
+	# have him lick.
+	option = {
+		name = deviantsgo_beast.1120.b
+		custom_tooltip = deviantsgo_beast.1120.b.tt
+		trigger_event = deviantsgo_beast.1122
+	}	
+	# shoo away.
+	option = {
+		name = deviantsgo_beast.1120.c
+		custom_tooltip = deviantsgo_beast.1120.c.tt
+		trigger_event = deviantsgo_beast.1123
+	}				
+}
+
+deviantsgo_beast.1121 = { 
+	type = character_event
+	title = deviantsgo_beast.1121.t
+	desc = deviantsgo_beast.1121.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# taste it.
+	option = {
+		name = deviantsgo_beast.1121.a
+		custom_tooltip = deviantsgo_beast.1121.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 5
+			}
+        }
+	} 		
+	# not ready.
+	option = {
+		name = deviantsgo_beast.1121.b
+		custom_tooltip = deviantsgo_beast.1121.b.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 3
+			}
+        }
+	} 			
+}
+
+deviantsgo_beast.1122 = { 
+	type = character_event
+	title = deviantsgo_beast.1122.t
+	desc = deviantsgo_beast.1122.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# cum.
+	option = {
+		name = deviantsgo_beast.1122.a
+		custom_tooltip = deviantsgo_beast.1122.a.tt
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 2
+			}
+        }
+	} 		 			
+}
+
+deviantsgo_beast.1123 = { 
+	type = character_event
+	title = deviantsgo_beast.1123.t
+	desc = deviantsgo_beast.1123.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1123.a
+		custom_tooltip = deviantsgo_beast.1123.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	} 		 			
+}
+
+#1130 Business and Pleasure, Part four
+deviantsgo_beast.1130 = { 
+	type = character_event
+	title = deviantsgo_beast.1130.t
+	desc = deviantsgo_beast.1130.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# pleasure him.
+	option = {
+		name = deviantsgo_beast.1130.a
+		custom_tooltip = deviantsgo_beast.1130.a.tt
+		trigger_event = deviantsgo_beast.1131
+	} 
+	# have him lick.
+	option = {
+		name = deviantsgo_beast.1130.b
+		custom_tooltip = deviantsgo_beast.1130.b.tt
+		trigger_event = deviantsgo_beast.1135
+	}	
+	# shoo away.
+	option = {
+		name = deviantsgo_beast.1130.c
+		custom_tooltip = deviantsgo_beast.1130.c.tt
+		trigger_event = deviantsgo_beast.1136
+	}				
+}
+
+deviantsgo_beast.1131 = { 
+	type = character_event
+	title = deviantsgo_beast.1131.t
+	desc = deviantsgo_beast.1131.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# swallow.
+	option = {
+		name = deviantsgo_beast.1131.a
+		custom_tooltip = deviantsgo_beast.1131.a.tt
+		trigger_event = deviantsgo_beast.1132
+	} 		
+	# on the face.
+	option = {
+		name = deviantsgo_beast.1131.b
+		custom_tooltip = deviantsgo_beast.1131.b.tt
+		trigger_event = deviantsgo_beast.1133
+	} 			
+}
+
+deviantsgo_beast.1132 = { 
+	type = character_event
+	title = deviantsgo_beast.1132.t
+	desc = deviantsgo_beast.1132.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.1132.a
+		custom_tooltip = deviantsgo_beast.1132.a.tt
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 5
+			}
+        }
+	} 					
+}
+
+deviantsgo_beast.1133 = { 
+	type = character_event
+	title = deviantsgo_beast.1133.t
+	desc = deviantsgo_beast.1133.a.desc
+	override_background = { reference =	deviantdoggyoralonfacecum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.1133.a
+		custom_tooltip = deviantsgo_beast.1133.a.tt
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 5
+			}
+        }
+	} 					
+}
+
+deviantsgo_beast.1135 = { 
+	type = character_event
+	title = deviantsgo_beast.1135.t
+	desc = deviantsgo_beast.1135.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# cum.
+	option = {
+		name = deviantsgo_beast.1135.a
+		custom_tooltip = deviantsgo_beast.1135.a.tt
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = 2
+			}
+        }
+	} 		 			
+}
+
+deviantsgo_beast.1136 = { 
+	type = character_event
+	title = deviantsgo_beast.1136.t
+	desc = deviantsgo_beast.1136.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1136.a
+		custom_tooltip = deviantsgo_beast.1136.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+	} 		 			
+}
+
+deviantsgo_beast.1900 = { 
+	type = character_event
+	title = deviantsgo_beast.1900.t
+	desc = deviantsgo_beast.1900.a.desc
+	override_background = { reference =	bedchamber }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1900.a
+		custom_tooltip = deviantsgo_beast.1900.a.tt
+		trigger_event = deviantsgo_beast.1901 
+	} 
+	# 
+	option = {
+		name = deviantsgo_beast.1900.b
+		custom_tooltip = deviantsgo_beast.1900.b.tt
+		trigger_event = deviantsgo_beast.1902
+	} 
+	# 
+	option = {
+		name = deviantsgo_beast.1900.c
+		custom_tooltip = deviantsgo_beast.1900.c.tt
+		trigger_event = deviantsgo_beast.1903
+	} 		 			
+}
+
+deviantsgo_beast.1901 = { 
+	type = character_event
+	title = deviantsgo_beast.1901.t
+	desc = deviantsgo_beast.1901.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.1901.a
+		custom_tooltip = deviantsgo_beast.1901.a.tt
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		remove_trait = deviants_canine_lover_two
+        add_trait_force_tooltip = deviants_canine_lover_three
+	} 		 			
+}
+
+deviantsgo_beast.1902 = { 
+	type = character_event
+	title = deviantsgo_beast.1902.t
+	desc = deviantsgo_beast.1902.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.1902.a
+		custom_tooltip = deviantsgo_beast.1902.a.tt
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		remove_trait = deviants_canine_lover_two
+        add_trait_force_tooltip = deviants_canine_lover_three
+	} 		 			
+}
+
+deviantsgo_beast.1903 = { 
+	type = character_event
+	title = deviantsgo_beast.1903.t
+	desc = deviantsgo_beast.1903.a.desc
+	override_background = { reference =	bedchamber }
+	theme = deviantsmaskgo 
+		right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.1903.a
+		custom_tooltip = deviantsgo_beast.1903.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+        hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_two
+				track = deviant_canine_lover_fame_two
+				value = -100
+			}
+        }
+	} 		 			
+}
+
+###### 3000 tier three events ################
+deviantsgo_beast.3000 = { 
+	type = character_event
+	title = deviantsgo_beast.3000.t
+	desc = deviantsgo_beast.3000.a.desc
+	override_background = { reference =	throne_room }
+	theme = deviantsmaskgo 
+		right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# To nearby woods
+	option = {
+		name = deviantsgo_beast.3000.a
+		custom_tooltip = deviantsgo_beast.3000.a.tt
+		trigger_event = deviantsgo_beast.3100
+	} 	
+	# To kitchen
+	option = {
+		name = deviantsgo_beast.3000.b
+		custom_tooltip = deviantsgo_beast.3000.b.tt
+		trigger_event = deviantsgo_beast.4000
+	}
+	# To courtyard
+	option = {
+		name = deviantsgo_beast.3000.c
+		custom_tooltip = deviantsgo_beast.3000.c.tt
+		trigger_event = deviantsgo_beast.5000
+	}
+	# Nevermind
+	option = {
+		name = deviantsgo_beast.3000.e
+		custom_tooltip = deviantsgo_beast.3000.e.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+	}	 			
+}
+
+#forest event chain, feeling horny
+deviantsgo_beast.3100 = { 
+	type = character_event
+	title = deviantsgo_beast.3100.t
+	desc = deviantsgo_beast.3100.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# mount
+	option = {
+		name = deviantsgo_beast.3100.a
+		custom_tooltip = deviantsgo_beast.3100.a.tt
+		hidden_effect = {
+			random_list = {
+				80 = {
+					trigger_event = deviantsgo_beast.3110
+				}
+				20 = {
+					trigger_event = deviantsgo_beast.3120
+				}
+			}	
+		}
+	} 	
+	# pleasure the dog
+	option = {
+		name = deviantsgo_beast.3100.b
+		custom_tooltip = deviantsgo_beast.3100.b.tt
+		hidden_effect = {
+			random_list = {
+				80 = {
+					trigger_event = deviantsgo_beast.3140
+				}
+				20 = {
+					trigger_event = deviantsgo_beast.3150
+				}
+			}	
+		}
+	}	 	
+	# pleasure yourself
+	option = {
+		name = deviantsgo_beast.3100.c
+		custom_tooltip = deviantsgo_beast.3100.c.tt
+		hidden_effect = {
+			random_list = {
+				80 = {
+					trigger_event = deviantsgo_beast.3190
+				}
+				20 = {
+					trigger_event = deviantsgo_beast.3191
+				}
+			}
+		}	
+	}		
+	# resist the urge
+	option = {
+		name = deviantsgo_beast.3100.d
+		custom_tooltip = deviantsgo_beast.3100.d.tt
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+        }
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.3101
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.3102
+				}
+			}	
+		}
+	}	
+}
+#if resist urge variant one
+deviantsgo_beast.3101 = { 
+	type = character_event
+	title = deviantsgo_beast.3101.t
+	desc = deviantsgo_beast.3101.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = chaplain
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.3101.a
+		custom_tooltip = deviantsgo_beast.3101.a.tt
+	} 		
+}
+
+#if resist urge variant two
+deviantsgo_beast.3102 = { 
+	type = character_event
+	title = deviantsgo_beast.3102.t
+	desc = deviantsgo_beast.3102.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = chaplain
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.3102.a
+		custom_tooltip = deviantsgo_beast.3102.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+	} 		
+}
+
+#3110 mount, no issues
+deviantsgo_beast.3110 = { 
+	type = character_event
+	title = deviantsgo_beast.3110.t
+	desc = deviantsgo_beast.3110.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.3110.a
+		custom_tooltip = deviantsgo_beast.3110.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 5
+			}
+        }
+	} 	 			
+}
+#3120 man walks in
+deviantsgo_beast.3120 = { 
+	type = character_event
+	title = deviantsgo_beast.3120.t
+	desc = deviantsgo_beast.3120.a.desc
+	override_background = { reference =	deviantdoggyvagfuck }
+	theme = deviantsmaskgo 
+	# ignore
+	option = {
+		name = deviantsgo_beast.3120.a
+		custom_tooltip = deviantsgo_beast.3120.a.tt
+		trigger_event = deviantsgo_beast.3121
+	} 	
+	# yell
+	option = {
+		name = deviantsgo_beast.3120.b
+		custom_tooltip = deviantsgo_beast.3120.b.tt
+		duel = {
+			skill = diplomacy
+			value = average_skill_rating
+			# Success: win
+			40 = {
+				compare_modifier = {
+					value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+				}
+				custom_tooltip = {
+					text = deviantsgo_beast.3120.bwin.tt
+			   }
+			   trigger_event = deviantsgo_beast.3122
+			}   
+			# Failure, lose
+			60 = {
+				compare_modifier = {
+					value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+				}	
+				custom_tooltip = {
+					text = deviantsgo_beast.3120.blose.tt
+				}		
+				trigger_event = deviantsgo_beast.3123
+			}
+		}
+	} 
+	# call over
+	option = {
+		name = deviantsgo_beast.3120.c
+		custom_tooltip = deviantsgo_beast.3120.c.tt
+		trigger_event = deviantsgo_beast.3125
+	} 
+	# try to flee
+	option = {
+		name = deviantsgo_beast.3120.d
+		custom_tooltip = deviantsgo_beast.3120.d.tt
+		duel = {
+			skill = prowess
+			value = average_skill_rating
+			# Success: win
+			40 = {
+				compare_modifier = {
+					value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+				}
+				custom_tooltip = {
+					text = deviantsgo_beast.3120.dwin.tt
+			   }
+			   trigger_event = deviantsgo_beast.3130
+			}   
+			# Failure, lose
+			60 = {
+				compare_modifier = {
+					value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+				}	
+				custom_tooltip = {
+					text = deviantsgo_beast.3120.dlose.tt
+				}		
+				trigger_event = deviantsgo_beast.3131
+			}
+		}
+	} 	
+}
+#3121 ignore
+deviantsgo_beast.3121 = { 
+	type = character_event
+	title = deviantsgo_beast.3121.t
+	desc = deviantsgo_beast.3121.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.3121.a
+		custom_tooltip = deviantsgo_beast.3121.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 3
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 4
+			}
+        }
+	} 	 			
+}
+#3122 yell and he runs
+deviantsgo_beast.3122 = { 
+	type = character_event
+	title = deviantsgo_beast.3122.t
+	desc = deviantsgo_beast.3122.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = anger
+		outfit_tags = { no_clothes }
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.3122.a
+		custom_tooltip = deviantsgo_beast.3122.a.tt
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 3
+			}
+        }
+	} 		 			
+}
+#3123 if fail to shout him away
+deviantsgo_beast.3123 = { 
+	type = character_event
+	title = deviantsgo_beast.3123.t
+	desc = deviantsgo_beast.3123.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.3123.a
+		custom_tooltip = deviantsgo_beast.3123.a.tt
+		stress_impact = {
+            base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 5
+			}
+        }
+	} 		 			
+}
+#3125 if call over
+deviantsgo_beast.3125 = { 
+	type = character_event
+	title = deviantsgo_beast.3125.t
+	desc = deviantsgo_beast.3125.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.3125.a
+		custom_tooltip = deviantsgo_beast.3125.a.tt
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = major_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 5
+			}
+        }
+	} 		 			
+}
+#3130 if managed to run
+deviantsgo_beast.3130 = { 
+	type = character_event
+	title = deviantsgo_beast.3130.t
+	desc = deviantsgo_beast.3130.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.3130.a
+		custom_tooltip = deviantsgo_beast.3130.a.tt
+		stress_impact = {
+            base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 3
+			}
+        }
+	} 		 			
+}
+#3131 if failed to run
+deviantsgo_beast.3131 = { 
+	type = character_event
+	title = deviantsgo_beast.3131.t
+	desc = deviantsgo_beast.3131.a.desc
+	override_background = { reference =	deviantanalcreampie }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.3131.a
+		custom_tooltip = deviantsgo_beast.3131.a.tt
+		remove_short_term_gold = 3
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 5
+			}
+        }
+	} 		 			
+}
+
+#3140 pleasure, no issues
+deviantsgo_beast.3140 = { 
+	type = character_event
+	title = deviantsgo_beast.3140.t
+	desc = deviantsgo_beast.3140.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.3140.a
+		custom_tooltip = deviantsgo_beast.3140.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 4
+			}
+        }
+	} 	 			
+}
+#3150 woman walks in
+deviantsgo_beast.3150 = { 
+	type = character_event
+	title = deviantsgo_beast.3150.t
+	desc = deviantsgo_beast.3150.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# ignore
+	option = {
+		name = deviantsgo_beast.3150.a
+		custom_tooltip = deviantsgo_beast.3150.a.tt
+		trigger_event = deviantsgo_beast.3151
+	} 	
+	# yell
+	option = {
+		name = deviantsgo_beast.3150.b
+		custom_tooltip = deviantsgo_beast.3150.b.tt
+		trigger_event = deviantsgo_beast.3152
+	} 
+	# call over
+	option = {
+		name = deviantsgo_beast.3150.c
+		custom_tooltip = deviantsgo_beast.3150.c.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.3155
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.3156
+				}
+			}	
+		}
+	} 
+	# try to flee
+	option = {
+		name = deviantsgo_beast.3150.d
+		custom_tooltip = deviantsgo_beast.3150.d.tt
+		trigger_event = deviantsgo_beast.3160
+	} 	
+}
+#3151 ignore
+deviantsgo_beast.3151 = { 
+	type = character_event
+	title = deviantsgo_beast.3151.t
+	desc = deviantsgo_beast.3151.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.3151.a
+		custom_tooltip = deviantsgo_beast.3151.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 3
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+        }
+	} 	 			
+}
+#3152 yell and she runs
+deviantsgo_beast.3152 = { 
+	type = character_event
+	title = deviantsgo_beast.3152.t
+	desc = deviantsgo_beast.3152.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = anger
+		outfit_tags = { no_clothes }
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.3152.a
+		custom_tooltip = deviantsgo_beast.3152.a.tt
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 3
+			}
+        }
+	} 		 			
+}
+
+#3155 if call over, oral
+deviantsgo_beast.3155 = { 
+	type = character_event
+	title = deviantsgo_beast.3155.t
+	desc = deviantsgo_beast.3155.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.3155.a
+		custom_tooltip = deviantsgo_beast.3155.a.tt
+		stress_impact = {
+            base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+        }
+	} 		 			
+}
+#3156 if call over, fuck
+deviantsgo_beast.3156 = { 
+	type = character_event
+	title = deviantsgo_beast.3156.t
+	desc = deviantsgo_beast.3156.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.3156.a
+		custom_tooltip = deviantsgo_beast.3156.a.tt
+		stress_impact = {
+            base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 4
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+        }
+	} 		 			
+}
+#3160 if run
+deviantsgo_beast.3160 = { 
+	type = character_event
+	title = deviantsgo_beast.3160.t
+	desc = deviantsgo_beast.3160.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = worry
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.3160.a
+		custom_tooltip = deviantsgo_beast.3160.a.tt
+		stress_impact = {
+            base = medium_stress_impact_gain
+			lustful = minor_stress_impact_gain
+        }
+		remove_short_term_gold = 1
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 4
+			}
+        }
+	} 		 			
+}
+
+#3190 if masturbate one
+deviantsgo_beast.3190 = { 
+	type = character_event
+	title = deviantsgo_beast.3190.t
+	desc = deviantsgo_beast.3190.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.3190.a
+		custom_tooltip = deviantsgo_beast.3190.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+	} 		
+}
+
+#3191 if masturbate two
+deviantsgo_beast.3191 = { 
+	type = character_event
+	title = deviantsgo_beast.3191.t
+	desc = deviantsgo_beast.3191.a.desc
+	override_background = { reference =	wilderness }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.3191.a
+		custom_tooltip = deviantsgo_beast.3191.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 5
+			}
+        }
+	} 		
+}
+
+#4000 go to the kitchen
+deviantsgo_beast.4000 = { 
+	type = character_event
+	title = deviantsgo_beast.4000.t
+	desc = deviantsgo_beast.4000.a.desc
+	override_background = { reference =	bp1_kitchen_western }
+	theme = deviantsmaskgo 
+		right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# Blueberry fun
+	option = {
+		name = deviantsgo_beast.4000.a
+		custom_tooltip = deviantsgo_beast.4000.a.tt
+		hidden_effect = {
+			random_list = {
+				80 = {
+					trigger_event = deviantsgo_beast.4010
+				}
+				20 = {
+					trigger_event = deviantsgo_beast.4011
+				}
+			}	
+		}
+	} 	
+	# Banana-na-na
+	option = {
+		name = deviantsgo_beast.4000.b
+		custom_tooltip = deviantsgo_beast.4000.b.tt
+		hidden_effect = {
+			random_list = {
+				80 = {
+					trigger_event = deviantsgo_beast.4020
+				}
+				20 = {
+					trigger_event = deviantsgo_beast.4021
+				}
+			}	
+		}
+	}
+	# Salacious Carrot Fun
+	option = {
+		name = deviantsgo_beast.4000.c
+		custom_tooltip = deviantsgo_beast.4000.c.tt
+		hidden_effect = {
+			random_list = {
+				80 = {
+					trigger_event = deviantsgo_beast.4030
+				}
+				20 = {
+					trigger_event = deviantsgo_beast.4031
+				}
+			}	
+		}
+	}
+	# Resist the urge
+	option = {
+		name = deviantsgo_beast.4000.d
+		custom_tooltip = deviantsgo_beast.4000.d.tt
+		hidden_effect = {
+			random_list = {
+				70 = {
+					trigger_event = deviantsgo_beast.4040
+				}
+				30 = {
+					trigger_event = deviantsgo_beast.4041
+				}
+			}	
+		}
+	}	 			
+}
+
+#4010 if just does it
+deviantsgo_beast.4010 = { 
+	type = character_event
+	title = deviantsgo_beast.4010.t
+	desc = deviantsgo_beast.4010.a.desc
+	override_background = { reference =	bp1_kitchen_western }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.4010.a
+		custom_tooltip = deviantsgo_beast.4010.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+        }
+	} 		
+}
+
+#4011 if almost caught
+deviantsgo_beast.4011 = { 
+	type = character_event
+	title = deviantsgo_beast.4011.t
+	desc = deviantsgo_beast.4011.a.desc
+	override_background = { reference =	bp1_kitchen_western }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.4011.a
+		custom_tooltip = deviantsgo_beast.4011.a.tt
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 1
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 4
+			}
+        }
+	} 		
+}
+
+#4020 if just does it
+deviantsgo_beast.4020 = { 
+	type = character_event
+	title = deviantsgo_beast.4020.t
+	desc = deviantsgo_beast.4020.a.desc
+	override_background = { reference =	bp1_kitchen_western }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.4020.a
+		custom_tooltip = deviantsgo_beast.4020.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 3
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+        }
+	} 		
+}
+
+#4021 if almost caught
+deviantsgo_beast.4021 = { 
+	type = character_event
+	title = deviantsgo_beast.4021.t
+	desc = deviantsgo_beast.4021.a.desc
+	override_background = { reference =	bp1_kitchen_western }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.4021.a
+		custom_tooltip = deviantsgo_beast.4021.a.tt
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 4
+			}
+        }
+	} 		
+}
+
+#4030 if just does it
+deviantsgo_beast.4030 = { 
+	type = character_event
+	title = deviantsgo_beast.4030.t
+	desc = deviantsgo_beast.4030.a.desc
+	override_background = { reference =	bp1_kitchen_western }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.4030.a
+		custom_tooltip = deviantsgo_beast.4030.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+        }
+	} 		
+}
+
+#4031 if almost caught
+deviantsgo_beast.4031 = { 
+	type = character_event
+	title = deviantsgo_beast.4031.t
+	desc = deviantsgo_beast.4031.a.desc
+	override_background = { reference =	bp1_kitchen_western }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.4031.a
+		custom_tooltip = deviantsgo_beast.4031.a.tt
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		remove_short_term_gold = 3
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 1
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+        }
+	} 		
+}
+
+#4040 if just does it
+deviantsgo_beast.4040 = { 
+	type = character_event
+	title = deviantsgo_beast.4040.t
+	desc = deviantsgo_beast.4040.a.desc
+	override_background = { reference =	bp1_kitchen_western }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.4040.a
+		custom_tooltip = deviantsgo_beast.4040.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+        }
+	} 		
+}
+
+#4041 if almost caught
+deviantsgo_beast.4041 = { 
+	type = character_event
+	title = deviantsgo_beast.4041.t
+	desc = deviantsgo_beast.4041.a.desc
+	override_background = { reference =	bp1_kitchen_western }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.4041.a
+		custom_tooltip = deviantsgo_beast.4041.a.tt
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -3
+			}
+        }
+	} 		
+}
+
+
+# 5000 go to the courtyard
+deviantsgo_beast.5000 = { 
+	type = character_event
+	title = deviantsgo_beast.5000.t
+	desc = deviantsgo_beast.5000.a.desc
+	override_background = { reference =	courtyard }
+	theme = deviantsmaskgo 
+		right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.5000.a
+		custom_tooltip = deviantsgo_beast.5000.a.tt
+		hidden_effect = {
+			random_list = {
+				80 = {
+					trigger_event = deviantsgo_beast.5010
+				}
+				20 = {
+					trigger_event = deviantsgo_beast.5001
+				}
+			}	
+		}
+	} 	
+	# 
+	option = {
+		name = deviantsgo_beast.5000.b
+		custom_tooltip = deviantsgo_beast.5000.b.tt
+		hidden_effect = {
+			random_list = {
+				80 = {
+					trigger_event = deviantsgo_beast.5020
+				}
+				20 = {
+					trigger_event = deviantsgo_beast.5001
+				}
+			}	
+		}
+	}	 			
+}
+
+#the pet goes take a nap, leaving you horny
+deviantsgo_beast.5001 = { 
+	type = character_event
+	title = deviantsgo_beast.5001.t
+	desc = deviantsgo_beast.5001.a.desc
+	override_background = { reference =	courtyard }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = disbelief 
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.5001.a
+		custom_tooltip = deviantsgo_beast.5001.a.tt
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = -1
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = -1
+			}
+        }
+	} 		 			
+}
+
+# if go to a remote tower
+deviantsgo_beast.5010 = { 
+	type = character_event
+	title = deviantsgo_beast.5010.t
+	desc = deviantsgo_beast.5010.a.desc
+	override_background = { reference =	deviantdoggycockpose }
+	theme = deviantsmaskgo 
+	# fuck him
+	option = {
+		name = deviantsgo_beast.5010.a
+		custom_tooltip = deviantsgo_beast.5010.a.tt
+		trigger_event = deviantsgo_beast.5011
+	} 		
+	# say no
+	option = {
+		name = deviantsgo_beast.5010.b
+		custom_tooltip = deviantsgo_beast.5010.b.tt
+		hidden_effect = {
+			random_list = {
+				80 = {
+					trigger_event = deviantsgo_beast.5012
+				}
+				20 = {
+					trigger_event = deviantsgo_beast.5013
+				}
+			}	
+		}
+	}  			
+}
+
+deviantsgo_beast.5011 = { 
+	type = character_event
+	title = deviantsgo_beast.5011.t
+	desc = deviantsgo_beast.5011.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.5011.a
+		custom_tooltip = deviantsgo_beast.5011.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = -2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+	} 		 			
+}
+
+deviantsgo_beast.5012 = { 
+	type = character_event
+	title = deviantsgo_beast.5012.t
+	desc = deviantsgo_beast.5012.a.desc
+	override_background = { reference =	armory}
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = disbelief 
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.5012.a
+		custom_tooltip = deviantsgo_beast.5012.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = -1
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+	} 		 			
+}
+
+deviantsgo_beast.5013 = { 
+	type = character_event
+	title = deviantsgo_beast.5013.t
+	desc = deviantsgo_beast.5013.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.5013.a
+		custom_tooltip = deviantsgo_beast.5013.a.tt
+		stress_impact = {
+            base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = -3
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+	} 		 			
+}
+
+#if go to study
+deviantsgo_beast.5020 = { 
+	type = character_event
+	title = deviantsgo_beast.5020.t
+	desc = deviantsgo_beast.5020.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+		right_portrait = {
+		character = root
+		animation = thinking
+	}
+	# make love
+	option = {
+		name = deviantsgo_beast.5020.a
+		custom_tooltip = deviantsgo_beast.5020.a.tt
+		trigger_event = deviantsgo_beast.5021
+	} 	
+	# service him
+	option = {
+		name = deviantsgo_beast.5020.b
+		custom_tooltip = deviantsgo_beast.5020.b.tt
+		trigger_event = deviantsgo_beast.5022
+	} 
+	# masturbate
+	option = {
+		name = deviantsgo_beast.5020.c
+		custom_tooltip = deviantsgo_beast.5020.c.tt
+		trigger_event = deviantsgo_beast.5023
+	} 
+	# resist
+	option = {
+		name = deviantsgo_beast.5020.d
+		custom_tooltip = deviantsgo_beast.5020.d.tt
+		trigger_event = deviantsgo_beast.5024
+	} 		
+}
+
+deviantsgo_beast.5021 = { 
+	type = character_event
+	title = deviantsgo_beast.5021.t
+	desc = deviantsgo_beast.5021.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.5021.a
+		custom_tooltip = deviantsgo_beast.5021.a.tt
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 3
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+	} 		 			
+}
+
+deviantsgo_beast.5022 = { 
+	type = character_event
+	title = deviantsgo_beast.5022.t
+	desc = deviantsgo_beast.5022.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.5022.a
+		custom_tooltip = deviantsgo_beast.5022.a.tt
+		stress_impact = {
+            base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 1
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 3
+			}
+        }
+	} 		 			
+}
+
+deviantsgo_beast.5023 = { 
+	type = character_event
+	title = deviantsgo_beast.5023.t
+	desc = deviantsgo_beast.5023.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.5023.a
+		custom_tooltip = deviantsgo_beast.5023.a.tt
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = -1
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = -1
+			}
+        }
+	} 		 			
+}
+
+deviantsgo_beast.5024 = { 
+	type = character_event
+	title = deviantsgo_beast.5024.t
+	desc = deviantsgo_beast.5024.a.desc
+	override_background = { reference =	study }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = personality_content
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.5024.a
+		custom_tooltip = deviantsgo_beast.5024.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -2
+			}
+        }
+	} 		 			
+}
+##### 9000 #### random dog events
+#basic leg hump events
+deviantsgo_beast.9000 = { 
+	type = character_event
+	title = deviantsgo_beast.9000.t
+	desc = deviantsgo_beast.9000.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	cooldown = { years = 1 }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_conversation_1
+	}
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 25
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 25
+			}
+		}
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value <= 50
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value <= 50
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			age >= 18
+		}
+	}
+	immediate = {
+		random_courtier = {
+			save_scope_as = deviant_go_random_1
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+			}
+		}	
+	}
+	# Endure it.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 49
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 49
+				}
+			}
+		}
+		name = deviantsgo_beast.9000.a
+		custom_tooltip = deviantsgo_beast.9000.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 1
+			}
+        }
+		add_prestige = -10
+	} 		 
+	# Relent to his urge.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 49
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 49
+				}
+			}
+		}
+		name = deviantsgo_beast.9000.b
+		custom_tooltip = deviantsgo_beast.9000.b.tt
+		trigger_event = deviantsgo_beast.9001
+	} 	
+	# Laugh it off.
+	option = {
+		name = deviantsgo_beast.9000.c
+		custom_tooltip = deviantsgo_beast.9000.c.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+	} 	
+	# Call a servant.
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		name = deviantsgo_beast.9000.d
+		custom_tooltip = deviantsgo_beast.9000.d.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+		add_prestige = -5
+		add_dread = 2
+	} 	
+	# Affectionately Accept it.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value <= 75
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 49
+			}
+		}
+		name = deviantsgo_beast.9000.e
+		custom_tooltip = deviantsgo_beast.9000.e.tt
+		trigger_event = deviantsgo_beast.9002
+	} 	
+	# Obey to his urge.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value <= 75
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 49
+			}
+		}
+		name = deviantsgo_beast.9000.f
+		custom_tooltip = deviantsgo_beast.9000.f.tt
+		trigger_event = deviantsgo_beast.9003
+	} 			
+}
+
+# 9001
+deviantsgo_beast.9001 = { 
+	type = character_event
+	title = deviantsgo_beast.9001.t
+	desc = deviantsgo_beast.9001.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9001.a
+		custom_tooltip = deviantsgo_beast.9001.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 1
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+	} 		 			
+}
+# 9002
+deviantsgo_beast.9002 = { 
+	type = character_event
+	title = deviantsgo_beast.9002.t
+	desc = deviantsgo_beast.9002.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9002.a
+		custom_tooltip = deviantsgo_beast.9002.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+        }
+		add_prestige = -10
+	} 		 			
+}
+# 9003
+deviantsgo_beast.9003 = { 
+	type = character_event
+	title = deviantsgo_beast.9003.t
+	desc = deviantsgo_beast.9003.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# Endure it.
+	option = {
+		name = deviantsgo_beast.9003.a
+		custom_tooltip = deviantsgo_beast.9003.a.tt
+		add_prestige = -10
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+	} 		 			
+}
+
+# 9010, male courtiers dog
+deviantsgo_beast.9010 = { 
+	type = character_event
+	title = deviantsgo_beast.9010.t
+	desc = deviantsgo_beast.9010.a.desc
+	override_background = { reference =	corridor_day }
+	cooldown = { years = 1 }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_conversation_1
+	}
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 25
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 25
+			}
+		}
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value <= 50
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value <= 50
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = no
+		}
+	}
+	immediate = {
+		random_courtier = {
+			save_scope_as = deviant_go_random_1
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+				is_female = no
+			}
+		}	
+	}
+	# Endure it.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 49
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 49
+				}
+			}
+		}
+		name = deviantsgo_beast.9010.a
+		custom_tooltip = deviantsgo_beast.9010.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+        }
+		add_prestige = -10
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 5
+			}
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = confusion_opinion
+				opinion = 5
+			}
+			stress_impact = {
+				lustful = minor_stress_impact_loss
+			}
+		}
+	} 		 
+	# get angry.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 49
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 49
+				}
+			}
+		}
+		name = deviantsgo_beast.9010.b
+		custom_tooltip = deviantsgo_beast.9010.b.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -2
+			}
+        }
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = overreaction_opinion
+				opinion = -50
+			}
+		}
+	} 	
+	# Laugh it off.
+	option = {
+		name = deviantsgo_beast.9010.c
+		custom_tooltip = deviantsgo_beast.9010.c.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 2
+			}
+		}
+	} 	
+	# Call a servant.
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		name = deviantsgo_beast.9010.d
+		custom_tooltip = deviantsgo_beast.9010.d.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 2
+			}
+		}
+		add_prestige = -5
+		add_dread = 2
+	} 	
+	# Affectionately Accept it.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value <= 75
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 49
+			}
+		}
+		name = deviantsgo_beast.9010.e
+		custom_tooltip = deviantsgo_beast.9010.e.tt
+		trigger_event = deviantsgo_beast.9011
+	} 	
+	# Obey to his urge.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value <= 75
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 49
+			}
+		}
+		name = deviantsgo_beast.9010.f
+		custom_tooltip = deviantsgo_beast.9010.f.tt
+		trigger_event = deviantsgo_beast.9012
+	} 			
+}
+
+# 9011
+deviantsgo_beast.9011 = { 
+	type = character_event
+	title = deviantsgo_beast.9011.t
+	desc = deviantsgo_beast.9011.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_conversation_1
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9011.a
+		custom_tooltip = deviantsgo_beast.9011.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 3
+			}
+        }
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 5
+			}
+		}
+		add_prestige = -10
+	} 		 			
+}
+# 9012
+deviantsgo_beast.9012 = { 
+	type = character_event
+	title = deviantsgo_beast.9012.t
+	desc = deviantsgo_beast.9012.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9012.a
+		custom_tooltip = deviantsgo_beast.9012.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 3
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 3
+			}
+        }
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = 5
+		}
+		add_prestige = -10
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+		}
+	} 		 			
+}
+
+# 9020 female courtier's dog
+deviantsgo_beast.9020 = { 
+	type = character_event
+	title = deviantsgo_beast.9020.t
+	desc = deviantsgo_beast.9020.a.desc
+	override_background = { reference =	corridor_day }
+	cooldown = { years = 1 }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_conversation_1
+	}
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 25
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 25
+			}
+		}
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value <= 50
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value <= 50
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = yes
+		}
+	}
+	immediate = {
+		random_courtier = {
+			save_scope_as = deviant_go_random_1
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+				is_female = yes
+			}
+		}	
+	}
+	# Endure it.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 49
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 49
+				}
+			}
+		}
+		name = deviantsgo_beast.9020.a
+		custom_tooltip = deviantsgo_beast.9020.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+        }
+		add_prestige = -10
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = confusion_opinion
+				opinion = 5
+			}
+			stress_impact = {
+				lustful = minor_stress_impact_loss
+				chaste = minor_stress_impact_gain
+			}
+		}
+	} 		 
+	# get angry.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 49
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 49
+				}
+			}
+		}
+		name = deviantsgo_beast.9020.b
+		custom_tooltip = deviantsgo_beast.9020.b.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -2
+			}
+        }
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = overreaction_opinion
+				opinion = -50
+			}
+		}
+	} 	
+	# Laugh it off.
+	option = {
+		name = deviantsgo_beast.9020.c
+		custom_tooltip = deviantsgo_beast.9020.c.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 2
+			}
+		}
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+        }
+	} 	
+	# Call a servant.
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		name = deviantsgo_beast.9020.d
+		custom_tooltip = deviantsgo_beast.9020.d.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 3
+			}
+		}
+		add_prestige = -5
+		add_dread = 2
+	} 	
+	# Affectionately Accept it.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value <= 75
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 49
+			}
+		}
+		name = deviantsgo_beast.9020.e
+		custom_tooltip = deviantsgo_beast.9020.e.tt
+		trigger_event = deviantsgo_beast.9021
+	} 	
+	# Obey to his urge.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value <= 75
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 49
+			}
+		}
+		name = deviantsgo_beast.9020.f
+		custom_tooltip = deviantsgo_beast.9020.f.tt
+		trigger_event = deviantsgo_beast.9022
+	} 			
+}
+
+# 9021
+deviantsgo_beast.9021 = { 
+	type = character_event
+	title = deviantsgo_beast.9021.t
+	desc = deviantsgo_beast.9021.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_conversation_1
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9021.a
+		custom_tooltip = deviantsgo_beast.9021.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 3
+			}
+        }
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 5
+			}
+		}
+		add_prestige = -10
+	} 		 			
+}
+# 9022
+deviantsgo_beast.9022 = { 
+	type = character_event
+	title = deviantsgo_beast.9022.t
+	desc = deviantsgo_beast.9022.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9022.a
+		custom_tooltip = deviantsgo_beast.9022.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 3
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 3
+			}
+        }
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = 5
+		}
+		add_prestige = -10
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+		}
+	} 		 			
+}
+
+##########################################################################
+#basic mount hump events
+deviantsgo_beast.9030 = { 
+	type = character_event
+	title = deviantsgo_beast.9030.t
+	desc = deviantsgo_beast.9030.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	cooldown = { years = 1 }
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 51
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 51
+			}
+		}
+	}
+	# Endure it.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 51
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 62
+				}
+			}
+		}
+		name = deviantsgo_beast.9030.a
+		custom_tooltip = deviantsgo_beast.9030.a.tt
+		trigger_event = deviantsgo_beast.9031
+	} 		 
+	# Relent to his urge.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 62
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 62
+				}
+			}
+		}
+		name = deviantsgo_beast.9030.b
+		custom_tooltip = deviantsgo_beast.9030.b.tt
+		trigger_event = deviantsgo_beast.9032
+	} 	
+	# Laugh it off.
+	option = {
+		name = deviantsgo_beast.9030.c
+		custom_tooltip = deviantsgo_beast.9030.c.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+	} 	
+	# Call a servant.
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		name = deviantsgo_beast.9030.d
+		custom_tooltip = deviantsgo_beast.9030.d.tt
+		trigger_event = deviantsgo_beast.9035
+	} 	
+	# Affectionately Accept it.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 62
+			}
+		}
+		name = deviantsgo_beast.9030.e
+		custom_tooltip = deviantsgo_beast.9030.e.tt
+		trigger_event = deviantsgo_beast.9033
+	} 	
+	# Obey to his urge.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 62
+			}
+		}
+		name = deviantsgo_beast.9030.f
+		custom_tooltip = deviantsgo_beast.9030.f.tt
+		trigger_event = deviantsgo_beast.9034
+	} 			
+}
+
+# 9031
+deviantsgo_beast.9031 = { 
+	type = character_event
+	title = deviantsgo_beast.9031.t
+	desc = deviantsgo_beast.9031.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9031.a
+		custom_tooltip = deviantsgo_beast.9031.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 1
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+	} 		 			
+}
+# 9032
+deviantsgo_beast.9032 = { 
+	type = character_event
+	title = deviantsgo_beast.9032.t
+	desc = deviantsgo_beast.9032.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9032.a
+		custom_tooltip = deviantsgo_beast.9032.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+        }
+		remove_short_term_gold = 1
+	} 		 			
+}
+# 9033
+deviantsgo_beast.9033 = { 
+	type = character_event
+	title = deviantsgo_beast.9033.t
+	desc = deviantsgo_beast.9033.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# Endure it.
+	option = {
+		name = deviantsgo_beast.9033.a
+		custom_tooltip = deviantsgo_beast.9033.a.tt
+		add_prestige = -10
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 2
+			}
+        }
+	} 		 			
+}
+
+# 9034
+deviantsgo_beast.9034 = { 
+	type = character_event
+	title = deviantsgo_beast.9034.t
+	desc = deviantsgo_beast.9034.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# Endure it.
+	option = {
+		name = deviantsgo_beast.9034.a
+		custom_tooltip = deviantsgo_beast.9034.a.tt
+		add_prestige = -10
+		stress_impact = {
+            base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 3
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+	} 		 			
+}
+#9035 if call the servant
+deviantsgo_beast.9035 = { 
+	type = character_event
+	title = deviantsgo_beast.9035.t
+	desc = deviantsgo_beast.9035.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = scheme
+	}
+	# pay the servant like you promised
+	option = {
+		name = deviantsgo_beast.9035.a
+		custom_tooltip = deviantsgo_beast.9035.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -10
+			}
+        }
+		add_piety = minor_piety_gain
+		remove_short_term_gold = minor_gold_value
+	} 		
+	# do not pay
+	option = {
+		name = deviantsgo_beast.9035.b
+		custom_tooltip = deviantsgo_beast.9035.b.tt
+		stress_impact = {
+            sadistic = minor_stress_impact_loss
+        }
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 4
+			}
+        }
+		add_prestige = minor_prestige_loss
+		add_piety = minor_piety_loss
+	}  		
+	# make her dissapear before there is any trouble
+	option = {
+		name = deviantsgo_beast.9035.c
+		custom_tooltip = deviantsgo_beast.9035.c.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+		add_dread = minor_dread_gain
+	}  	
+}
+
+############ 9040, male courtiers dog #####################
+deviantsgo_beast.9040 = { 
+	type = character_event
+	title = deviantsgo_beast.9040.t
+	desc = deviantsgo_beast.9040.a.desc
+	override_background = { reference =	corridor_day }
+	cooldown = { years = 1 }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 51
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 51
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = no
+		}
+	}
+	immediate = {
+		random_courtier = {
+			save_scope_as = deviant_go_random_1
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+				is_female = no
+			}
+		}	
+	}
+	# Endure it.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 62
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 62
+				}
+			}
+		}
+		name = deviantsgo_beast.9040.a
+		custom_tooltip = deviantsgo_beast.9040.a.tt
+		trigger_event = deviantsgo_beast.9041
+	} 		 
+	# Relent to his urge.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 62
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 62
+				}
+			}
+		}
+		name = deviantsgo_beast.9040.b
+		custom_tooltip = deviantsgo_beast.9040.b.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9042
+				}
+				50 = {
+					trigger = {
+						scope:deviant_go_random_1 = {
+							has_trait = lustful
+						}
+					}
+					trigger_event = deviantsgo_beast.9043
+				}
+			}	
+		}
+	} 	
+	# Laugh it off.
+	option = {
+		name = deviantsgo_beast.9040.c
+		custom_tooltip = deviantsgo_beast.9040.c.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+        }
+	} 	
+	# Call a servant.
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		name = deviantsgo_beast.9040.d
+		custom_tooltip = deviantsgo_beast.9040.d.tt
+		trigger_event = deviantsgo_beast.9044
+	} 	
+	# Affectionately Accept it.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 63
+			}
+		}
+		name = deviantsgo_beast.9040.e
+		custom_tooltip = deviantsgo_beast.9040.e.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9045
+				}
+				50 = {
+					trigger = {
+						scope:deviant_go_random_1 = {
+							has_trait = lustful
+						}
+					}
+					trigger_event = deviantsgo_beast.9046
+				}
+			}	
+		}
+	} 	
+	# Obey to his urge.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 63
+			}
+		}
+		name = deviantsgo_beast.9040.f
+		custom_tooltip = deviantsgo_beast.9040.f.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9047
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.9048
+				}
+			}	
+		}
+	} 			
+}
+
+# 9041 if endure it
+deviantsgo_beast.9041 = { 
+	type = character_event
+	title = deviantsgo_beast.9041.t
+	desc = deviantsgo_beast.9041.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9041.a
+		custom_tooltip = deviantsgo_beast.9041.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 3
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 3
+			}
+        }
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 7
+			}
+		}
+		add_prestige = -15
+	} 		 			
+}
+# 9042 if relent and he just watches/ is not lustful
+deviantsgo_beast.9042 = { 
+	type = character_event
+	title = deviantsgo_beast.9042.t
+	desc = deviantsgo_beast.9042.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9042.a
+		custom_tooltip = deviantsgo_beast.9042.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 10
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = 15
+		}
+		add_prestige = -15
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -10
+			}
+		}
+	} 		 			
+}
+
+# 9043 if relent and he is  lustful
+deviantsgo_beast.9043 = { 
+	type = character_event
+	title = deviantsgo_beast.9043.t
+	desc = deviantsgo_beast.9043.a.desc
+	override_background = { reference =	deviantsuckcock }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = ecstasy
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9043.a
+		custom_tooltip = deviantsgo_beast.9043.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 10
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = 20
+		}
+		add_prestige = minor_prestige_loss
+		add_piety = minor_piety_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = amused_opinion
+				opinion = 10
+			}
+		}
+	} 		 			
+}
+
+# 9044 if call a servant
+deviantsgo_beast.9044 = { 
+	type = character_event
+	title = deviantsgo_beast.9044.t
+	desc = deviantsgo_beast.9044.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = scheme
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# pay the servant like you promised
+	option = {
+		name = deviantsgo_beast.9044.a
+		custom_tooltip = deviantsgo_beast.9044.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -5
+			}
+        }
+		remove_short_term_gold = minor_gold_value
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -10
+			}
+		}
+	} 		
+	# do not pay
+	option = {
+		name = deviantsgo_beast.9044.b
+		custom_tooltip = deviantsgo_beast.9044.b.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 4
+			}
+        }
+		add_prestige = minor_prestige_loss
+		add_piety = minor_piety_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = scared_opinion
+				opinion = 10
+			}
+		}
+	}  		
+	# make her dissapear before there is any trouble
+	option = {
+		name = deviantsgo_beast.9044.c
+		custom_tooltip = deviantsgo_beast.9044.c.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -2
+			}
+        }
+		add_dread = minor_dread_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = scared_opinion
+				opinion = 10
+			}
+		}
+	}  	
+	#make the owner pay
+	option = {
+		name = deviantsgo_beast.9044.d
+		custom_tooltip = deviantsgo_beast.9044.d.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -2
+			}
+        }
+		scope:deviant_go_random_1 = {
+			remove_short_term_gold = tiny_gold_value
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -20
+			}
+		}
+	}  
+}
+
+# 9045 if accept it but he not lustful
+deviantsgo_beast.9045 = { 
+	type = character_event
+	title = deviantsgo_beast.9045.t
+	desc = deviantsgo_beast.9045.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9045.a
+		custom_tooltip = deviantsgo_beast.9045.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 10
+			}
+        }
+		add_prestige = -7
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 10
+			}
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -20
+			}
+		}
+	} 		 			
+}
+
+# 9046 if accept it but he lustful
+deviantsgo_beast.9046 = { 
+	type = character_event
+	title = deviantsgo_beast.9046.t
+	desc = deviantsgo_beast.9046.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9046.a
+		custom_tooltip = deviantsgo_beast.9046.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 10
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 1
+			}
+        }
+		add_prestige = -10
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 15
+			}
+			add_opinion = {
+				target = root
+				modifier = confusion_opinion
+				opinion = 10
+			}
+		}
+	} 		 			
+}
+
+# 9047 if accept it and he not get hard
+deviantsgo_beast.9047 = { 
+	type = character_event
+	title = deviantsgo_beast.9047.t
+	desc = deviantsgo_beast.9047.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9047.a
+		custom_tooltip = deviantsgo_beast.9047.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 15
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+		add_prestige = -15
+		pay_short_term_gold = {
+				target = scope:deviant_go_random_1
+				gold = tiny_gold_value
+			}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -5
+			}
+		}
+	} 		 			
+}
+
+# 9048 if accept it and he  get hard
+deviantsgo_beast.9048 = { 
+	type = character_event
+	title = deviantsgo_beast.9048.t
+	desc = deviantsgo_beast.9048.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9048.a
+		custom_tooltip = deviantsgo_beast.9048.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 15
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 3
+			}
+        }
+		add_prestige = -25
+		pay_short_term_gold = {
+				target = scope:deviant_go_random_1
+				gold = tiny_gold_value
+			}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -10
+			}
+		}
+	} 		 			
+}
+
+
+########## 9050 female courtier's dog ########
+
+deviantsgo_beast.9050 = { 
+	type = character_event
+	title = deviantsgo_beast.9050.t
+	desc = deviantsgo_beast.9050.a.desc
+	override_background = { reference =	corridor_day }
+	cooldown = { years = 1 }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 51
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 51
+			}
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = yes
+		}
+	}
+	immediate = {
+		random_courtier = {
+			save_scope_as = deviant_go_random_1
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+				is_female = yes
+			}
+		}	
+	}
+	# Endure it.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 62
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 62
+				}
+			}
+		}
+		name = deviantsgo_beast.9050.a
+		custom_tooltip = deviantsgo_beast.9050.a.tt
+		trigger_event = deviantsgo_beast.9051
+	} 		 
+	# Relent to his urge.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value <= 62
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value <= 62
+				}
+			}
+		}
+		name = deviantsgo_beast.9050.b
+		custom_tooltip = deviantsgo_beast.9050.b.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9052
+				}
+				50 = {
+					trigger = {
+						scope:deviant_go_random_1 = {
+							has_trait = lustful
+						}
+					}
+					trigger_event = deviantsgo_beast.9053
+				}
+			}	
+		}
+	} 	
+	# Laugh it off.
+	option = {
+		name = deviantsgo_beast.9050.c
+		custom_tooltip = deviantsgo_beast.9050.c.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+		stress_impact = {
+            base = minor_stress_impact_gain
+			lustful = medium_stress_impact_gain
+        }
+	} 	
+	# Call a servant.
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		name = deviantsgo_beast.9050.d
+		custom_tooltip = deviantsgo_beast.9050.d.tt
+		trigger_event = deviantsgo_beast.9054
+	} 	
+	# Affectionately Accept it.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 63
+			}
+		}
+		name = deviantsgo_beast.9050.e
+		custom_tooltip = deviantsgo_beast.9050.e.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9055
+				}
+				50 = {
+					trigger = {
+						scope:deviant_go_random_1 = {
+							has_trait = lustful
+						}
+					}
+					trigger_event = deviantsgo_beast.9056
+				}
+			}	
+		}
+	} 	
+	# Obey to his urge.
+	option = {
+		trigger = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 63
+			}
+		}
+		name = deviantsgo_beast.9050.f
+		custom_tooltip = deviantsgo_beast.9050.f.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9057
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.9058
+				}
+			}	
+		}
+	} 			
+}
+
+# 9051 if endure it
+deviantsgo_beast.9051 = { 
+	type = character_event
+	title = deviantsgo_beast.9051.t
+	desc = deviantsgo_beast.9051.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9051.a
+		custom_tooltip = deviantsgo_beast.9051.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 5
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 1
+			}
+        }
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 7
+			}
+		}
+		add_prestige = -15
+	} 		 			
+}
+# 9052 if relent and she just watches/ is not lustful
+deviantsgo_beast.9052 = { 
+	type = character_event
+	title = deviantsgo_beast.9052.t
+	desc = deviantsgo_beast.9052.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9052.a
+		custom_tooltip = deviantsgo_beast.9052.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 10
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = 10
+		}
+		add_prestige = -10
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -10
+			}
+		}
+	} 		 			
+}
+
+# 9053 if relent and he is  lustful
+deviantsgo_beast.9053 = { 
+	type = character_event
+	title = deviantsgo_beast.9053.t
+	desc = deviantsgo_beast.9053.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = ecstasy
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9043.a
+		custom_tooltip = deviantsgo_beast.9043.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 10
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+		pay_short_term_gold = {
+			target = scope:deviant_go_random_1
+			gold = 20
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = amused_opinion
+				opinion = 10
+			}
+		}
+	} 		 			
+}
+
+# 9054 if call a servant
+deviantsgo_beast.9054 = { 
+	type = character_event
+	title = deviantsgo_beast.9054.t
+	desc = deviantsgo_beast.9054.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = scheme
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# pay the servant like you promised
+	option = {
+		name = deviantsgo_beast.9054.a
+		custom_tooltip = deviantsgo_beast.9054.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -1
+			}
+        }
+		remove_short_term_gold = minor_gold_value
+	} 		
+	# do not pay
+	option = {
+		name = deviantsgo_beast.9054.b
+		custom_tooltip = deviantsgo_beast.9054.b.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 4
+			}
+        }
+		add_prestige = minor_prestige_loss
+		add_piety = minor_piety_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = scared_opinion
+				opinion = 10
+			}
+		}
+	}  		
+	# make her dissapear before there is any trouble
+	option = {
+		name = deviantsgo_beast.9054.c
+		custom_tooltip = deviantsgo_beast.9054.c.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -2
+			}
+        }
+		add_dread = minor_dread_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = scared_opinion
+				opinion = 10
+			}
+		}
+	}  	
+	#make the owner pay
+	option = {
+		name = deviantsgo_beast.9054.d
+		custom_tooltip = deviantsgo_beast.9054.d.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -2
+			}
+        }
+		scope:deviant_go_random_1 = {
+			remove_short_term_gold = tiny_gold_value
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -20
+			}
+		}
+	}  
+}
+
+# 9055 if accept it but he not lustful
+deviantsgo_beast.9055 = { 
+	type = character_event
+	title = deviantsgo_beast.9055.t
+	desc = deviantsgo_beast.9055.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9055.a
+		custom_tooltip = deviantsgo_beast.9055.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 10
+			}
+        }
+		add_prestige = -7
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = 10
+			}
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -5
+			}
+		}
+	} 		 			
+}
+
+# 9056 if accept it but she lustful
+deviantsgo_beast.9056 = { 
+	type = character_event
+	title = deviantsgo_beast.9056.t
+	desc = deviantsgo_beast.9056.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9056.a
+		custom_tooltip = deviantsgo_beast.9056.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 3
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+		add_prestige = -5
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = flustered_opinion
+				opinion = 10
+			}
+		}
+	} 		 			
+}
+
+# 9057 if accept it and she not get hard
+deviantsgo_beast.9057 = { 
+	type = character_event
+	title = deviantsgo_beast.9057.t
+	desc = deviantsgo_beast.9057.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = shock
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9057.a
+		custom_tooltip = deviantsgo_beast.9057.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 5
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+		add_prestige = -10
+		pay_short_term_gold = {
+				target = scope:deviant_go_random_1
+				gold = tiny_gold_value
+			}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -5
+			}
+		}
+	} 		 			
+}
+
+# 9058 if accept it and she get hard
+deviantsgo_beast.9058 = { 
+	type = character_event
+	title = deviantsgo_beast.9058.t
+	desc = deviantsgo_beast.9058.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9058.a
+		custom_tooltip = deviantsgo_beast.9058.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 1
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 3
+			}
+        }
+		add_prestige = -10
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = flustered_opinion
+				opinion = 10
+			}
+		}
+	} 		 			
+}
+
+# 9100 jealosy, see your pet fucking a dog
+deviantsgo_beast.9100 = { 
+	type = character_event
+	title = deviantsgo_beast.9100.t
+	desc = deviantsgo_beast.9100.a.desc
+	override_background = { reference =	courtyard }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 63
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 63
+			}
+		}
+	}
+	# Endure it.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value < 90
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value < 90
+				}
+			}
+		}
+		name = deviantsgo_beast.9100.a
+		custom_tooltip = deviantsgo_beast.9100.a.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9101
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.9102
+				}
+			}	
+		}
+	} 		
+	# Compete for his affection.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value < 90
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value < 90
+				}
+			}
+		}
+		name = deviantsgo_beast.9100.b
+		custom_tooltip = deviantsgo_beast.9100.b.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9103
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.9104
+				}
+			}	
+		}
+	}  		
+	# Laugh it off.
+	option = {
+		name = deviantsgo_beast.9100.c
+		custom_tooltip = deviantsgo_beast.9100.c.tt
+		stress_impact = {
+            base = medium_stress_impact_gain
+        }
+	}  	
+	# Affectionately Accept it.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value >= 90
+				}
+			}
+		}
+		name = deviantsgo_beast.9100.d
+		custom_tooltip = deviantsgo_beast.9100.d.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9105
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.9106
+				}
+			}	
+		}
+	}  
+
+	# Worship your master.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value >= 90
+				}
+			}
+		}
+		name = deviantsgo_beast.9100.e
+		custom_tooltip = deviantsgo_beast.9100.e.tt
+		trigger_event = deviantsgo_beast.9107
+	} 
+}
+
+deviantsgo_beast.9101 = { 
+	type = character_event
+	title = deviantsgo_beast.9101.t
+	desc = deviantsgo_beast.9101.a.desc
+	override_background = { reference =	courtyard }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = boredom
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9101.a
+		custom_tooltip = deviantsgo_beast.9101.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = -2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -2
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = -2
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9102 = { 
+	type = character_event
+	title = deviantsgo_beast.9102.t
+	desc = deviantsgo_beast.9102.a.desc
+	override_background = { reference =	courtyard }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = anger
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9102.a
+		custom_tooltip = deviantsgo_beast.9102.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = -2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = -2
+			}
+        }
+		every_courtier_or_guest = {
+			custom = all_courtiers_and_guests
+			add_opinion = {
+				opinion = -1
+				target = root
+				modifier = suspicion_opinion
+			}
+		}
+	} 		
+}
+
+deviantsgo_beast.9103 = { 
+	type = character_event
+	title = deviantsgo_beast.9103.t
+	desc = deviantsgo_beast.9103.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9103.a
+		custom_tooltip = deviantsgo_beast.9103.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 2
+			}
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 2
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9104 = { 
+	type = character_event
+	title = deviantsgo_beast.9104.t
+	desc = deviantsgo_beast.9104.a.desc
+	override_background = { reference =	deviantdoggyoral}
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9104.a
+		custom_tooltip = deviantsgo_beast.9104.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = 2
+			}
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value = 4
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9105 = { 
+	type = character_event
+	title = deviantsgo_beast.9105.t
+	desc = deviantsgo_beast.9105.a.desc
+	override_background = { reference =	courtyard }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = admiration
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9105.a
+		custom_tooltip = deviantsgo_beast.9105.a.tt
+		hidden_effect = {
+            add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value = 4
+			}
+        }
+		remove_short_term_gold = 2
+	} 		
+}
+
+deviantsgo_beast.9106 = { 
+	type = character_event
+	title = deviantsgo_beast.9106.t
+	desc = deviantsgo_beast.9106.a.desc
+	override_background = { reference =	courtyard }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = throne_room_kneel_2
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9106.a
+		custom_tooltip = deviantsgo_beast.9106.a.tt
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value = 3
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_exposure_fame
+					value = 2
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value = 1
+				}
+			}
+        }
+		remove_short_term_gold = 2
+	} 		
+}
+
+deviantsgo_beast.9107 = { 
+	type = character_event
+	title = deviantsgo_beast.9107.t
+	desc = deviantsgo_beast.9107.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9107.a
+		custom_tooltip = deviantsgo_beast.9107.a.tt
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_exposure_fame
+					value = 3
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value = 4
+				}
+			}
+        }
+	} 		
+}
+
+# 9120 wake up to dog fuck
+deviantsgo_beast.9120 = { 
+	type = character_event
+	title = deviantsgo_beast.9120.t
+	desc = deviantsgo_beast.9120.a.desc
+	override_background = { reference =	deviantdoggyvagfuck }
+	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		OR = {
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_lover_fame_three
+				value >= 76
+			}
+			has_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_sub_fame
+				value >= 76
+			}
+		}
+	}
+	# Endure it.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value < 90
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value < 90
+				}
+			}
+		}
+		name = deviantsgo_beast.9120.a
+		custom_tooltip = deviantsgo_beast.9120.a.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9121
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.9122
+				}
+			}	
+		}
+	} 		
+	# Pleasure him.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value < 90
+				}
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value < 90
+				}
+			}
+		}
+		name = deviantsgo_beast.9120.b
+		custom_tooltip = deviantsgo_beast.9120.b.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9123
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.9124
+				}
+			}	
+		}
+	}  		
+	# Push him off.
+	option = {
+		name = deviantsgo_beast.9120.c
+		custom_tooltip = deviantsgo_beast.9120.c.tt
+		hidden_effect = {
+			random_list = {
+				70 = {
+					trigger_event = deviantsgo_beast.9125
+				}
+				30 = {
+					trigger_event = deviantsgo_beast.9126
+				}
+			}	
+		}
+		
+	}  	
+	# Affectionately Accept it.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value >= 90
+				}
+			}
+		}
+		name = deviantsgo_beast.9120.d
+		custom_tooltip = deviantsgo_beast.9120.d.tt
+		hidden_effect = {
+			random_list = {
+				70 = {
+					trigger_event = deviantsgo_beast.9127
+				}
+				30 = {
+					trigger_event = deviantsgo_beast.9128
+				}
+			}	
+		}
+	}  
+
+	# Obediently serve.
+	option = {
+		trigger = {
+			OR = {
+				has_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value >= 90
+				}
+			}
+		}
+		name = deviantsgo_beast.9100.e
+		custom_tooltip = deviantsgo_beast.9100.e.tt
+		hidden_effect = {
+			random_list = {
+				70 = {
+					trigger_event = deviantsgo_beast.9129
+				}
+				30 = {
+					trigger_event = deviantsgo_beast.9130
+				}
+			}	
+		}
+	} 
+}
+
+deviantsgo_beast.9121 = { 
+	type = character_event
+	title = deviantsgo_beast.9121.t
+	desc = deviantsgo_beast.9121.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9121.a
+		custom_tooltip = deviantsgo_beast.9121.a.tt
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value = 4
+				}
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9122 = { 
+	type = character_event
+	title = deviantsgo_beast.9122.t
+	desc = deviantsgo_beast.9122.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9122.a
+		custom_tooltip = deviantsgo_beast.9122.a.tt
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_exposure_fame
+					value = 3
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value = 2
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value = 3
+				}
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9123 = { 
+	type = character_event
+	title = deviantsgo_beast.9123.t
+	desc = deviantsgo_beast.9123.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9123.a
+		custom_tooltip = deviantsgo_beast.9123.a.tt
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value = 2
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value = 2
+				}
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9124 = { 
+	type = character_event
+	title = deviantsgo_beast.9124.t
+	desc = deviantsgo_beast.9124.a.desc
+	override_background = { reference =	deviantdoggyoral }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9124.a
+		custom_tooltip = deviantsgo_beast.9124.a.tt
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value = 1
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value = 3
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_exposure_fame
+					value = 1
+				}
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9125 = { 
+	type = character_event
+	title = deviantsgo_beast.9125.t
+	desc = deviantsgo_beast.9125.a.desc
+	override_background = { reference =	bedchamber }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = anger
+		outfit_tags = { nightgown }
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9125.a
+		custom_tooltip = deviantsgo_beast.9125.a.tt
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_exposure_fame
+					value = -3
+				}
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9126 = { 
+	type = character_event
+	title = deviantsgo_beast.9126.t
+	desc = deviantsgo_beast.9126.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9126.a
+		custom_tooltip = deviantsgo_beast.9126.a.tt
+		add_prestige = -5
+		remove_short_term_gold = 3
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_exposure_fame
+					value = 3
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value = -2
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value = 3
+				}
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9127 = { 
+	type = character_event
+	title = deviantsgo_beast.9127.t
+	desc = deviantsgo_beast.9127.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9127.a
+		custom_tooltip = deviantsgo_beast.9127.a.tt
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_exposure_fame
+					value = 3
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value = 4
+				}
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9128 = { 
+	type = character_event
+	title = deviantsgo_beast.9128.t
+	desc = deviantsgo_beast.9128.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9128.a
+		custom_tooltip = deviantsgo_beast.9128.a.tt
+		remove_short_term_gold = tiny_gold_value
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_exposure_fame
+					value = 4
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_lover_fame_three
+					value = 4
+				}
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9129 = { 
+	type = character_event
+	title = deviantsgo_beast.9129.t
+	desc = deviantsgo_beast.9129.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9129.a
+		custom_tooltip = deviantsgo_beast.9129.a.tt
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_exposure_fame
+					value = 3
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value = 4
+				}
+			}
+        }
+	} 		
+}
+
+deviantsgo_beast.9130 = { 
+	type = character_event
+	title = deviantsgo_beast.9130.t
+	desc = deviantsgo_beast.9130.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9130.a
+		custom_tooltip = deviantsgo_beast.9130.a.tt
+		hidden_effect = {
+            hidden_effect = {
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_exposure_fame
+					value = 5
+				}
+				add_trait_xp = {
+					trait = deviants_canine_lover_three
+					track = deviant_canine_sub_fame
+					value = 4
+				}
+			}
+        }
+	} 		
+}
+
+################ 100 sus, male courtier suggestion #####################
+deviantsgo_beast.9140 = { 
+	type = character_event
+	title = deviantsgo_beast.9140.t
+	desc = deviantsgo_beast.9140.a.desc
+	override_background = { reference =	corridor_day }
+	cooldown = { years = 1 }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait_xp = {
+			trait = deviants_canine_lover_three
+			track = deviant_canine_exposure_fame
+			value >= 100
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = no
+			OR = {	
+				has_trait = sadistic
+				has_trait = lustful
+				has_trait = wrathful
+				has_trait = ambitious
+				has_trait = vengeful
+				has_trait = callous
+				has_trait = deceitful
+			}
+		}
+	}
+	immediate = {
+		random_courtier = {
+			save_scope_as = deviant_go_random_1
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+				is_female = no
+				OR = {	
+					has_trait = sadistic
+					has_trait = lustful
+					has_trait = wrathful
+					has_trait = ambitious
+					has_trait = vengeful
+					has_trait = callous
+					has_trait = deceitful
+				}
+			}
+		}	
+	}
+	# Accept the proposal.
+	option = {
+		name = deviantsgo_beast.9140.a
+		custom_tooltip = deviantsgo_beast.9140.a.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9141
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.9142
+				}
+			}	
+		}
+	} 		 
+	# propose just him
+	option = {
+		name = deviantsgo_beast.9140.b
+		custom_tooltip = deviantsgo_beast.9140.b.tt
+		hidden_effect = {
+			random_list = {
+				70 = {
+					trigger_event = deviantsgo_beast.9143
+				}
+				30 = {
+					trigger_event = deviantsgo_beast.9144
+				}
+			}	
+		}
+	} 	
+	# Decline his proposal.
+	option = {
+		name = deviantsgo_beast.9140.c
+		custom_tooltip = deviantsgo_beast.9140.c.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}	
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -2
+			}
+		}	
+	} 	
+	# have him flogged
+	option = {
+		name = deviantsgo_beast.9140.d
+		custom_tooltip = deviantsgo_beast.9140.d.tt
+		add_dread = minor_dread_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -40
+			}
+			add_trait = wounded_1
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -10
+			}
+		}
+	} 			
+}
+
+deviantsgo_beast.9141 = { 
+	type = character_event
+	title = deviantsgo_beast.9141.t
+	desc = deviantsgo_beast.9141.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9141.a
+		custom_tooltip = deviantsgo_beast.9141.a.tt
+		add_prestige = minor_prestige_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+			}
+		}
+	} 		
+}
+
+deviantsgo_beast.9142 = { 
+	type = character_event
+	title = deviantsgo_beast.9142.t
+	desc = deviantsgo_beast.9142.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9142.a
+		custom_tooltip = deviantsgo_beast.9142.a.tt
+		add_prestige = minor_prestige_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = minor_gold_value
+			}
+			stress_impact = {
+				base = major_stress_impact_loss
+				lustful = minor_stress_impact_loss
+			}
+		}
+	} 		
+}
+
+deviantsgo_beast.9143 = { 
+	type = character_event
+	title = deviantsgo_beast.9143.t
+	desc = deviantsgo_beast.9143.a.desc
+	override_background = { reference =	deviantvaginalcreampie }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9143.a
+		custom_tooltip = deviantsgo_beast.9143.a.tt
+		add_prestige = minor_prestige_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = medium_stress_impact_loss
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -4
+			}
+		}	
+	} 		
+}
+
+deviantsgo_beast.9144 = { 
+	type = character_event
+	title = deviantsgo_beast.9144.t
+	desc = deviantsgo_beast.9144.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = anger
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9144.a
+		custom_tooltip = deviantsgo_beast.9144.a.tt
+		add_piety = minor_piety_loss
+		add_prestige = minor_prestige_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -30
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -8
+			}
+		}	
+	} 		
+}
+
+#100 sus, female courtier suggestion
+deviantsgo_beast.9150 = { 
+	type = character_event
+	title = deviantsgo_beast.9150.t
+	desc = deviantsgo_beast.9150.a.desc
+	override_background = { reference =	corridor_day }
+	cooldown = { years = 1 }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait_xp = {
+			trait = deviants_canine_lover_three
+			track = deviant_canine_exposure_fame
+			value >= 100
+		}
+		any_courtier = {
+			is_available_ai_adult = yes
+			age >= 18
+			is_female = yes
+			OR = {	
+				has_trait = sadistic
+				has_trait = lustful
+				has_trait = wrathful
+				has_trait = ambitious
+				has_trait = vengeful
+				has_trait = callous
+				has_trait = deceitful
+			}
+		}
+	}
+	immediate = {
+		random_courtier = {
+			save_scope_as = deviant_go_random_1
+			limit = {
+				is_available_ai_adult = yes
+				age >= 18
+				is_female = yes
+				OR = {	
+					has_trait = sadistic
+					has_trait = lustful
+					has_trait = wrathful
+					has_trait = ambitious
+					has_trait = vengeful
+					has_trait = callous
+					has_trait = deceitful
+				}
+			}
+		}	
+	}
+	# Accept the proposal.
+	option = {
+		name = deviantsgo_beast.9150.a
+		custom_tooltip = deviantsgo_beast.9150.a.tt
+		hidden_effect = {
+			random_list = {
+				50 = {
+					trigger_event = deviantsgo_beast.9151
+				}
+				50 = {
+					trigger_event = deviantsgo_beast.9152
+				}
+			}	
+		}
+	} 		 
+	# propose just him
+	option = {
+		name = deviantsgo_beast.9150.b
+		custom_tooltip = deviantsgo_beast.9150.b.tt
+		hidden_effect = {
+			random_list = {
+				70 = {
+					trigger_event = deviantsgo_beast.9153
+				}
+				30 = {
+					trigger_event = deviantsgo_beast.9154
+				}
+			}	
+		}
+	} 	
+	# Decline her proposal.
+	option = {
+		name = deviantsgo_beast.9150.c
+		custom_tooltip = deviantsgo_beast.9150.c.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+		}	
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -2
+			}
+		}	
+	} 	
+	# have her flogged
+	option = {
+		name = deviantsgo_beast.9150.d
+		custom_tooltip = deviantsgo_beast.9150.d.tt
+		add_dread = minor_dread_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -40
+			}
+			add_trait = wounded_1
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -10
+			}
+		}
+	} 			
+}
+
+deviantsgo_beast.9151 = { 
+	type = character_event
+	title = deviantsgo_beast.9151.t
+	desc = deviantsgo_beast.9151.a.desc
+	override_background = { reference =	deviantdoggyvagfuckcum }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9151.a
+		custom_tooltip = deviantsgo_beast.9151.a.tt
+		add_prestige = minor_prestige_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = minor_stress_impact_loss
+			}
+		}
+	} 		
+}
+
+deviantsgo_beast.9152 = { 
+	type = character_event
+	title = deviantsgo_beast.9152.t
+	desc = deviantsgo_beast.9152.a.desc
+	override_background = { reference =	deviantdoggyvagfuck }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9152.a
+		custom_tooltip = deviantsgo_beast.9152.a.tt
+		add_prestige = minor_prestige_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 40
+			}
+		}
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = minor_gold_value
+			}
+			stress_impact = {
+				base = major_stress_impact_loss
+				lustful = minor_stress_impact_loss
+			}
+		}
+	} 		
+}
+
+deviantsgo_beast.9153 = { 
+	type = character_event
+	title = deviantsgo_beast.9153.t
+	desc = deviantsgo_beast.9153.a.desc
+	override_background = { reference =	deviantssixtyninewomen }
+	theme = deviantsmaskgo 
+	# 
+	option = {
+		name = deviantsgo_beast.9153.a
+		custom_tooltip = deviantsgo_beast.9153.a.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}
+		scope:deviant_go_random_1 = {
+			pay_short_term_gold = {
+				target = root
+				gold = tiny_gold_value
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lustful = medium_stress_impact_loss
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -10
+			}
+		}	
+	} 		
+}
+
+deviantsgo_beast.9154 = { 
+	type = character_event
+	title = deviantsgo_beast.9154.t
+	desc = deviantsgo_beast.9154.a.desc
+	override_background = { reference =	corridor_day }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = shock
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = anger
+	}
+	# 
+	option = {
+		name = deviantsgo_beast.9154.a
+		custom_tooltip = deviantsgo_beast.9154.a.tt
+		add_piety = minor_piety_loss
+		add_prestige = minor_prestige_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disgusted_opinion
+				opinion = -30
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_canine_lover_three
+				track = deviant_canine_exposure_fame
+				value = -4
+			}
+		}	
+	} 		
+}

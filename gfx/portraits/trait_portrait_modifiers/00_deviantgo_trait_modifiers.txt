@@ -1,0 +1,20 @@
+﻿deviants_strangejester = {
+	deviants_strangejester = {
+		traits = { deviants_strangejester }
+		dna_modifiers = {
+			color = {
+				gene = skin_color
+				mode = modify
+				
+				x = -1.0
+				y = -1.0
+			}
+            morph = {
+				mode = replace
+				gene = complexion
+				template = complexion_beauty_1
+				value = 1.0
+			}
+		}
+	}
+}

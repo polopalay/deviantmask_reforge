@@ -1,0 +1,606 @@
+﻿deviantgo_jesterfemale = {
+	age = { 18 20 }
+	gender_female_chance = 100
+	culture = root.culture
+	faith = root.faith
+	dynasty = none
+	random_traits = no
+
+	#Education
+	random_traits_list = {
+		count = 1
+		education_intrigue_2  = {}
+		education_intrigue_3  = {}
+		education_intrigue_4  = {}
+	}
+	#Personality trait 1 (main)
+	random_traits_list = {
+		count = 1
+		lustful = {}
+	}
+	#Personality trait 2
+	random_traits_list = {
+		count = 2
+		deceitful = {}
+		brave = {}
+		ambitious = {}
+		gluttonous = {}
+		greedy = {}
+		generous = {}
+		lazy = {}
+		diligent = {}
+		impatient = {}
+		honest = {}
+		arbitrary = {}
+		just = {}
+		paranoid = {}
+		trusting = {}
+		compassionate = {}
+		stubborn = {}
+		fickle = {}
+		forgiving = {}
+	}
+    diplomacy = {
+		min_template_average_skill
+		max_template_medium_skill
+	}
+    after_creation = {
+		add_character_flag = jester_flag
+        add_trait = deviants_strangejester
+		add_secret = { type = secret_deviant }
+		set_sexuality = bisexual
+	}
+}
+
+deviantgo_hornypeasantfemale = {
+	age = { 18 20 }
+	gender_female_chance = 100
+	culture = root.culture
+	faith = root.faith
+	dynasty = none
+	random_traits = no
+
+	#Personality trait 1 (main)
+	random_traits_list = {
+		count = 1
+		lustful = {}
+	}
+	#Personality trait 2
+	random_traits_list = {
+		count = 2
+		gluttonous = {}
+		generous = {}
+		diligent = {}
+		honest = {}
+		arbitrary = {}
+		paranoid = {}
+		trusting = {}
+		compassionate = {}
+		stubborn = {}
+		fickle = {}
+		forgiving = {}
+	}
+    after_creation = {
+        add_trait = beauty_good_1
+		set_sexuality = bisexual
+	}
+}
+
+deviant_physician_character_template = {
+	age = { 19 30 }
+	faith = root.faith
+	culture = root.culture
+	gender_female_chance = 100
+	random_traits = no
+
+	#Personality trait 1 (main)
+	random_traits_list = {
+		count = 1
+		lustful = {}
+	}
+	#Personality trait 2
+	random_traits_list = {
+		count = 2
+		gluttonous = {}
+		temperate = {}
+		greedy = {}
+		generous = {}
+		diligent = {}
+		wrathful = {}
+		calm = {}
+		patient = {}
+		impatient = {}
+		arrogant = {}
+		humble = {}
+		deceitful = {}
+		honest = {}
+		brave = {}
+		shy = {}
+		gregarious = {}
+		ambitious = {}
+		content = {}
+		arbitrary = {}
+		just = {}
+		cynical = {}
+		zealous = {}
+		paranoid = {}
+		trusting = {}
+		compassionate = {}
+		callous = {}
+		sadistic = {}
+		stubborn = {}
+		fickle = {}
+		vengeful = {}
+		forgiving = {}
+	}
+	# education Traits
+	random_traits_list = {
+		count = 1
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	trait = lifestyle_physician
+
+	# set beauty Traits 1
+	random_traits_list = {
+		count = 1
+		beauty_good_1 = {}
+		beauty_good_2 = {}
+		beauty_good_3 = {}
+	}
+	# issue 1
+	random_traits_list = {
+		count = 1
+		blind = {}
+		albino = {}
+		stuttering = {}
+		drunkard = {}
+		reclusive = {}
+		irritable = {}
+		contrite = {}
+	}
+	# Skills
+	learning = {
+		min_template_medium_skill
+		max_template_high_skill
+	}
+
+	after_creation = {
+		add_trait_xp = {
+			trait = lifestyle_physician
+			value = {
+				medium_lifestyle_random_xp_high
+				100
+			}
+		}
+		add_trait = deviants_seed_alchemist
+	}
+}
+
+#random witch female
+deviant_witch_character_template = {
+	age = { 19 30 }
+	faith = root.faith
+	culture = root.culture
+	gender_female_chance = 100
+	random_traits = no
+
+	#Personality trait 3
+	random_traits_list = {
+		count = 3
+		lustful = {}
+		gluttonous = {}
+		temperate = {}
+		greedy = {}
+		generous = {}
+		diligent = {}
+		wrathful = {}
+		calm = {}
+		patient = {}
+		impatient = {}
+		arrogant = {}
+		humble = {}
+		deceitful = {}
+		honest = {}
+		brave = {}
+		shy = {}
+		gregarious = {}
+		ambitious = {}
+		content = {}
+		arbitrary = {}
+		just = {}
+		cynical = {}
+		zealous = {}
+		paranoid = {}
+		trusting = {}
+		compassionate = {}
+		callous = {}
+		sadistic = {}
+		stubborn = {}
+		fickle = {}
+		vengeful = {}
+		forgiving = {}
+	}
+	# education Traits
+	random_traits_list = {
+		count = 1
+		education_intrigue_3  = {}
+		education_intrigue_4  = {}
+		education_learning_2  = {}
+		education_learning_3  = {}
+		education_learning_4  = {}
+		education_diplomacy_3  = {}
+		education_diplomacy_4  = {}
+		education_stewardship_3 = {}
+		education_stewardship_4 = {}
+		education_learning_2 = {}
+		education_learning_3 = {}
+	}
+
+	martial = {
+		min_template_low_skill
+		max_template_high_skill
+	}
+	stewardship = {
+		min_template_low_skill
+		max_template_high_skill
+	}
+	diplomacy = {
+		min_template_low_skill
+		max_template_high_skill
+	}
+	intrigue = {
+		min_template_low_skill
+		max_template_high_skill
+	}
+	learning = {
+		min_template_low_skill
+		max_template_high_skill
+	}
+
+	# set beauty or int Traits 1
+	random_traits_list = {
+		count = 1
+		beauty_good_1 = {}
+		beauty_good_2 = {}
+		beauty_good_3 = {}
+		intellect_good_1 = {}
+		intellect_good_2 = {}
+		intellect_good_3 = {}
+		beauty_bad_1 = {}
+		beauty_bad_2 = {}
+		beauty_bad_3 = {}
+	}
+	# issue 1
+	random_traits_list = {
+		count = 1
+		blind = {}
+		albino = {}
+		stuttering = {}
+		drunkard = {}
+		reclusive = {}
+		irritable = {}
+		contrite = {}
+		shrewd  = {}
+		fecund = {}
+		dwarf = {}
+		giant = {}
+		bleeder = {}
+		lunatic_1 = {}
+		possessed_1 = {}
+		lifestyle_herbalist = {}
+		schemer = {}
+		seducer = {}
+		torturer = {}
+		whole_of_body = {}
+		scholar = {}
+	}
+
+	after_creation = {
+		add_trait = witch
+	}
+}
+
+
+deviants_merchant_template = {
+	age = { 20 40 }
+	random_traits_list = {
+		count = 1
+		education_stewardship_1 = {}
+		education_stewardship_2 = {}
+		education_stewardship_3 = {}
+		education_stewardship_4 = {}
+	}
+	dynasty = none
+	random_traits = yes
+	faith = this.faith
+	culture = this.culture
+	stewardship = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	prowess = { 2 10 }
+	martial = { 2 10 }
+	diplomacy = { 5 13 }
+	learning = { 5 13 }
+}
+
+deviant_bandit_character = {
+	age = { 20 40 }
+	random_traits = no
+	dynasty = none
+	faith = root.location.county.holder.faith
+	culture = root.location.culture
+	random_traits_list = {
+		count = 1
+		education_martial_1 = { weight = { base = 50 } }
+		education_martial_2 = { weight = { base = 20 } }
+		education_martial_3 = { weight = { base = 5 } }
+	}
+	random_traits_list = {
+		count = 2
+		ambitious = {}
+		gregarious = {}
+		impatient = {}
+		wrathful = {}
+		callous = {}
+		stubborn = {}
+		vengeful = {}
+		greedy = {}
+		zealous = {}
+		lazy = {}
+		deceitful = {}
+		arrogant = {}
+		gluttonous = {}
+	}
+	random_traits_list = {
+		count = 1
+		intellect_bad_1 = { weight = { base = 10 } }
+		intellect_bad_2 = { weight = { base = 10 } }
+		physique_good_1 = { weight = { base = 5 } }
+		physique_good_2 = { weight = { base = 5 } }
+		strong = { weight = { base = 5 } }
+		giant = { weight = { base = 5 } }
+		reckless = { weight = { base = 20 } }
+		rough_terrain_expert = { weight = { base = 20 } }
+		unyielding_defender = { weight = { base = 10 } }
+		flexible_leader = { weight = { base = 10 } }
+		forder = { weight = { base = 10 } }
+		tourney_participant = { weight = { base = 20 } }
+	}
+	martial = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+	after_creation = {
+		random_list = {
+			10 = {}
+			10 = {
+				add_random_tiered_trait_track_xp_effect = {
+					TRAIT = tourney_participant
+					TRACK = horse
+					LEVEL_1 = yes
+					LEVEL_3 = no
+				}
+			}
+			10 = {
+				add_random_tiered_trait_track_xp_effect = {
+					TRAIT = tourney_participant
+					TRACK = bow
+					LEVEL_1 = yes
+					LEVEL_3 = no
+				}
+			}
+		}
+	}
+}
+
+deviant_giantbandit_character_template = {
+	age = { 20 40 }
+	random_traits = no
+	dynasty = none
+	faith = root.location.county.holder.faith
+	culture = root.location.culture
+	random_traits_list = {
+		count = 1
+		education_martial_1 = { weight = { base = 50 } }
+		education_martial_2 = { weight = { base = 20 } }
+		education_martial_3 = { weight = { base = 5 } }
+	}
+	#Personality trait 1 (main)
+	random_traits_list = {
+		count = 1
+		sadistic = {}
+	}
+
+	
+
+	random_traits_list = {
+		count = 2
+		ambitious = {}
+		gregarious = {}
+		impatient = {}
+		wrathful = {}
+		stubborn = {}
+		vengeful = {}
+		greedy = {}
+		zealous = {}
+		lazy = {}
+		deceitful = {}
+		arrogant = {}
+		gluttonous = {}
+		lustful = {}
+	}
+	random_traits_list = {
+		count = 2
+		giant = {}
+		strong = {}
+	}
+	random_traits_list = {
+		count = 3
+		intellect_bad_1 = { weight = { base = 30 } }
+		intellect_bad_2 = { weight = { base = 20 } }
+		intellect_bad_3 = { weight = { base = 10 } }
+		physique_good_1 = { weight = { base = 5 } }
+		physique_good_2 = { weight = { base = 5 } }
+		one_eyed = { weight = { base = 30 } }
+		disfigured = { weight = { base = 20 } }
+		beauty_bad_1 = { weight = { base = 30 } }
+		beauty_bad_2 = { weight = { base = 20 } }
+		beauty_bad_3 = { weight = { base = 10 } }
+		reckless = { weight = { base = 20 } }
+		rough_terrain_expert = { weight = { base = 20 } }
+		unyielding_defender = { weight = { base = 10 } }
+		flexible_leader = { weight = { base = 10 } }
+		forder = { weight = { base = 10 } }
+		scarred = { weight = { base = 20 } }
+		inbred = { weight = { base = 20 } }
+		dull = { weight = { base = 20 } }
+		scaly = { weight = { base = 20 } }
+		infertile = { weight = { base = 20 } }
+		drunkard = { weight = { base = 20 } }
+		albino = { weight = { base = 20 } }
+		lunatic_1 = { weight = { base = 20 } } 
+		possessed_1 = { weight = { base = 20 } } 
+		torturer = { weight = { base = 20 } } 
+		irritable = { weight = { base = 20 } } 
+		fecund = { weight = { base = 20 } } 
+	}
+	martial = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+}
+
+deviant_humble_assistant_template = {
+	age = { 20 22}
+	gender_female_chance = 100
+	random_traits = no
+
+	name = deviant_humble_assistant
+
+	#Personality trait 3 (main)
+	random_traits_list = {
+		count = 3
+		sadistic = {}
+		lustful = {}
+		humble = {}
+	}
+	# education Traits
+	random_traits_list = {
+		count = 1
+		education_intrigue_4 = {}
+	}
+
+	# set beauty Traits 1
+	random_traits_list = {
+		count = 1
+		beauty_good_3 = {}
+	}
+	# Skills
+	intrigue = {
+		min_template_medium_skill
+		max_template_high_skill
+	}
+	after_creation = {
+		add_trait = deviants_humble_assistant
+	}
+}
+
+deviants_theowner_template = {
+	age = { 30 40 }
+	gender_female_chance = 0
+	random_traits = no
+
+	name = deviant_the_owner
+	dynasty = none
+	faith = this.faith
+	culture = this.culture
+		random_traits_list = {
+		count = 1
+		education_stewardship_4 = {}
+	}
+	stewardship = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+		#Personality trait 3 (main)
+	random_traits_list = {
+		count = 3
+		greedy = {}
+		wrathful = {}
+		humble = {}
+	}
+}
+
+deviants_unknownman_template = {
+	age = { 20 60 }
+	gender_female_chance = 0
+	random_traits = yes
+
+	name = deviant_the_unknown_man
+	dynasty = none
+	faith = this.faith
+	culture = this.culture
+}
+
+deviants_unknownservant_template = {
+	age = { 20 60 }
+	gender_female_chance = 0
+	random_traits = yes
+
+	name = deviant_the_unknown_servant
+	dynasty = none
+	faith = this.faith
+	culture = this.culture
+}
+
+deviants_unknownbandit_template = {
+	age = { 20 60 }
+	gender_female_chance = 0
+	random_traits = yes
+
+	name = deviant_the_bandit
+	dynasty = none
+	faith = this.faith
+	culture = this.culture
+}
+
+deviants_unknowglorynman_template = {
+	age = { 20 60 }
+	gender_female_chance = 0
+	random_traits = yes
+
+	name = deviant_the_glory
+	dynasty = none
+	faith = this.faith
+	culture = this.culture
+}
+
+deviants_unknowstreetman_template = {
+	age = { 20 60 }
+	gender_female_chance = 0
+	random_traits = yes
+
+	name = deviant_the_street
+	dynasty = none
+	faith = this.faith
+	culture = this.culture
+}
+
+deviants_one_of_your_men_at_arms_template = {
+	age = { 20 60 }
+	gender_female_chance = 0
+	random_traits = yes
+	random_traits_list = {
+		count = 1
+		education_martial_1 = { weight = { base = 50 } }
+		education_martial_2 = { weight = { base = 20 } }
+		education_martial_3 = { weight = { base = 5 } }
+	}
+
+	name = deviant_one_of_your_men_at_arms
+	dynasty = none
+	faith = this.faith
+	culture = this.culture
+}

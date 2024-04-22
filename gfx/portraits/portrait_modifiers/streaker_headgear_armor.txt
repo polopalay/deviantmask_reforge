@@ -1,0 +1,22 @@
+﻿
+#add the mask using a weird trick, not sure if optimal but works for now
+headgear_streak_modifier = {
+    usage = game
+    headgear_streak_modifier = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = special_headgear_face_mask
+                template = face_mask
+                value = 1.0
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                has_character_flag = headgear_streak_modifier
+            }
+        }
+    }
+}

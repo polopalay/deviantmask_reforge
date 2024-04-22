@@ -1,0 +1,11 @@
+﻿deviantsmaskgo = {
+	icon = {
+		reference = "gfx/interface/icons/event_types/deviants_mask_eventicon.dds"
+	}
+	sound = {
+		reference = "event:/SFX/Events/Themes/sfx_event_theme_type_seduction"
+	}
+	background = {
+		reference = sitting_room
+	}
+}

@@ -1,0 +1,6 @@
+﻿deviant_refused_whore = {
+	opinion = -50
+	decaying = yes
+	years = 5
+	imprisonment_reason = yes
+}

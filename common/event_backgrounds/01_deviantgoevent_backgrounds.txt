@@ -1,0 +1,1370 @@
+﻿deviantgoorgy = {
+	background = {
+		reference = "gfx/interface/illustrations/activity_backgrounds/deviantorgyroombackground.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantlibrarybackground = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviant_dream_library.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbattlefieldbackground = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviant_dream_battle.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantmerchantroombackground = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviants_merchant_room.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantblackmarketbackground = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviant_black_market.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsvaginalone = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviants_vaginal_one.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantscockpose = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdickpose.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantpilloryfuckpussy = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/devianpilloryfuckpussyonebackground.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantvaginalcreampie = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantvaginalcreampie.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantasspresent = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantpresentass.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantanalcreampie = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/bottomonstamchanalfuckcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantanalfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/bottomonstamchanalfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+deviantanalfuckfist = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/bottomonstamchanalfuckfist.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbigshowtonight = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutdildoshow.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantpublichumiliationbondage = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/bondagehumiliationpublic.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantpublichumiliationbondagehereticwitch = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/bondagehumiliationpublichereticwitch.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantpublichumiliationbondagecartpull = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/humiliationcartpulsoldier.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantpublichumiliationbondagecartdisplay = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/humiliationcartslutondisplal.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+devianthumiliationpussyspread = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/humiliationpussyspreadpresent.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+devianthumiliationpussyspreadfuckfrombehindbreastgrope = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fuckfrombehindandpussygrope.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+devianthumiliationpussyspreadgropedbymenleakingcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/humiliationpussyspreadpresentcumleakingwiththugs.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+devianthumiliationpracticeswordduel = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/humiloationbondageswordduel.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+devianthumiliationpracticesworddefeatbondagefuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/humiloationbondageswordanalfucktrain.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantpublichumiliatflutfuckcart = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/humiliationcartslutfuckcart.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantanaltrainhardfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutfuckanalslutcumtrain.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgroupgrope = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/groupgropezoom.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgroupgropejerkthighfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantgrouppussyjobjerk.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantpublichumiliationbondagefuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/humiliationbondagefuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantpublichumiliationbondagefreeuse = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/humiliationbondagepublicuse.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdildodisplaybox = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/stickdilodtablefuckbox.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantartexhibitdisplay = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantartexhibitbondage.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantartexhibitportraitbondage = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/humiliationfrontdoorbondage.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+groupbathinatubrub = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/groupbathtubrub.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbasicdildo = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviandildopussyonebackground.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbasicdildotwo = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantnewdildofucking.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbasicdildotwohandfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/tehthingvagfucktwohands.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbasicdildofuckontop = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/dildofuckontop.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbasicdildofuckbehind = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/dildorearfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+deviantbasicdildofuckshake = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/dildoshakefuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsvaginaldildocockfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantcockfuckdildofucking.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsvaginaltoppussyjob = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantvaginatoppussyjob.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantssuckballs = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantsuckballs.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsholdballsinpussy = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/holdingballsinpussy.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsdildocockfucktop = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/dilodcocktopvagfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbasicneckhold = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantbaseneckhold.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbasicpussypoledildo = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantpussypolebasic.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantassfuckpussypoledildo = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantpussypoleassfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdildostickstageshow = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdildostickstageshow.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdpgangbangbehindsandwitch = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/dpfuckcumsandwitch.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantleakingcumonfloor = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutleakingcumonthefloor.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbasicfisting = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantfistingbasic.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbasicfistingwomen = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantfistingbasicwomen.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantssixtyninewomen = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantssixtyninewomen.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantspeggingwomen = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/ffpeggingbehind.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbarrelbuckage = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantbarrelbukkake.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgroupbuckage = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantgroupbukkake.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgroupbuckagedildo = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantgroupbukkakedildo.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgroupbuckageselffisting = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/bukakeselffistinggroup.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+devianttentacleanal = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantrendetentacleass.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+devianttentaclevaginal = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantrendetentaclepussy.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+devianttentacleallin = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantrendetentacleallin.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantfootjobtease = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantfootjobtease.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantfootjobclimax = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantfootjobcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+devianthorsecockpose = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/devianthorsecockpose.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+devianthorsecockfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/devianthorsefuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+devianthorsecockcreampie = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/devianthorsefuckcreampie.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+dreamthingmanifests = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/thedeviantthingcomes.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+dreamthingpussyfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/thedeviantthingpussyfucktop.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+dreamthingassfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/tehthingassfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+dreamthingbirthing = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/birthingdreamthings.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsemenbath = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantsemenbathbang.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantvaginafacesitlick = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/vaginafacesitlick.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantslapfacewithcock = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantcockface.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsuckcock = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantcockfacesuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantcumonfacewithcock = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantcockfacecum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgrouptablegrope = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/devianttablegroupgropeglisten.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgrouptablefuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/devianttableanalfuckcumkerkgangbang.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantlineofnudewomen = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantlineofwomen.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantlineofnudewomenfuckingdildos = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/lineofwomenfuckingdildos.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantnakedwaitressgrope = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/barwatriressnudegroipe.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdoggyvagfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdoggyvagfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdoggycockpose = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdoggycockpose.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdoggyvagfuckcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdoggyvagfuckcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdoggyoral = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdoggyoral.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+deviantdoggyoralonfacecum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdoggyoralonfacecum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdoggyffdogthreesome = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantffdogthreesome.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgiantanalcowgirl = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/giantlapanalcowgirl.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+deviantgiantanalcarrycreampie = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/giantanalcarrycum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgiantanalstrangledoggy = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/giantanalstrangledoggu.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgiantvaginalstrangledoggycum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantvagfuckcumstranglefront.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgiananalspitroastcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantgangbanganalcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantvaginalrideholdcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantcumrideholdvaginal.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantlikccumbowl = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deciantlikccumbowl.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantlickfloorcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/likccumfromfloor.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantfemodgroupmmff = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/ffmmbondagespitriats.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantfuckdualdildohandsback = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/dildotwotipfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantfemdomanalfuckgiantcockwithsword = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/femdombichanalfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantanaldiloddisplaybox = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/anlddiloddisplaybox.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantffmsidebysidefuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantffmsidesassfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantrearexposespread = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutsrearesposespread.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantffmduocockworship = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/ffmdualcockworship.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantffmoralandfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantffmfemoralandfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantffmpilefuckhug = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantffmpilefuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantffmpilefuckhugdemoncockcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/ffmpilefuckmonstercockcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbasicbreastgrope = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/basicdoublebreastgroup.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgremlinontop = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantgremlinontop.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgremlinontopfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantgremlinfucktop.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgremlinontopkiss = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantgremlinontopkiss.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantgremlinontopdoggy = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantgremlinontopdoggyfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemongrope = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsurroundgrope.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonorgyfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsurroundgangbangfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonbigcockfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsbigcockfuckgroup.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonbigcockcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsbigcockfuckcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonorgycumdump = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsorgybuckakecumfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonbeinghumiliated = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsorgyhumiliationpassout.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparade = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/demonparadebasic.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparadegrope = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsorgygrouprope.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparafeedcumbucket = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsfeedingcumbucket.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparadecumwash = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsorgybucketcumwash.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparadefistingrun = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsparadefisting.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparadeorgyanalrough = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsorgyanalfuckrough.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparadeorgyheadincumbucket = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsorgyheadincumbucket.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparadeorgymaleanalcoerced = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsorgymaleforcedfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparadeorgydildoshow = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsorgydildoshow.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparadehumanthugsgrope = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsorgysurroundedbyhumanthugs.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonparadehumanthugsgangbang = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deomsorgyfuckedbyhumanthugs.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonimpfuckmissionarypov = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/demonimpmissionarypov.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonimpfuckmissionarysideview = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/demonimpmissionarysideview.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonimpfuckwakpeupgape = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/demonpostwakeupgape.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdemonimpfuckcowgirl = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/demonimpcowgirldrooldride.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutexposeass = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutpresentassanalslut.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutjustass = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantasspose.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutdogguanalalley = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutstreetdoggy.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutdogguanalalleybodytexts = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutstreetdoggybodywriting.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutspearsurround = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutspearpoint.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutspearsurroundbendover = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutspearbendoverpose.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutbarrelanalslutcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutbarrelanalfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutpussyjob = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerslutsstaningdoggyzoom.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutanallkeacumboydtexsts = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/anallkeaingcumbodytexsts.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutglorrypose = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/gloryasswallpose.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutglorryvagfuckcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/glorywallfuckpussycum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutglorryanalfuckcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/glorywallfuckasswithasscum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutglorryvagsidewaysfuckcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/glorywallfuckvagsidewayscum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutglorrydpfuckcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/glorywallfuckvagsidewaysdpcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantstreetslutglorrycumgape = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/glorywallcumgapeend.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantboxslutglorrycumanal = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantgloryanalbasiccum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsdildodualfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdualdilodfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsdildodualdominationfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdualdilodfuckontop.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsdildostoragetwowomen = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdildostufftwofemale.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsfutaposewomen = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantfutaposeftwofemale.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsfutafuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantfutahardfuckftwofemale.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantssuccubusfutafuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdesiredemonfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantsdildostoresale = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdildostorageshop.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdoorknobfuck = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/deviantdoorknobfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantdoorknobfuckjerkgroup = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/doorknobfuckgroupjerk.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthroneexposespreadlegs = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/throneexposespreadlegs.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthronefistpussymasturbation = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/throneexposefistmasturbate.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthronefistpussymasturbationgroupjerk = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/throneexposespreadlegsgroupmasturbation.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthronesidewaysfuckcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/throneexposesidewayfuckcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthroneunderthronebondageasspresent = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/throneexposestuckunderthroneposek.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthroneunderthronebondageassanalcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/throneexposestuckunderthronefuckanalcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthroneunderthronebondageassdpcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/throneexposestuckunderthronefuckdpcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthroneunderthronebondageasspresentcumleak = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/throneexposestuckunderthronecumleak.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthronebasicfootstoolhumiliation = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/throneexposefootstooltwojerk.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthronematingpress = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/thronematingpressfuck.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthronepresentcumpussy = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/throneexposespresentpussyleakingcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthronedpcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/thronedpcumleaking.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantthronepresentcumpussywithguyscumleaking = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/sitonthrinepussyleakallholesonthronepresentwithguys.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantshakingcockoflineofmen = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/menatarmsshakingnewcocks.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantshakingcockoflineofmenfuckcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/lineofmenfuckcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantbublicbondagehumiliationparade = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/publichumiliationbondagepussypoke.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}
+
+deviantcowgirlfffmbondageonbedcum = {
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/commonerwhoremerchantscumclinetbedgriupcondagevagcum.dds"
+		environment = "environment_activity_western_feast"
+		ambience = "event:/SFX/Events/Backgrounds/feasthall"
+	}
+}

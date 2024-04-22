@@ -1,0 +1,1345 @@
+﻿namespace = deviantsgo_army
+
+#0100-1000 army events
+#0100 caught X knight masturbating, flog, ignore or if female, give close talking to...
+deviantsgo_army.0100 = { 
+	type = character_event
+	title = deviantsgo_army.0100.t
+	desc = deviantsgo_army.0100.desc
+	override_background = { reference =	army_camp }
+	theme = deviantsmaskgo 
+	right_portrait = {
+		character = root
+		animation = thinking  
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = ecstasy
+	}
+    trigger = { 
+		is_in_army = yes
+		has_trait = deviants_mask
+	}
+    immediate = {
+		if = {
+			limit = {
+				any_knight = {
+					is_knight = yes
+					is_female = no
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+				}
+			}
+			random_knight = {
+				limit = {
+					is_knight = yes
+					age >= 18
+					is_female = no
+					is_ai = yes
+					is_adult = yes
+					is_incapable = no
+					is_imprisoned = no
+				}
+				save_scope_as = deviant_go_random_1
+			}
+		}
+		else = {
+			create_character = {
+			template = knight_errant_character
+			location = root.location
+			faith = root.capital_province.county.faith
+			culture = root.capital_province.county.culture
+			age = { 20 30 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+			}
+		}
+	}
+	# was that my picture you just threw away? give him a stern talking to, up close
+	option = {
+		ai_chance = { base = 80 }
+		name = deviantsgo_army.0100.a
+		custom_tooltip = deviantsgo_army.0100.a.tt
+		trigger = {
+			is_female = yes
+		}
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+			chaste = major_stress_impact_gain
+		}	
+		add_character_modifier = {
+			modifier = deviant_motivatedknights_modifier
+			days = 30
+		}	
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = flustered_opinion
+				opinion = 20
+			}
+			stress_impact = {
+			base = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+			shy = medium_stress_impact_gain
+			}
+		}
+	}		
+	# flogged, twice more than usual
+	option = {
+		ai_chance = { base = 80 }
+		name = deviantsgo_army.0100.b
+		custom_tooltip = deviantsgo_army.0100.b.tt
+		add_piety = minor_piety_gain
+		stress_impact = {
+			zealous = major_stress_impact_loss
+			lustful = minor_stress_impact_gain
+			sadistic = medium_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = deviant_demotivatedknights_modifier
+			days = 30
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = overreaction_opinion
+				opinion = -10
+			}
+			stress_impact = {
+			base = medium_stress_impact_gain
+			}
+			add_piety = minor_piety_loss
+			add_prestige = minor_prestige_loss
+			add_trait = ill
+		}
+	}	
+	# ignore, pretend you don't see 
+	option = {
+		name = deviantsgo_army.0100.c
+		custom_tooltip = deviantsgo_army.0100.c.tt
+		stress_impact = {
+			chaste = medium_stress_impact_gain
+			zealous = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			stress_impact = {
+			base = medium_stress_impact_loss
+			}
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+		}
+	}			
+}
+#0101 training with random knight, sadists can humiliate them to gain 2 prowess, lustful can promise fun time later, or just train hard? prowess gain 1?
+deviantsgo_army.0101 = { 
+	type = character_event
+	title = deviantsgo_army.0101.t
+	desc = deviantsgo_army.0101.desc
+	override_background = { reference =	army_camp }
+	theme = deviantsmaskgo 
+	cooldown = { years = 5 }
+	right_portrait = {
+		character = root
+		animation = aggressive_sword  
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = aggressive_sword
+	}
+	trigger = { 
+		is_in_army = yes
+		has_trait = deviants_mask
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_knight = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+			}
+			random_knight = {
+				limit = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+				save_scope_as = deviant_go_random_1
+			}
+		}
+		else = {
+			create_character = {
+			template = knight_errant_character
+			location = root.location
+			faith = root.capital_province.county.faith
+			culture = root.capital_province.county.culture
+			age = { 20 30 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+			}
+		}
+	}
+	# humiliate them 
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		trait = sadistic
+		name = deviantsgo_army.0101.a
+		custom_tooltip = deviantsgo_army.0101.a.tt
+		add_prowess_skill = 3
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = humiliated_opinion
+				opinion = -20
+			}
+			stress_impact = {
+			base = medium_stress_impact_gain
+			}
+			add_trait = wounded_1
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+	}		
+	# promise fun time later
+	option = {
+		ai_chance = { base = 80 }
+		trigger = {
+			has_trait = lustful
+		}
+		trait = lustful
+		name = deviantsgo_army.0101.b
+		custom_tooltip = deviantsgo_army.0101.b.tt
+		add_prowess_skill = 2
+		stress_impact = {
+			lustful = minor_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantlibido
+				value = 1
+			}
+		}
+		add_piety = minor_piety_gain
+		scope:deviant_go_random_1 = {
+			add_prowess_skill = 2
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 20
+			}
+			stress_impact = {
+			base = minor_stress_impact_loss
+			}
+		}
+	}	
+	# train hard
+	option = {
+		ai_chance = { base = 80 }
+		name = deviantsgo_army.0101.c
+		custom_tooltip = deviantsgo_army.0101.c.tt
+		add_prowess_skill = 1
+		stress_impact = {
+		base = medium_stress_impact_gain
+		}
+		scope:deviant_go_random_1 = {
+			add_prowess_skill = 1
+			add_opinion = {
+				target = root
+				modifier = respect_opinion
+				opinion = 10
+			}
+			stress_impact = {
+			base = medium_stress_impact_gain
+			}
+		}
+	}			
+}
+#0102 asking permission to let some women come inside barrels, well clean seed, refuse, accepts and gain tiny gold or get some men and double the barrel count as sadist
+deviantsgo_army.0102 = { 
+	type = character_event
+	title = deviantsgo_army.0102.t
+	desc = deviantsgo_army.0102.desc
+	theme = deviantsmaskgo 
+	override_background = { reference =	army_camp }
+	cooldown = { years = 1 }
+	right_portrait = {
+		character = root
+		animation = thinking  
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = chaplain
+	}
+	trigger = { 
+		is_in_army = yes
+		has_trait = deviants_mask
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_knight = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+			}
+			random_knight = {
+				limit = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+				save_scope_as = deviant_go_random_1
+			}
+		}
+		else = {
+			create_character = {
+			template = knight_errant_character
+			location = root.location
+			faith = root.capital_province.county.faith
+			culture = root.capital_province.county.culture
+			age = { 20 30 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+			}
+		}
+	}
+	# allow the glory barrels staffed by local women
+	option = {
+		ai_chance = { base = 80 }
+		name = deviantsgo_army.0102.a
+		custom_tooltip = deviantsgo_army.0102.a.tt
+		add_piety = medium_piety_loss
+		add_gold = tiny_gold_value
+	}	
+	# get some men and stuff them into barrels, the more there are the more gold I can make
+	option = {
+		ai_chance = { base = 80 }
+		trigger = {
+			has_trait = sadistic
+		}
+		trait = sadistic
+		name = deviantsgo_army.0102.b
+		custom_tooltip = deviantsgo_army.0102.b.tt
+		stress_impact = {
+			sadistic = major_stress_impact_loss
+		}
+		add_piety = major_piety_loss
+		add_gold = minor_gold_value
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+	}	
+	# refuse
+	option = {
+		name = deviantsgo_army.0102.c
+		custom_tooltip = deviantsgo_army.0102.c.tt
+		add_piety = minor_piety_gain
+	}	
+	#one extra barrel
+	option = {
+		trigger = {
+			has_trait = lustful
+			has_trait_xp = {
+			trait = deviants_campslut
+			track = campslutfame
+			value >= 50
+			}
+		}
+		trait = lustful
+		trait = deviants_campslut
+		name = deviantsgo_army.0102.d
+		custom_tooltip = deviantsgo_army.0102.d.tt
+		add_piety = medium_piety_loss
+		add_gold = minor_gold_value
+		stress_impact = {
+			lustful = minor_stress_impact_loss
+		}
+	}			
+}
+#0103 knights captured some woman, want to "interogate her" sadists can go interogate with them, let them "interogate" them, or interogate normally 
+deviantsgo_army.0103 = { 
+	type = character_event
+	title = deviantsgo_army.0103.t
+	desc = deviantsgo_army.0103.desc
+	theme = deviantsmaskgo 
+	override_background = { reference =	army_camp }
+	cooldown = { years = 1 }
+	right_portrait = {
+		character = root
+		animation = thinking  
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = prisonhouse
+	}
+	lower_left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = aggressive_unarmed
+	}
+	trigger = { 
+		is_in_army = yes
+		has_trait = deviants_mask
+	}
+	immediate = {
+		if = { 	
+			limit = {
+				any_pool_character = {
+					province = root.location
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = yes
+				}
+			}
+			random_pool_character = {
+				save_scope_as = deviant_go_random_2
+				province = root.location
+				limit = {
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = yes
+					}
+				}
+		}		
+        else = {
+			create_character = {
+				template = beautiful_peasant_character
+				culture = location.culture
+				location = root.location
+				faith = location.faith
+				age = { 20 30 }
+				gender_female_chance = 100
+				dynasty = none
+				save_scope_as = deviant_go_random_2
+			}
+		}
+		if = {
+			limit = {
+				any_knight = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+			}
+			random_knight = {
+				limit = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+				save_scope_as = deviant_go_random_1
+			}
+		}
+		else = {
+			create_character = {
+			template = knight_errant_character
+			location = root.location
+			faith = root.capital_province.county.faith
+			culture = root.capital_province.county.culture
+			age = { 20 30 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+			}
+		}
+	}
+	# sadists can go interogate with them
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		trait = sadistic
+		name = deviantsgo_army.0103.a
+		custom_tooltip = deviantsgo_army.0103.a.tt
+		add_piety = minor_piety_loss
+		stress_impact = {
+			sadistic = major_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+		add_dread = minor_dread_gain
+		scope:deviant_go_random_2 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -100
+			}
+			stress_impact = {
+				base = massive_stress_impact_gain
+			}
+			add_trait = wounded_1
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = scared_opinion
+				opinion = 20
+			}
+			stress_impact = {
+			base = minor_stress_impact_loss
+			}
+		}
+		imprison = {
+			target = scope:deviant_go_random_2
+			type = dungeon
+		}
+	}	
+	#  let them "interogate"
+	option = {
+		name = deviantsgo_army.0103.b
+		custom_tooltip = deviantsgo_army.0103.b.tt
+		add_piety = miniscule_piety_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 20
+			}
+			stress_impact = {
+				base = major_stress_impact_loss
+			}
+			add_piety = minor_piety_loss
+		}
+		scope:deviant_go_random_2 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -50
+			}
+			stress_impact = {
+				base = major_stress_impact_gain
+			}
+		}
+		add_character_modifier = {
+			modifier = deviant_motivatedknights_modifier
+			days = 30
+		}
+	}	
+	# interogate normally 
+	option = {
+		name = deviantsgo_army.0103.c
+		custom_tooltip = deviantsgo_army.0103.c.tt
+		add_prestige = minor_prestige_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -10
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+			}
+		}
+		scope:deviant_go_random_2 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -20
+			}
+			stress_impact = {
+			base = medium_stress_impact_gain
+			}
+		}
+	}			
+}
+#0104 giving speech, normal speech, or if sadistic, alright maggots, basically dread speech and if female, give special motivation speech defend my chaste honor and all that
+deviantsgo_army.0104 = { 
+	type = character_event
+	title = deviantsgo_army.0104.t
+	desc = deviantsgo_army.0104.desc
+	theme = deviantsmaskgo 
+	override_background = { reference =	army_camp }
+	cooldown = { years = 1 }
+	right_portrait = {
+		character = root
+		animation = thinking  
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = personality_bold
+	}
+    trigger = { 
+		is_in_army = yes
+		has_trait = deviants_mask
+	}
+    immediate = {
+		if = {
+			limit = {
+				any_knight = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+			}
+			random_knight = {
+				limit = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+				save_scope_as = deviant_go_random_1
+			}
+		}
+		else = {
+			create_character = {
+			template = knight_errant_character
+			faith = root.capital_province.county.faith
+			location = root.location
+			culture = root.capital_province.county.culture
+			age = { 20 30 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+			}
+		}
+	}
+	# if sadistic, alright maggots
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		trait = sadistic
+		name = deviantsgo_army.0104.a
+		custom_tooltip = deviantsgo_army.0104.a.tt
+		add_dread = minor_dread_gain
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+		add_character_modifier = {
+			modifier = deviant_motivatedknights_modifier
+			days = 10
+		}
+	}	
+	#if female, give special motivation speech defend my chaste honor and all that
+	option = {
+		ai_chance = { base = 80 }
+		trigger = {
+			is_female = yes
+		}
+		name = deviantsgo_army.0104.b
+		custom_tooltip = deviantsgo_army.0104.b.tt
+		add_piety = minor_piety_gain
+		add_character_modifier = {
+			modifier = deviant_motivatedknights_modifier
+			days = 20
+		}
+	}	
+	# normal speech
+	option = {
+		name = deviantsgo_army.0104.c
+		custom_tooltip = deviantsgo_army.0104.c.tt
+		add_prestige = minor_prestige_gain
+	}	
+	# promise big dance show tonight		
+	option = {
+		ai_chance = { base = 80 }
+		trigger = {
+			has_trait = deviants_hiredcampslut
+		}
+		trait = deviants_hiredcampslut
+		name = deviantsgo_army.0104.d
+		custom_tooltip = deviantsgo_army.0104.d.tt
+		add_prestige = major_prestige_gain
+		add_piety = minor_piety_loss
+		remove_short_term_gold = medium_gold_value
+		add_character_modifier = {
+			modifier = deviant_motivatedknights_modifier
+			days = 60
+		}
+	}
+	# promise a dance show tonight, with one performer
+	option = {
+		ai_chance = { base = 80 }
+		trigger = {
+			has_trait = deviants_campslut
+		}
+		trait = deviants_campslut
+		name = deviantsgo_army.0104.e
+		custom_tooltip = deviantsgo_army.0104.e.tt
+		add_prestige = minor_prestige_gain
+		add_piety = minor_piety_loss
+		add_gold = tiny_gold_value
+		stress_impact = {
+			base = major_stress_impact_gain
+			lustful = medium_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = deviant_motivatedknights_modifier
+			days = 30
+		}
+	}
+}
+#0105 fight between knights for a female camp follower, they claim it's to wash their clothes, force them share, have them flogged, or ignore
+deviantsgo_army.0105 = { 
+	type = character_event
+	title = deviantsgo_army.0105.t
+	desc = deviantsgo_army.0105.desc
+	theme = deviantsmaskgo 
+	override_background = { reference =	army_camp }
+	cooldown = { years = 1 }
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = rage 
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_2
+		animation = anger
+	}
+	lower_center_portrait = {
+		character = root
+		animation = thinking
+	}
+	trigger = { 
+		is_in_army = yes
+		has_trait = deviants_mask
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_knight = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+			}
+			random_knight = {
+				limit = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+				save_scope_as = deviant_go_random_1
+			}
+		}
+		else = {
+			create_character = {
+			template = knight_errant_character
+			location = root.location
+			faith = root.capital_province.county.faith
+			culture = root.capital_province.county.culture
+			age = { 20 30 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+			}
+		}
+		if = {
+			limit = {
+				any_knight = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+			}
+			random_knight = {
+				limit = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+					NOT = { this = scope:deviant_go_male_1 }
+				}
+				save_scope_as = deviant_go_random_2
+			}
+		}
+		else = {
+			create_character = {
+			template = knight_errant_character
+			location = root.location
+			faith = root.capital_province.county.faith
+			culture = root.capital_province.county.culture
+			age = { 20 30 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_2
+			}
+		}
+	}
+	# command them to share
+	option = {
+		ai_chance = { base = 80 }
+		name = deviantsgo_army.0105.a
+		custom_tooltip = deviantsgo_army.0105.a.tt
+		stress_impact = {
+			lustful = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = scope:deviant_go_random_2
+				modifier = confusion_opinion
+				opinion = 10
+			}
+			stress_impact = {
+				base = medium_stress_impact_loss
+			}
+		}
+		scope:deviant_go_random_2 = {
+			add_opinion = {
+				target = scope:deviant_go_random_1
+				modifier = confusion_opinion
+				opinion = 10
+			}
+			stress_impact = {
+				base = medium_stress_impact_loss
+			}
+		}
+	}	
+	# have them flogged
+	option = {
+		ai_chance = { base = 80 }
+		name = deviantsgo_army.0105.b
+		custom_tooltip = deviantsgo_army.0105.b.tt
+		add_piety = minor_piety_gain
+		stress_impact = {
+			zealous = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = overreaction_opinion
+				opinion = -20
+			}
+			stress_impact = {
+			 	base = medium_stress_impact_gain
+			}
+		}
+		scope:deviant_go_random_2 = {
+			add_opinion = {
+				target = root
+				modifier = overreaction_opinion
+				opinion = -20
+			}
+			stress_impact = {
+			 	base = medium_stress_impact_gain
+			}
+		}
+	}	
+	# ignore
+	option = {
+		name = deviantsgo_army.0105.c
+		custom_tooltip = deviantsgo_army.0105.c.tt
+		add_prestige = minor_prestige_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+			stress_impact = {
+			 	base = minor_stress_impact_gain
+			}
+		}
+		scope:deviant_go_random_2 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 10
+			}
+			stress_impact = {
+			 	base = minor_stress_impact_gain
+			}
+		}
+	}		
+	#offer to wash the clothes yourself	
+	option = {
+		ai_chance = { base = 99 }
+		trigger = {
+			is_female = yes
+		}
+		name = deviantsgo_army.0105.d
+		custom_tooltip = deviantsgo_army.0105.d.tt
+		add_prestige = medium_prestige_loss
+		add_piety = minor_piety_gain
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantlibido
+				value = 1
+			}
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = confusion_opinion
+				opinion = 20
+			}
+			stress_impact = {
+			 	base = minor_stress_impact_gain
+			}
+		}
+		scope:deviant_go_random_2 = {
+			add_opinion = {
+				target = root
+				modifier = confusion_opinion
+				opinion = 20
+			}
+			stress_impact = {
+			 	base = minor_stress_impact_gain
+			}
+		}
+	}	
+}
+#0106 feel the need, take care of it yourself or find someone to avoid the sin, or trust in god and pray
+deviantsgo_army.0106 = { 
+	type = character_event
+	title = deviantsgo_army.0106.t
+	desc = deviantsgo_army.0106.desc
+	theme = deviantsmaskgo 
+	override_background = { reference =	army_camp }
+	cooldown = { years = 1 }
+	right_portrait = {
+		character = root
+		animation = chancellor  
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = throne_room_messenger_3
+	}
+    trigger = { 
+		is_in_army = yes
+		has_trait = deviants_mask
+	}
+    immediate = {
+		if = {
+			limit = {
+				any_knight = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+			}
+			random_knight = {
+				limit = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+				save_scope_as = deviant_go_random_1
+			}
+		}
+		else = {
+			create_character = {
+			template = knight_errant_character
+			location = root.location
+			faith = root.capital_province.county.faith
+			culture = root.capital_province.county.culture
+			age = { 20 30 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+			}
+		}
+	}
+	# take care of yourself
+	option = {
+		ai_chance = { base = 80 }
+		name = deviantsgo_army.0106.a
+		custom_tooltip = deviantsgo_army.0106.a.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantlibido
+				value = 1
+			}
+		}
+	}	
+	# find someone to do it with
+	option = {
+		ai_chance = { base = 80 }
+		name = deviantsgo_army.0106.b
+		custom_tooltip = deviantsgo_army.0106.b.tt
+		add_piety = minor_piety_loss
+		stress_impact = {
+			base = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantlibido
+				value = 1
+			}
+		}
+	}
+	# my faith will sate me through prayer
+	option = {
+		name = deviantsgo_army.0106.c
+		custom_tooltip = deviantsgo_army.0106.c.tt
+		stress_impact = {
+			base = medium_stress_impact_gain
+			sadistic = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
+			zealous = medium_stress_impact_loss
+		}
+	}			
+}
+#0107  some random guy selling drawn profile pictures of women was caught by one of the knights and brought to you, confiscate his money and burn picks, or ignore
+deviantsgo_army.0107 = { 
+	type = character_event
+	title = deviantsgo_army.0107.t
+	desc = deviantsgo_army.0107.desc
+	theme = deviantsmaskgo 
+	override_background = { reference =	army_camp }
+	cooldown = { years = 1 }
+	right_portrait = {
+		character = root
+		animation = chancellor 
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = scheme
+	}
+	trigger = { 
+		is_in_army = yes
+		has_trait = deviants_mask
+	}
+	 immediate = {
+		if = {
+			limit = {
+				any_knight = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+			}
+			random_knight = {
+				limit = {
+					is_incapable = no
+					is_imprisoned = no
+					is_knight = yes
+					age >= 18
+					is_ai = yes
+					is_adult = yes
+				}
+				save_scope_as = deviant_go_random_1
+			}
+		}
+		else = {
+			create_character = {
+			template = knight_errant_character
+			location = root.location
+			faith = root.capital_province.county.faith
+			culture = root.capital_province.county.culture
+			age = { 20 30 }
+			gender_female_chance = 0
+			dynasty = none
+			save_scope_as = deviant_go_random_1
+			}
+		}
+	}
+	# burn the drwaings and take the money
+	option = {
+		ai_chance = { base = 80 }
+		name = deviantsgo_army.0107.a
+		custom_tooltip = deviantsgo_army.0107.a.tt
+		add_piety = minor_piety_gain
+		add_prestige = minor_prestige_loss
+		add_gold = tiny_gold_value
+	}	
+	# wait, some of these are me, and they are pretty good, with a closer look he might be able to motivate my men even better
+	option = {
+		ai_chance = { base = 80 }
+		trigger = {
+			is_female = yes
+		}
+		name = deviantsgo_army.0107.b
+		custom_tooltip = deviantsgo_army.0107.b.tt
+		add_piety = medium_piety_loss
+		add_gold = minor_gold_value
+	}	
+	# ignore
+	option = {
+		name = deviantsgo_army.0107.c
+		custom_tooltip = deviantsgo_army.0107.c.tt
+		add_piety = minor_piety_loss
+		add_prestige = minor_prestige_gain
+	}			
+}
+#0108 if female having heavy weight on them dream in the army sleep paralyzis
+deviantsgo_army.0108 = { 
+	type = character_event
+	title = deviantsgo_army.0108.t
+	desc = deviantsgo_army.0108.desc
+	theme = deviantsmaskgo 
+	override_background = { reference =	army_camp }
+	right_portrait = {
+		character = root
+		animation = ecstasy  
+	}
+	trigger = { 
+		is_in_army = yes
+		has_trait = deviants_mask
+		is_female = yes
+	}
+	# as lustful, embrace, 
+	option = {
+		trigger = {
+			has_trait = lustful
+		}
+		trait = lustful
+		name = deviantsgo_army.0108.a
+		custom_tooltip = deviantsgo_army.0108.a.tt
+		stress_impact = {
+			lustful = minor_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantlibido
+				value = 5
+			}
+		}
+	}	
+	# scream yourself awake
+	option = {
+		name = deviantsgo_army.0108.b
+		custom_tooltip = deviantsgo_army.0108.b.tt
+		add_prestige = minor_prestige_loss
+	}	
+	# endure
+	option = {
+		name = deviantsgo_army.0108.c
+		custom_tooltip = deviantsgo_army.0108.c.tt
+		stress_impact = {
+			base = medium_stress_impact_gain
+		}
+	}			
+}
+#0109  if male, some camp woman snuk into your tent to steal your noble seed
+deviantsgo_army.0109 = { 
+	type = character_event
+	title = deviantsgo_army.0109.t
+	desc = deviantsgo_army.0109.desc
+	theme = deviantsmaskgo 
+	override_background = { reference =	army_camp }
+	cooldown = { years = 1 }
+	right_portrait = {
+		character = root
+		animation = thinking  
+	}
+	left_portrait = {
+		character = scope:deviant_go_random_1
+		animation = chaplain
+		outfit_tags = { no_clothes }
+	}
+	trigger = { 
+		is_in_army = yes
+		has_trait = deviants_mask
+		is_female = no
+	}
+	immediate = {
+		if = { 	
+			limit = {
+				any_pool_character = {
+					is_available_ai_adult = yes
+					province = root.location
+					age >= 18
+					is_female = yes
+				}
+			}
+			random_pool_character = {
+				save_scope_as = deviant_go_random_1
+				province = root.location
+				limit = {
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = yes
+					}
+				}
+		}		
+        else = {
+			create_character = {
+				template = beautiful_peasant_character
+				culture = location.culture
+				faith = location.faith
+				location = root.location
+				age = { 20 30 }
+				gender_female_chance = 100
+				dynasty = none
+				save_scope_as = deviant_go_random_1
+			}
+		}
+	}
+	# kick out and flogged
+	option = {
+		name = deviantsgo_army.0109.a
+		custom_tooltip = deviantsgo_army.0109.a.tt
+		stress_impact = {
+			base = minor_stress_impact_gain
+			sadistic = massive_stress_impact_loss
+			zealous = medium_stress_impact_loss
+		}
+		add_piety = minor_piety_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -50
+			}
+			stress_impact = {
+			base = massive_stress_impact_gain
+			}
+			add_trait = wounded_1
+		}
+	}	
+	# fuck	
+	option = {
+		name = deviantsgo_army.0109.b
+		custom_tooltip = deviantsgo_army.0109.b.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = grateful_opinion
+				opinion = 20
+			}
+			stress_impact = {
+				base = minor_stress_impact_loss
+			}
+			had_sex_with_effect = {
+			CHARACTER = root
+			PREGNANCY_CHANCE = pregnancy_chance
+			}
+		}
+	}	
+	# drag her out, others naturally saw it, spread rumors, especially since sge kept shouting about your cock on the way out
+	option = {
+		name = deviantsgo_army.0109.c
+		custom_tooltip = deviantsgo_army.0109.c.tt
+		add_piety = minor_piety_loss
+		stress_impact = {
+			base = minor_stress_impact_gain
+			zealous = medium_stress_impact_gain
+			lustful = medium_stress_impact_gain
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = annoyed_opinion
+				opinion = -20
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+			}
+		}
+	}	
+	#you came to me, you should not have
+	option = {
+		trigger = {
+			has_trait = sadistic
+		}
+		trait = sadistic
+		name = deviantsgo_army.0109.d
+		custom_tooltip = deviantsgo_army.0109.d.tt
+		stress_impact = {
+			sadistic = major_stress_impact_loss
+		}
+		imprison = {
+			target = scope:deviant_go_random_1
+			type = dungeon
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 5
+			}
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -100
+			}
+			stress_impact = {
+			base = major_stress_impact_gain
+			}
+		}
+	}			
+}
+

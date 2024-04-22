@@ -1,0 +1,88 @@
+﻿
+deviant_fuckedsilly_modifier = {
+	icon = love_negative
+    intrigue = -3
+    stewardship = -3
+    martial = -4
+    learning = -5
+    diplomacy = -2
+    prowess = -2
+    stress_gain_mult = -0.55
+}
+
+deviant_woncocks_modifier = {
+	icon = love_positive
+    prowess = 5
+    stress_gain_mult = -0.25
+}
+
+deviant_motivatedknights_modifier = {
+	icon = love_positive
+    knight_effectiveness_mult = 0.1
+}
+deviant_demotivatedknights_modifier = {
+	icon = love_negative
+    knight_effectiveness_mult = -0.2
+}
+
+deviant_greatshow_modifier = {
+    icon = love_negative
+    county_opinion_add = 10
+}
+
+deviant_vassaltrouble_modifier = {
+    icon = intrigue_negative
+    county_opinion_add = -10
+    opinion_of_vassal = -10
+    monthly_prestige = -2
+    development_growth_factor = -0.05
+    tax_mult = -0.2
+    vassal_tax_contribution_mult = -0.3
+    vassal_levy_contribution_mult = -0.3
+    stewardship = -2
+    diplomacy = -2
+    monthly_county_control_growth_factor = -0.2
+}
+
+deviant_canonlythinkdildo_modifier = {
+    icon = health_negative
+    intrigue = -1
+    stewardship = -2
+    martial = -2
+    learning = -3
+    diplomacy = -1
+    prowess = -1
+    stress_gain_mult = -0.20
+}
+
+deviant_mindfuckedsilly_modifier = {
+	icon = love_negative
+    intrigue = -10
+    stewardship = -10
+    martial = -10
+    learning = -10
+    diplomacy = -10
+    prowess = -10
+}
+
+deviant_accused_whore_modifier = {
+	icon = love_negative
+    stress_gain_mult = 0.20
+    opinion_of_vassal = -10
+    opinion_of_same_faith = -10
+    opinion_of_female_rulers = -10
+    courtly_opinion = -10
+    fellow_vassal_opinion = -10
+    legitimacy_gain_mult = -0.10
+}
+
+deviants_strangebook_modifier = {
+    icon = learning_negative
+    stress_loss_mult = 0.05
+}
+
+deviant_knownslut_modifier = {
+    icon = love_negative
+    attraction_opinion = -20
+    legitimacy_gain_mult = -0.15
+}

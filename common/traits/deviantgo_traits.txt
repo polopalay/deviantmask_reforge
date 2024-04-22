@@ -1,0 +1,1879 @@
+﻿deviants_mask = {
+	category = lifestyle
+	icon = deviants_mask.dds
+	desc = trait_deviants_mask_character_desc
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	tracks = {
+		deviantsadism = {
+			30 = {
+				prowess_no_portrait = 1
+			}
+
+			65 = {
+				prowess_no_portrait = 2
+				dread_gain_mult = 0.02
+				dread_per_tyranny_add = 0.2
+				stress_loss_mult = 0.05
+			}
+
+			100 = {
+				prowess_no_portrait = 3
+				dread_per_tyranny_add = 0.3
+				dread_gain_mult = 0.3
+				stress_loss_mult = 0.1
+			}		
+		}
+		deviantlibido = {
+			30 = {
+				health = 0.10
+			}
+
+			65 = {
+				health = 0.20
+				stress_gain_mult = -0.05
+			}
+
+			100 = {
+				health = 0.40
+				stress_gain_mult = -0.1
+			}
+		}
+	}	
+}
+
+deviants_campslut = {
+	category = fame
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	men_at_arms_maintenance = -0.2
+	monthly_prestige = 0.3
+	monthly_piety_gain_mult = -0.01
+	religious_vassal_opinion = -10
+	icon = {
+		first_valid = {
+			triggered_desc = { # If no character exists
+				trigger = { NOT = { exists = this } }
+				desc = deviants_campslut.dds
+			}
+			triggered_desc = { 
+				trigger = { 
+					has_trait_xp = {
+						trait = deviants_campslut
+						track = campslutfame
+						value < 50
+					} 
+				}
+				desc = deviants_campslut.dds
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = deviants_campslut
+						track = campslutfame
+						value >= 50
+					}
+				}
+				desc = DeMa_famous_lookalike.dds
+			}
+		}	
+	}
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_campslut }
+						has_trait_xp = {
+							trait = deviants_campslut
+							track = campslutfame
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_campslut }
+					}
+				}
+				desc = deviants_campslut_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_campslut
+					has_trait_xp = {
+						trait = deviants_campslut
+						track = campslutfame
+						value = 100
+					}
+				}
+				desc = deviants_campslut_3
+			}
+			desc = deviants_campslut_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_campslut_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_campslut }
+						has_trait_xp = {
+							trait = deviants_campslut
+							track = campslutfame
+							value < 50
+						}
+					}
+				}
+				desc = deviants_campslut_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_campslut
+					has_trait_xp = {
+						trait = deviants_campslut
+						track = campslutfame
+						value = 100
+					}
+				}
+				desc = deviants_campslut_3_character_desc
+			}
+			desc = deviants_campslut_2_character_desc
+		}
+	}
+
+	tracks = {
+		campslutfame = {
+			trait_second_level = {
+				monthly_prestige = 0.3
+				men_at_arms_recruitment_cost = -0.05
+				monthly_piety_gain_mult = -0.05
+				clergy_opinion = -10
+				religious_vassal_opinion = -10
+			}
+			trait_third_level = {
+				monthly_prestige = 0.3
+				men_at_arms_recruitment_cost = -0.05
+				attraction_opinion = 5
+				monthly_piety_gain_mult = -0.10
+				religious_vassal_opinion = -20
+				clergy_opinion = -20
+				religious_head_opinion = -15
+				spouse_opinion = -30
+				opinion_of_female_rulers = -10
+				vassal_limit = 5
+			}		
+		}
+		sexual_service_pleasure = {
+			30 = {
+				diplomacy = 1
+			}
+
+			65 = {
+				diplomacy = 2
+			}
+
+			100 = {
+				diplomacy = 3
+			}			
+		}
+		sexual_service_submission = {
+			30 = {
+				intrigue = 1
+			}
+
+			65 = {
+				intrigue = 2
+			}
+
+			100 = {
+				intrigue = 3
+			}			
+		}
+		seenonthestreets = {
+			30 = {
+				clergy_opinion = -5
+			}
+
+			65 = {
+				county_opinion_add = 10
+				opinion_of_vassal = -10
+			}
+
+			100 = {
+				county_opinion_add = 20
+				monthly_piety_gain_mult = -0.10
+				religious_vassal_opinion = -10
+				clergy_opinion = -10
+				religious_head_opinion = -5
+				spouse_opinion = -10
+				opinion_of_vassal = -10
+			}			
+		}
+	}	
+}
+
+deviants_hiredcampslut = {
+	category = fame
+	icon = deviants_pimp_fame_trait.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	men_at_arms_maintenance = -0.2
+	monthly_income_mult = -0.05
+	men_at_arms_recruitment_cost = -0.05
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_hiredcampslut}
+						has_trait_xp = {
+							trait = deviants_hiredcampslut
+							track = pimpslutfame
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_hiredcampslut }
+					}
+				}
+				desc = deviants_hiredcampslut_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_hiredcampslut
+					has_trait_xp = {
+						trait = deviants_hiredcampslut
+						track = pimpslutfame
+						value = 100
+					}
+				}
+				desc = deviants_hiredcampslut_3
+			}
+			desc = deviants_hiredcampslut_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_hiredcampslut_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_hiredcampslut }
+						has_trait_xp = {
+							trait = deviants_hiredcampslut
+							track = pimpslutfame
+							value < 50
+						}
+					}
+				}
+				desc = deviants_hiredcampslut_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_hiredcampslut
+					has_trait_xp = {
+						trait = deviants_hiredcampslut
+						track = pimpslutfame
+						value = 100
+					}
+				}
+				desc = deviants_hiredcampslut_3_character_desc
+			}
+			desc = deviants_hiredcampslut_2_character_desc
+		}
+	}
+
+	tracks = {
+		pimpslutfame = {
+			30 = {
+				men_at_arms_recruitment_cost = -0.05
+				religious_vassal_opinion = -10
+			}
+
+			65 = {
+				intrigue = 1
+				men_at_arms_recruitment_cost = -0.05
+				religious_vassal_opinion = -10
+				monthly_piety_gain_mult = -0.05
+				monthly_prestige = 0.2
+				monthly_piety = -0.3
+			}
+
+			100 = {
+				intrigue = 2
+				diplomacy = 2
+				religious_vassal_opinion = -20
+				men_at_arms_recruitment_cost = -0.05
+				monthly_piety_gain_mult = -0.05
+				monthly_piety = -0.2
+				opinion_of_female_rulers = -10
+				clergy_opinion = -40
+				religious_head_opinion = -25
+				county_opinion_add = 5
+			}			
+		}
+	}
+}
+
+deviants_clitclamp = {
+	genetic = no
+	physical = yes
+	icon = deviantdevils_clitclamp.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_clitclamp }
+						has_trait_xp = {
+							trait = deviants_clitclamp
+							track = clitgrowthsize
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_clitclamp }
+					}
+				}
+				desc = deviants_clitclamp_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_clitclamp
+					has_trait_xp = {
+						trait = deviants_clitclamp
+						track = clitgrowthsize
+						value = 100
+					}
+				}
+				desc = deviants_clitclamp_3
+			}
+			desc = deviants_clitclamp_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_clitclamp_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_clitclamp }
+						has_trait_xp = {
+							trait = deviants_clitclamp
+							track = clitgrowthsize
+							value < 50
+						}
+					}
+				}
+				desc = deviants_clitclamp_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_clitclamp
+					has_trait_xp = {
+						trait = deviants_clitclamp
+						track = clitgrowthsize
+						value = 100
+					}
+				}
+				desc = deviants_clitclamp_3_character_desc
+			}
+			desc = deviants_clitclamp_2_character_desc
+		}
+	}
+
+	tracks = {
+		clitgrowthsize = {
+			trait_second_level = {
+				spouse_opinion = -10
+			}
+			trait_third_level = {
+				spouse_opinion = -20
+			}		
+		}
+	}	
+}
+
+deviants_blackmailvictim = {
+	category = fame
+	icon = deviantblackmail_victim.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_blackmailvictim }
+						has_trait_xp = {
+							trait = deviants_blackmailvictim
+							track = deviantblackmailfame
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_blackmailvictim }
+					}
+				}
+				desc = deviants_blackmailvictim_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_blackmailvictim
+					has_trait_xp = {
+						trait = deviants_blackmailvictim
+						track = deviantblackmailfame
+						value = 100
+					}
+				}
+				desc = deviants_blackmailvictim_3
+			}
+			desc = deviants_blackmailvictim_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_blackmailvictim_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_blackmailvictim }
+						has_trait_xp = {
+							trait = deviants_blackmailvictim
+							track = deviantblackmailfame
+							value < 50
+						}
+					}
+				}
+				desc = deviants_blackmailvictim_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_blackmailvictim
+					has_trait_xp = {
+						trait = deviants_blackmailvictim
+						track = deviantblackmailfame
+						value = 100
+					}
+				}
+				desc = deviants_blackmailvictim_3_character_desc
+			}
+			desc = deviants_blackmailvictim_2_character_desc
+		}
+	}
+
+	tracks = {
+		deviantblackmailfame = {
+			trait_second_level = {
+				opinion_of_vassal = 10
+				monthly_prestige = -1
+				domain_limit = 1
+				county_opinion_add = -5
+				vassal_tax_contribution_mult = -0.1
+				vassal_levy_contribution_mult = -0.1
+			}
+			trait_third_level = {
+				opinion_of_vassal = 30
+				powerful_vassal_opinion = 20
+				spouse_opinion = -20
+				monthly_prestige = -2
+				domain_limit = 2
+				county_opinion_add = -10
+				development_growth_factor = 0.05
+				tax_mult = -0.1
+				dread_decay_mult = 0.20
+				vassal_tax_contribution_mult = -0.3
+				vassal_levy_contribution_mult = -0.3
+			}		
+		}
+	}	
+}
+
+deviants_blackmailvassal = {
+	category = fame
+	icon = deviantblackmail_vassal.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_blackmailvassal }
+						has_trait_xp = {
+							trait = deviants_blackmailvassal
+							track = deviantvassalfame
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_blackmailvassal }
+					}
+				}
+				desc = deviants_blackmailvassal_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_blackmailvassal
+					has_trait_xp = {
+						trait = deviants_blackmailvassal
+						track = deviantvassalfame
+						value = 100
+					}
+				}
+				desc = deviants_blackmailvassal_3
+			}
+			desc = deviants_blackmailvassal_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_blackmailvassal_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_blackmailvassal }
+						has_trait_xp = {
+							trait = deviants_blackmailvassal
+							track = deviantvassalfame
+							value < 50
+						}
+					}
+				}
+				desc = deviants_blackmailvassal_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_blackmailvassal
+					has_trait_xp = {
+						trait = deviants_blackmailvassal
+						track = deviantvassalfame
+						value = 100
+					}
+				}
+				desc = deviants_blackmailvassal_3_character_desc
+			}
+			desc = deviants_blackmailvassal_2_character_desc
+		}
+	}
+
+	tracks = {
+		deviantvassalfame = {
+			trait_second_level = {
+				monthly_prestige = 1
+				tax_mult = 0.1
+			}
+			trait_third_level = {
+				monthly_prestige = 2
+				spouse_opinion = 20
+				development_growth_factor = 0.05
+				tax_mult = 0.2
+				dread_decay_mult = -0.20
+			}		
+		}
+	}	
+}
+
+deviants_blackmailliege = {
+	category = fame
+	icon = deviantblackmail_liege.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_blackmailliege }
+						has_trait_xp = {
+							trait = deviants_blackmailliege
+							track = deviantliegefame
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_blackmailliege }
+					}
+				}
+				desc = deviants_blackmailliege_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_blackmailliege
+					has_trait_xp = {
+						trait = deviants_blackmailliege
+						track = deviantliegefame
+						value = 100
+					}
+				}
+				desc = deviants_blackmailliege_3
+			}
+			desc = deviants_blackmailliege_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_blackmailliege_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_blackmailliege }
+						has_trait_xp = {
+							trait = deviants_blackmailliege
+							track = deviantliegefame
+							value < 50
+						}
+					}
+				}
+				desc = deviants_blackmailliege_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_blackmailliege
+					has_trait_xp = {
+						trait = deviants_blackmailliege
+						track = deviantliegefame
+						value = 100
+					}
+				}
+				desc = deviants_blackmailliege_3_character_desc
+			}
+			desc = deviants_blackmailliege_2_character_desc
+		}
+	}
+
+	tracks = {
+		deviantliegefame = {
+			30 = {
+				vassal_opinion = 5
+			}
+
+			65 = {
+				vassal_opinion = 10
+				vassal_tax_contribution_mult = 0.1
+				vassal_levy_contribution_mult = 0.1
+			}
+
+			100 = {
+				vassal_opinion = 20
+				powerful_vassal_opinion = 10
+				vassal_tax_contribution_mult = 0.1
+				vassal_levy_contribution_mult = 0.1
+				vassal_limit = 5
+			}		
+		}
+	}	
+}
+
+deviants_strangejester = {
+	category = fame
+	icon = deviantjester_possessed.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	stress_gain_mult = -0.5
+	stress_loss_mult = 0.5
+	attraction_opinion = -30
+	general_opinion = -10
+	immortal = yes
+	can_have_children = no
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_strangejester }
+						has_trait_xp = {
+							trait = deviants_strangejester
+							track = strangejester
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_strangejester }
+					}
+				}
+				desc = deviants_strangejester_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_strangejester
+					has_trait_xp = {
+						trait = deviants_strangejester
+						track = strangejester
+						value = 100
+					}
+				}
+				desc = deviants_strangejester_3
+			}
+			desc = deviants_strangejester_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_strangejester_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_strangejester }
+						has_trait_xp = {
+							trait = deviants_strangejester
+							track = strangejester
+							value < 50
+						}
+					}
+				}
+				desc = deviants_strangejester_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_strangejester
+					has_trait_xp = {
+						trait = deviants_strangejester
+						track = strangejester
+						value = 100
+					}
+				}
+				desc = deviants_strangejester_3_character_desc
+			}
+			desc = deviants_strangejester_2_character_desc
+		}
+	}
+
+	tracks = {
+		strangejester = {
+			trait_second_level = {
+				diplomacy = 10
+				attraction_opinion = -10
+				general_opinion = -10
+				health = major_health_bonus
+			}
+			trait_third_level = {
+				diplomacy = 10
+				attraction_opinion = -20
+				general_opinion = -10
+				health = major_health_bonus
+			}		
+		}
+	}	
+}
+#demon anal slut immortality trait
+deviants_demonanalslut = {
+	category = health
+	icon = deviantdemonanalslut.dds
+	minimum_age = 18
+	immortal = yes
+	shown_in_ruler_designer = no
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_demonanalslut }
+						has_trait_xp = {
+							trait = deviants_demonanalslut
+							track = demonanalslutcorruption
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_demonanalslut }
+					}
+				}
+				desc = deviants_demonanalslut_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_demonanalslut
+					has_trait_xp = {
+						trait = deviants_demonanalslut
+						track = demonanalslutcorruption
+						value = 100
+					}
+				}
+				desc = deviants_demonanalslut_3
+			}
+			desc = deviants_demonanalslut_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_demonanalslut_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_demonanalslut }
+						has_trait_xp = {
+							trait = deviants_demonanalslut
+							track = demonanalslutcorruption
+							value < 50
+						}
+					}
+				}
+				desc = deviants_demonanalslut_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_demonanalslut
+					has_trait_xp = {
+						trait = deviants_demonanalslut
+						track = demonanalslutcorruption
+						value = 100
+					}
+				}
+				desc = deviants_demonanalslut_3_character_desc
+			}
+			desc = deviants_demonanalslut_2_character_desc
+		}
+	}
+
+	tracks = {
+		demonanalslutcorruption = {
+			50 = {
+				attraction_opinion = -10
+			}
+
+			100 = {
+				attraction_opinion = -40
+				monthly_prestige = -1
+				monthly_piety = -1
+				monthly_piety_gain_mult = -0.05
+				legitimacy_gain_mult = -0.25
+			}			
+		}
+		demonsubmissionslut = {
+			30 = {
+				prowess = 2
+				health = 0.10
+				hostile_scheme_resistance_mult = 0.1
+				character_travel_safety_mult = 0.05
+			}
+
+			65 = {
+				prowess = 5
+				attraction_opinion = 5
+				health = 0.20
+				hostile_scheme_resistance_mult = 0.2
+				hostile_scheme_resistance_add = 5
+				character_travel_safety_mult = 0.10
+				negate_health_penalty_add = 0.2	
+			}
+
+			100 = {
+				prowess = 8
+				health = 0.40
+				hostile_scheme_resistance_mult = 0.2
+				hostile_scheme_resistance_add = 10
+				character_travel_safety_mult = 0.15
+				negate_health_penalty_add = 2
+			}			
+		}
+		menatarmstwistedloyalty = {
+			30 = {
+				knight_effectiveness_mult = 0.05
+			}
+
+			65 = {
+				men_at_arms_maintenance = -0.05
+				knight_effectiveness_mult = 0.10
+				men_at_arms_limit = 1
+				vassal_opinion = -10
+			}
+
+			100 = {
+				men_at_arms_maintenance = -0.10
+				knight_effectiveness_mult = 0.15
+				vassal_opinion = -20
+			}			
+		}
+	}	
+}
+
+#dildo addict trait
+deviants_strange_dildo = {
+	category = health
+	icon = deviants_strange_phallicobject.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_strange_dildo }
+						has_trait_xp = {
+							trait = deviants_strange_dildo
+							track = strange_dildo_addiction
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_strange_dildo }
+					}
+				}
+				desc = deviants_strange_dildo_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_strange_dildo
+					has_trait_xp = {
+						trait = deviants_strange_dildo
+						track = strange_dildo_addiction
+						value = 100
+					}
+				}
+				desc = deviants_strange_dildo_3
+			}
+			desc = deviants_strange_dildo_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_strange_dildo_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_strange_dildo }
+						has_trait_xp = {
+							trait = deviants_strange_dildo
+							track = strange_dildo_addiction
+							value < 50
+						}
+					}
+				}
+				desc = deviants_strange_dildo_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_strange_dildo
+					has_trait_xp = {
+						trait = deviants_strange_dildo
+						track = strange_dildo_addiction
+						value = 100
+					}
+				}
+				desc = deviants_strange_dildo_3_character_desc
+			}
+			desc = deviants_strange_dildo_2_character_desc
+		}
+	}
+
+	tracks = {
+		strange_dildo_addiction = {
+			30 = {
+				learning = -1
+			}
+
+			65 = {
+				learning = -1
+				stewardship = -1
+			}
+
+			100 = {
+				learning = -2
+				stewardship = -1
+				stress_loss_mult = 0.10
+				stress_gain_mult = -0.1
+			}			
+		}
+	}	
+}
+
+#sadistic wife trait
+deviants_sadistic_wife = {
+	category = health
+	icon = deviantgo_wife.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_sadistic_wife }
+						has_trait_xp = {
+							trait = deviants_sadistic_wife
+							track = sadistic_wife_obsession
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_sadistic_wife }
+					}
+				}
+				desc = deviants_sadistic_wife_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_sadistic_wife
+					has_trait_xp = {
+						trait = deviants_sadistic_wife
+						track = sadistic_wife_obsession
+						value = 100
+					}
+				}
+				desc = deviants_sadistic_wife_3
+			}
+			desc = deviants_sadistic_wife_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_sadistic_wife_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_sadistic_wife }
+						has_trait_xp = {
+							trait = deviants_sadistic_wife
+							track = sadistic_wife_obsession
+							value < 50
+						}
+					}
+				}
+				desc = deviants_sadistic_wife_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_sadistic_wife
+					has_trait_xp = {
+						trait = deviants_sadistic_wife
+						track = sadistic_wife_obsession
+						value = 100
+					}
+				}
+				desc = deviants_sadistic_wife_3_character_desc
+			}
+			desc = deviants_sadistic_wife_2_character_desc
+		}
+	}
+
+	tracks = {
+		sadistic_wife_obsession = {
+			30 = {
+				prowess = 5
+				intrigue = 5
+			}
+
+			65 = {
+				diplomacy = 5
+				martial = 5
+				health = 0.25
+			}
+
+			100 = {
+				learning = 5
+				intrigue = 5
+				fertility = 0.2
+				health = 0.40
+			}			
+		}
+	}	
+}
+
+deviants_seed_alchemist = {
+	category = fame
+	icon = DeMa_seed_alchemist.dds
+	desc = trait_deviants_seed_alchemist_character_desc
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	learning = 2
+	monthly_piety = -0.5
+}
+
+deviants_slut_hired_maiden = {
+	category = fame
+	icon = DeMa_basic_whore.dds
+	desc = trait_deviants_slut_hired_maiden_character_desc
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	tracks = {
+		deviants_dancer_maiden_skill = {
+			30 = {
+				diplomacy = 2
+			}
+
+			65 = {
+				diplomacy = 4
+			}
+
+			100 = {
+				diplomacy = 4
+			}			
+		}
+		deviants_warrior_maiden_skill = {
+			30 = {
+				prowess = 2
+			}
+
+			65 = {
+				prowess = 4
+			}
+
+			100 = {
+				prowess = 4
+			}			
+		}
+		deviants_domina_maiden_skill = {
+			30 = {
+				intrigue = 2
+			}
+
+			65 = {
+				intrigue = 4
+			}
+
+			100 = {
+				intrigue = 4
+			}			
+		}
+		deviants_religous_maiden_skill = {
+			30 = {
+				learning = 2
+			}
+
+			65 = {
+				learning = 4
+			}
+
+			100 = {
+				learning = 4
+			}			
+		}
+	}	
+}
+
+deviants_horse_fucker = {
+	category = fame
+	icon = devianthorsefucker.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_horse_fucker }
+						has_trait_xp = {
+							trait = deviants_horse_fucker
+							track = horsefucker_pussy_state
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_horse_fucker }
+					}
+				}
+				desc = deviants_horse_fucker_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_horse_fucker
+					has_trait_xp = {
+						trait = deviants_horse_fucker
+						track = horsefucker_pussy_state
+						value = 100
+					}
+				}
+				desc = deviants_horse_fucker_3
+			}
+			desc = deviants_horse_fucker_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_horse_fucker_1
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_horse_fucker }
+						has_trait_xp = {
+							trait = deviants_horse_fucker
+							track = horsefucker_pussy_state
+							value < 50
+						}
+					}
+				}
+				desc = deviants_horse_fucker_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_horse_fucker
+					has_trait_xp = {
+						trait = deviants_horse_fucker
+						track = horsefucker_pussy_state
+						value = 100
+					}
+				}
+				desc = deviants_horse_fucker_3_character_desc
+			}
+			desc = deviants_horse_fucker_2_character_desc
+		}
+	}
+
+	tracks = {
+		horsefucker_pussy_state = {
+			35 = {
+
+			}
+
+			65 = {
+				health = -0.50
+				fertility = -0.4
+			}
+
+			100 = {
+				stewardship = -5
+				learning = -5
+				fertility = -0.9
+				health = -0.50
+				monthly_piety = -0.2
+				attraction_opinion = -5
+				spouse_opinion = -5
+				opinion_of_female_rulers = -5
+			}			
+		}
+	}
+}
+
+deviants_virility_saint = {
+	category = fame
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	monthly_prestige = -1
+	monthly_piety = -1
+	monthly_piety_gain_mult = -0.05
+	religious_vassal_opinion = -10
+	county_opinion_add = -10
+	opinion_of_same_faith = -20
+	clergy_opinion = -10
+	build_speed = 0.15
+	icon = {
+		first_valid = {
+			triggered_desc = { # If no character exists
+				trigger = { NOT = { exists = this } }
+				desc = deviants_virility_saint.dds
+			}
+			triggered_desc = { 
+				trigger = { 
+					has_trait_xp = {
+						trait = deviants_virility_saint
+						track = virilitysaintfame
+						value < 50
+					} 
+				}
+				desc = deviants_virility_saint.dds
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait_xp = {
+						trait = deviants_virility_saint
+						track = virilitysaintfame
+						value >= 50
+					}
+				}
+				desc = deviants_famous_virilty_saint.dds
+			}
+		}	
+	}
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_virility_saint }
+						has_trait_xp = {
+							trait = deviants_virility_saint
+							track = virilitysaintfame
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_virility_saint }
+					}
+				}
+				desc = deviants_virility_saint_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_virility_saint
+					has_trait_xp = {
+						trait = deviants_virility_saint
+						track = virilitysaintfame
+						value = 100
+					}
+				}
+				desc = deviants_virility_saint_3
+			}
+			desc = deviants_virility_saint_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_virility_saint_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_virility_saint }
+						has_trait_xp = {
+							trait = deviants_virility_saint
+							track = virilitysaintfame
+							value < 50
+						}
+					}
+				}
+				desc = deviants_virility_saint_1_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_virility_saint
+					has_trait_xp = {
+						trait = deviants_virility_saint
+						track = virilitysaintfame
+						value = 100
+					}
+				}
+				desc = deviants_virility_saint_3_character_desc
+			}
+			desc = deviants_virility_saint_2_character_desc
+		}
+	}
+
+	tracks = {
+		virilitysaintfame = {
+			30 = {
+				diplomacy = 1
+				opinion_of_same_faith = 5
+			}
+
+			65 = {
+				diplomacy = 2
+				opinion_of_male_rulers = 5
+				opinion_of_same_faith = 10
+			}
+
+			100 = {
+				diplomacy = 3
+				opinion_of_male_rulers = 10
+				opinion_of_same_faith = 10
+			}	
+		}
+		commoner_saint_reputation = {
+			30 = {
+				county_opinion_add = 5
+			}
+
+			65 = {
+				monthly_prestige = 1
+				county_opinion_add = 10
+				opinion_of_vassal = 10
+				general_opinion = 5
+				holding_build_speed = -0.10
+				build_gold_cost = -0.1
+			}
+
+			100 = {
+				monthly_prestige = 1
+				county_opinion_add = 10
+				general_opinion = 10
+				build_speed = -0.15
+				holding_build_speed = -0.1
+				build_gold_cost = -0.1
+				holding_build_gold_cost = -0.1
+			}			
+		}
+		clergy_saint_reputation = {
+			30 = {
+				clergy_opinion = 5
+				monthly_piety_gain_mult = 0.02
+				monthly_piety = 1
+			}
+
+			65 = {
+				clergy_opinion = 10
+				religious_vassal_opinion = 10
+				monthly_piety_gain_mult = 0.02
+				opinion_of_same_faith = 5
+				monthly_piety = 1
+			}
+
+			100 = {
+				clergy_opinion = 15
+				religious_vassal_opinion = 20
+				religious_head_opinion = 15
+				monthly_piety_gain_mult = 0.02
+				opinion_of_same_faith = 10
+				monthly_piety = 1
+			}			
+		}
+	}	
+}
+
+deviants_canine_lover_one = {
+	category = fame
+	icon = deviants_canine_lover_one.dds
+	desc = trait_deviants_canine_lover_one_character_desc
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	tracks = {
+		deviant_canine_lover_fame_one = {
+
+			100 = {
+				health = 0.05
+				health = 0.10
+				stress_loss_mult = 0.10
+				prowess = 1
+			}			
+		}
+	}
+}
+
+deviants_canine_lover_two = {
+	category = fame
+	icon = deviants_canine_lover_one.dds
+	desc = trait_deviants_canine_lover_two_character_desc
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	health = 0.15
+	stress_loss_mult = 0.10
+	prowess = 1
+	tracks = {
+		deviant_canine_lover_fame_two = {
+
+			100 = {
+				stress_loss_mult = 0.10
+				stress_gain_mult = -0.10
+			}			
+		}
+	}
+}
+
+deviants_canine_lover_three = {
+	category = fame
+	icon = deviants_canine_lover_one.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	health = 0.15
+	stress_loss_mult = 0.20
+	prowess = 1
+	stress_gain_mult = -0.10
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviants_canine_lover_three }
+						has_trait_xp = {
+							trait = deviants_canine_lover_three
+							track = deviant_canine_exposure_fame
+							value < 50
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviants_canine_lover_three }
+					}
+				}
+				desc = deviants_canine_lover_three_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_canine_lover_three
+					has_trait_xp = {
+						trait = deviants_canine_lover_three
+						track = deviant_canine_exposure_fame
+						value = 100
+					}
+				}
+				desc = deviants_canine_lover_three_3
+			}
+			desc = deviants_canine_lover_three_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviants_canine_lover_three_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviants_canine_lover_three }
+						has_trait_xp = {
+							trait = deviants_canine_lover_three
+							track = deviant_canine_exposure_fame
+							value < 50
+						}
+					}
+				}
+				desc = trait_deviants_canine_lover_three_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviants_canine_lover_three
+					has_trait_xp = {
+						trait = deviants_canine_lover_three
+						track = deviant_canine_exposure_fame
+						value = 100
+					}
+				}
+				desc = deviants_canine_lover_three_3_character_desc
+			}
+			desc = deviants_canine_lover_three_2_character_desc
+		}
+	}
+	tracks = {
+		deviant_canine_lover_fame_three = {
+
+			50 = {
+				stress_gain_mult = -0.10
+			}
+
+			100 = {
+				stress_loss_mult = 0.10
+			}			
+		}
+		deviant_canine_sub_fame = {
+
+			50 = {
+				stress_gain_mult = -0.10
+			}
+
+			100 = {
+				negate_health_penalty_add = 0.25
+			}			
+		}
+		deviant_canine_exposure_fame = {
+
+			50 = {
+				stress_loss_mult = -0.10
+	     		stress_gain_mult = 0.05
+				attraction_opinion = -5
+			}
+
+			100 = {
+				stress_loss_mult = -0.10
+	     		stress_gain_mult = 0.05
+				clergy_opinion = -15
+				general_opinion = -15
+				attraction_opinion = -15
+				religious_vassal_opinion = -20
+				religious_head_opinion = -15
+				monthly_piety_gain_mult = -0.02
+				opinion_of_same_faith = -10
+			}			
+		}
+	}
+}
+
+deviants_humble_assistant = {
+	category = fame
+	icon = deviantblackmail_vassal.dds
+	desc = trait_deviants_humble_assistant_character_desc
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	immortal = yes
+	attraction_opinion = 20
+}
+
+
+lustful_inn_slut = {
+	category = fame
+	icon = lustful_inn_whore.dds
+	desc = trait_lustful_inn_slut_character_desc
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	tracks = {
+		lustful_inn_slut_popularity = {
+			30 = {
+			}
+
+			65 = {
+				diplomacy = 1
+			}
+
+			100 = {
+				diplomacy = 2
+			}			
+		}
+		lustful_inn_slut_daring = {
+
+			100 = {
+				prowess = 1
+			}			
+		}
+		lustful_inn_slut_status = {
+			30 = {
+				intrigue = 1
+			}
+
+			65 = {
+				intrigue = 2
+			}
+
+			100 = {
+				intrigue = 3
+			}			
+		}
+		lustful_inn_slut_experince = {
+
+			100 = {
+
+			}			
+		}
+	}	
+}
+
+deviant_nether_oil = {
+	category = health
+	icon = deviant_nether_oil.dds
+	minimum_age = 18
+	shown_in_ruler_designer = no
+	stress_loss_mult = -0.30
+	stress_gain_mult = 0.20
+	general_opinion = -10
+	learning = -2
+	fertility = 10
+	years_of_fertility = 9000
+	monthly_track_xp_degradation = { min = 0 change = 5 }
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = {
+							NOT = { exists = this }
+						}
+					}
+					trigger_else_if = {
+						limit = { has_trait = deviant_nether_oil }
+						has_trait_xp = {
+							trait = deviant_nether_oil
+							track = deviant_nether_oil_addiction
+							value < 25
+						}
+					}
+					trigger_else = {
+						NOT = { has_trait = deviant_nether_oil }
+					}
+				}
+				desc = deviant_nether_oil_1
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviant_nether_oil
+					has_trait_xp = {
+						trait = deviant_nether_oil
+						track = deviant_nether_oil_addiction
+						value >= 75
+					}
+				}
+				desc = deviant_nether_oil_3
+			}
+			desc = deviant_nether_oil_2
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = deviant_nether_oil_1_desc
+			}
+			triggered_desc = {
+				trigger = {
+					trigger_if = {
+						limit = { has_trait = deviant_nether_oil }
+						has_trait_xp = {
+							trait = deviant_nether_oil
+							track = deviant_nether_oil_addiction
+							value < 25
+						}
+					}
+				}
+				desc = trait_deviant_nether_oil_character_desc
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = deviant_nether_oil
+					has_trait_xp = {
+						trait = deviant_nether_oil
+						track = deviant_nether_oil_addiction
+						value >= 75
+					}
+				}
+				desc = deviant_nether_oil_3_character_desc
+			}
+			desc = deviant_nether_oil_2_character_desc
+		}
+	}
+	tracks = {
+		deviant_nether_oil_addiction = {
+
+			25 = {
+				stress_loss_mult = 0.30
+				stress_gain_mult = -0.20
+				general_opinion = 10
+				learning = 2
+				fertility = -12
+			}
+
+			75 = {
+				stress_loss_mult = 0.10
+				prowess = 2
+				stewardship = 1
+				diplomacy = 4
+				attraction_opinion = 10
+				fertility = -3
+				health = major_health_bonus
+				negate_health_penalty_add = major_health_bonus	
+			}			
+		}
+	}
+}

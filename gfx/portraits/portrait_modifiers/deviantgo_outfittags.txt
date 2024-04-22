@@ -1,0 +1,25 @@
+﻿
+#deviantgo_outfittags = {
+#
+#    usage = game
+#mask outfit tag
+#    deviantgo_maskedoutfit = {
+#       require_outfit_tags = yes
+#        dna_modifiers = {
+#            accessory = {
+#                mode = add
+#                gene = special_headgear_face_mask
+#		        template = face_mask
+#                value = 1
+#            }
+#        }   
+#        outfit_tags = { deviantgo_maskedoutfitgo }  
+#        weight = {
+#			base = 0
+#			modifier = {
+#				add = 200
+#				limit = { has_activity_type = activity_deviantgo_orgy }
+#			}
+#		}
+#    }
+#}

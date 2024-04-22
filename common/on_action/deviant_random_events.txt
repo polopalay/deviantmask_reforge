@@ -1,0 +1,471 @@
+﻿random_yearly_playable_pulse = {
+	on_actions = {
+		deviant_yearly_random_player_pulse
+	}
+}
+#quarterly pulse 
+quarterly_playable_pulse = {
+	on_actions = {
+		delay = { days = { 90 365 } }
+		deviants_pervert_events
+		delay = { days = { 90 180 } }
+		deviants_saintgo_events
+		delay = { days = { 90 365 } }
+		deviants_spouse_events
+		delay = { days = { 90 180 } }
+		deviants_specialgo_events
+		delay = { days = { 365 1000 } }
+		deviants_jestergo_events
+		delay = { days = { 90 180 } }
+		deviants_quarterlyblackmail_events
+		delay = { days = { 90 365 } }
+		deviants_sadistprisoner_events
+		delay = { days = { 90 365 } }
+		deviants_army_events
+		delay = { days = { 90 365 } }
+		deviants_slut_events_pulse
+		delay = { days = { 90 365 } }
+		deviantcampslut_quarterly_random_player_pulse
+		delay = { days = { 180 365 } }
+		deviants_caninelover_events
+	}
+}
+
+#random events while in the castle and leasure time
+deviant_yearly_random_player_pulse = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        is_ruler = yes
+		age >= 18
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+	}
+	random_events = {
+		chance_to_happen = 50
+        #sadistic events 0001-0999
+		200 = deviants_gorandom.0001 # urge to slap
+		100 = deviants_gorandom.0100 # line of new servants
+		100 = deviants_gorandom.0200 # add to a maid's minor punishment
+		100 = deviants_gorandom.0300 # urge to step on random courtier or guest
+		200 = deviants_gorandom.0400 # desire to imprison ranomd person just to see their face 
+        100 = deviants_gorandom.0500 # desire to give public humiliation to random
+        #lustful or sadistic, trigger in the event 1000-1999
+        100 = deviants_gorandom.1000 # criminals being punished by public humiliation
+		100 = deviants_gorandom.1010 # rumors about thief, stolen things from several nobles
+		100 = deviants_gorandom.1020 # get asked by some scholars to dig some nearby ruins
+		100 = deviants_gorandom.1030 # reports about missing servants
+		100 = deviants_gorandom.1040 # rumors about strange creatures at night, living shadow beasts
+		100 = deviants_gorandom.1050 # complaint about some strange well, if you drop a note and body weight of cold into it, the person will alledgedly die
+		100 = deviants_gorandom.1060 # virgin woman's pussy juice thought to help with erections/virility/skincare etc
+		100 = deviants_gorandom.1070 # vassal complains about a serial horse molester at his stables
+		100 = deviants_gorandom.1080 # some "crazed witch" attacked male courtier and stole his seed, by force
+		100 = deviants_gorandom.1090 # some crazed fiend attacked her last night and drank her nectar
+		100 = deviants_gorandom.1200 # two courtiers arguing
+		100 = deviants_gorandom.1300 # courtier accused of sodomy
+		100 = deviants_gorandom.1301 # vassal accused of dealing with whores
+		100 = deviants_gorandom.1302 # you are supscted of deviancy
+		100 = deviants_gorandom.1303 # vassal wants to kiss feet
+		100 = deviants_gorandom.1304 # vassal wants to bath with you
+		100 = deviants_gorandom.1305 # courtier or guest accused of self touch or self-abuse 
+		100 = deviants_gorandom.1306 # waking up restless, hook to go streaking
+		100 = deviants_gorandom.1310 # you are accused of witchcraft
+		100 = deviants_gorandom.1320 # random female courtier is accused of sodomy
+		100 = deviants_gorandom.1330 # female healer being accused of stealing semen from men,
+		100 = deviants_gorandom.1331 # peasant mob stripped female courtier 
+		100 = deviants_gorandom.1332 # royal and up, peasants demand to have your Royal Touch cure some new illness
+		100 = deviants_gorandom.1333 # new claim is spreading among the commoners, that woman's breast milk can be used to prevent some new minor illness,
+		100 = deviants_gorandom.1334 # claim that if a woman has been unfateful can be measured from the size and color of her nipples, big dark ones are a punishment from the heavens...
+		100 = deviants_gorandom.1335 # random lustful vassal wants wants to offer a small favor, if you ignore the petition that has just been delivered to you,
+		100 = deviants_gorandom.1336 # male courtier is claiming that some woman witch is stealing his seed... at night, while he sleeps... and causing his impotence
+		100 = deviants_gorandom.1337 # female is claiming that some demon comes to lick her feet during the night, she keeps waking up with wet feet... 
+		100 = deviants_gorandom.1338 # complaint about alledged glory hole inside the castle, some witch is tempting men to it and stealing their money
+        #lustful 2000-2999
+        200 = deviants_gorandom.2000 # urge to masturbate in a meeting
+		200 = deviants_gorandom.2100 # urge to expose
+		100 = deviants_gorandom.2200 # urge to gangbang
+		100 = deviants_gorandom.2300 # urge to get stuck to a garden fence hole
+		200 = deviants_gorandom.2400 # urge to be spanked 
+		#other
+		100 = deviants_maskgo.1000 # jester shows up if no jester hired
+		300 = deviants_maskgo.4000 # if female lustful and deviant, horse fuck events start
+	} 
+}
+#being campslut random events while in the castle and leasure time
+deviantcampslut_quarterly_random_player_pulse = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        is_ruler = yes
+		age >= 18
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = pregnant }
+	}
+	random_events = {
+		chance_to_happen = 40
+		#camp slut stuff
+		300 = deviants_campslut.1000 # is camp slut, basic request event
+	} 
+}
+#hired campslutORcomplaints about camp slut random events while in the castle and leasure time
+deviants_slut_events_pulse = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        is_ruler = yes
+		age >= 18
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		exists = capital_province
+	}
+	random_events = {
+		chance_to_happen = 50
+		#random if no sluts
+		100 = deviants_campslut.1998 #the men pleading you to get some camp dancers
+		#camp slut stuff if you are the dancer
+		100 = deviants_campslut.2500 # servants complain about having to clean cum
+		100 = deviants_campslut.2501 # random priest complains about the camp whore
+		100 = deviants_campslut.0800 # 50> fame, basic whored to a client by a knight
+		100 = deviants_campslut.2502 # vassal wants the look alike
+		100 = deviants_campslut.2503 # vassal comes to stare
+		100 = deviants_campslut.2504 # knight comes to stare
+		100 = deviants_campslut.2505 # knight complaining about the look-alike
+		# events if you hired dancers
+		1000 = deviants_campslut.4000 # spot a suitable woman to hire as a special whore
+		200 = deviants_campslut.4100 # vassal wants compensation, for mental damage...
+		200 = deviants_campslut.4110 # vassal wants to buy services
+		200 = deviants_campslut.4111 # vassal wants to buy services, have her enetrain his guests
+		200 = deviants_campslut.4112 # vassal wants to buy services, wants her to dom him
+		200 = deviants_campslut.4113 # knight wants her for a night, duel with knights
+		200 = deviants_campslut.4114 # knight wants her for a night, diplo, to a party with his guys
+		200 = deviants_campslut.4115 # knight wants her for a night, some really shady party if sadist
+		200 = deviants_campslut.4116 # vassal wanst religous whore service
+		200 = deviants_campslut.4117 # knight wanst religous whore service
+		200 = deviants_campslut.4120 # one of the men at arms did a bad thing, variant 
+		200 = deviants_campslut.4140 # written complaint from X, she stole his chastity...
+		200 = deviants_campslut.4150 # your knight complains on behalf of your men at arms
+		200 = deviants_campslut.4160 # wants new clothes, as a bonus
+		200 = deviants_campslut.4170 # has a simp stalker, how to deal with him
+		200 = deviants_campslut.4180 # someone been stealing her undergarments
+		200 = deviants_campslut.4190 # in debt to local mafia
+		200 = deviants_campslut.4200 # local religous scholar complain about her, varinat desc based on which whore trait she has and one generic
+		400 = deviants_campslut.4210 # variant event seeing her do diplo whore stuff with your men
+		400 = deviants_campslut.4211 # variant event seeing her do warrior whore stuff with your men 
+		400 = deviants_campslut.4212 # variant event seeing her do domina whore stuff with your men
+		400 = deviants_campslut.4213 # variant event seeing her do religous whore stuff with your men
+		100 = deviants_campslut.5000 # priest complains
+		100 = deviants_campslut.5001 # rent whores to a tavern
+		100 = deviants_campslut.5002 # random vassal wants whores for specific reason
+		400 = deviants_campslut.5003 # random vassal wants 100 exp whore
+		100 = deviants_campslut.5004 # courtier buying a whores
+		100 = deviants_campslut.5005 # whores molesting a priest
+		100 = deviants_campslut.5006 # whore with money
+		100 = deviants_campslut.5007 # sanction new gloryhole
+	} 
+}
+
+####### random traveling events #########
+on_travel_plan_movement = {
+	on_actions = {
+		delay = { days = { 2 4 } }
+		deviants_travel_events
+	}
+}
+deviants_travel_events = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        is_ruler = yes
+		age >= 18
+		is_travelling = yes
+		NOT = { has_trait = blind }
+	}
+	random_events = {
+		chance_to_happen = 5
+		#travel events
+		10 = deviantsgo_travel.0100 # spot a bound woman having a witch trial
+		10 = deviantsgo_travel.0101
+		10 = deviantsgo_travel.0102
+		10 = deviantsgo_travel.0103
+		10 = deviantsgo_travel.0104
+		10 = deviantsgo_travel.0105
+		10 = deviantsgo_travel.0106
+		10 = deviantsgo_travel.0107
+		10 = deviantsgo_travel.0108
+		10 = deviantsgo_travel.0109
+		500 = deviantsgo_travel.0110 # bandit attack if female
+		10 = deviantsgo_travel.0200 # spot woman fucking a dog
+		500 = deviantsgo_travel.1000 # lustful female only perverted inn
+		500 = deviantsgo_travel.2000 # lustful female only perverted inn, the contributed story arch one
+	} 
+}
+#random army events
+deviants_army_events = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        is_ruler = yes
+		is_in_army = yes
+		age >= 18
+		NOT = { has_trait = blind }
+	}
+	random_events = {
+		chance_to_happen = 30
+		#army events
+		10 = deviantsgo_army.0100 # knight caught masturbating
+		10 = deviantsgo_army.0101 # training with random knight
+		100 = deviantsgo_army.0102 # asking permit for barrel glory with local women
+		10 = deviantsgo_army.0103 # knights want to "interogate" some guy they found
+		10 = deviantsgo_army.0104 # giving speech
+		100 = deviantsgo_army.0105 # fight between knights for a camp follower, to "wash clothes"
+		10 = deviantsgo_army.0106 # feel the need
+		10 = deviantsgo_army.0107 # see some random guy selling drawn profile pictures of women
+		100 = deviantsgo_army.0108 # if female, sleep paralyzis
+		100 = deviantsgo_army.0109 # if male, some camp whore snuk in to steal some seed
+	} 
+}
+#sadists random prisoner fun
+deviants_sadistprisoner_events = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+		has_trait = sadistic
+        is_ruler = yes
+		has_prisoners = yes
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		age >= 18
+		NOT = { has_trait = blind }
+	}
+	random_events = {
+		chance_to_happen = 100
+		#sadist events with women
+		100 = deviantsgo_prison.0100 # basic female prisoner
+		#sadist events with man as woman
+		100 = deviantsgo_prison.2000 # basic male prisoner spotted as female
+	} 
+}
+#quarterly blackmail
+deviants_quarterlyblackmail_events = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        	is_ruler = yes
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		age >= 18
+		NOT = { 
+			has_trait_xp = {
+				trait = deviants_demonanalslut
+				track = demonanalslutcorruption
+				value >= 50
+			} 
+		}
+	}
+	random_events = {
+		chance_to_happen = 10
+		#starter blackmail 
+		100 = deviantsgo_blackmail.0100 #  starter blakcmail if no trait and past 50 camp slut
+		#basic blackmail events
+		10 = deviantsgo_blackmail.0200 # pay or go as place to exhibition
+		10 = deviantsgo_blackmail.0300 # pay or go x room to be naked
+		#event if you don't have named blackmailer but above 30 exp
+		10 = deviantsgo_blackmail.1000 # go to room to fuck man.
+		#after you get blackmailer blackmail events
+		100 = deviantsgo_blackmail.1100 # 30>basic blackmail in the council room during private meeting
+		100 = deviantsgo_blackmail.1200 # 50>groping you in public, demanding money or sex
+		100 = deviantsgo_blackmail.1300 # 70> amd if vassla 60> invite to be party decor
+		100 = deviantsgo_blackmail.1400 # 90> and if vassal 50>force marry if both can
+		100 = deviantsgo_blackmail.1500 # 100> and if vassal 90>force regent 
+		#if spouse and blackmailer and they not the same, comment the below event away like this line to remove NTR from blackmail
+		100 = deviantsgo_blackmail.2000 #80>/70>basic NTR event start
+		#liege blackmail events
+		500 = deviantsgo_blackmail.5000 # emissary from from your liege comes if don't have trait
+		500 = deviantsgo_blackmail.5100 # liege call you over with a letter
+		500 = deviantsgo_blackmail.7000 # basic blackmail by your fellow vassal in the name of your liege
+	} 
+}
+#quarterly jester events
+deviants_jestergo_events = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        is_ruler = yes
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		age >= 18
+	}
+	random_events = {
+		chance_to_happen = 20
+		#jester shows up is a regular random event now to make it rarer
+		#basic jester events
+		200 = deviants_maskgo.1010 # weird but arousuing hip sway dance
+		50 = deviants_maskgo.1020 # jester is stuck
+		200 = deviants_maskgo.1030 # jester is performing felatio to random objects/food during show in a feast
+		50 = deviants_maskgo.1040 # jester caught commiting self-abuse on the corridor
+		100 = deviants_maskgo.1050 # doing a show, where she makes cucumbers and carrots dissapear
+		50 = deviants_maskgo.1060 # come to your bedroom, jester is there, giving you a private show
+		200 = deviants_maskgo.1070 # is making a puppet play...
+		200 = deviants_maskgo.1080 # jester giving a lapdance to random courtier or guest
+		50 = deviants_maskgo.1090 # if female, she wants to measure the volume of your pussy,
+		50 = deviants_maskgo.1100 # if male, jester in your room, asking to measure your cock,
+	} 
+}
+#quarterly specialgo/demon events
+deviants_specialgo_events = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        	is_ruler = yes
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		age >= 18
+	}
+	random_events = {
+		chance_to_happen = 40
+		#special deviant lunatic events
+		5 = deviants_maskgo.1200 # the multipath dream
+		5 = deviants_maskgo.1250 # basic dream anal
+		5 = deviants_maskgo.1251 # basic dream vaginal
+		5 = deviants_maskgo.1252 # basic dream in public 
+		5 = deviants_maskgo.1300 # special dream
+		5 = deviants_maskgo.1390 # servant facial
+		5 = deviants_maskgo.1400 # servant fucking ass
+		100 = deviants_maskgo.1410 # gremlin fuck
+		100 = deviants_maskgo.1440 # urge to expose at high submission
+		10 = deviants_maskgo.1450 # urge to fuck doorknob
+		200 = deviants_maskgo.1460 # high deviancy, vassals want to fuck since you were doing naked court again
+		200 = deviants_maskgo.8000 # start men at arms blackmail at max deviancy
+		200 = deviants_maskgo.8099 # basic men at arms event request
+		200 = deviants_maskgo.8900 # 0 loyalty punishment event
+	} 
+}
+
+#quarterly spouse events
+deviants_spouse_events = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        is_ruler = yes
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		age >= 18
+	}
+	random_events = {
+		chance_to_happen = 30
+		#basic sadistic wife start
+		100 = deviants_gorandom.5000 #  
+		#basic sadistic wife events that can always trigger
+		200 = deviants_gorandom.5010 # servant in trouble
+		100 = deviants_gorandom.5030 # common prisoner in trouble 
+		100 = deviants_gorandom.5100 # date invite
+		200 = deviants_gorandom.5300 # 100 special, I was waiting for you gift
+		100 = deviants_gorandom.5500 # wife talking to another man, trying to make you jealous
+	} 
+}
+
+#special pervert pulse
+deviants_pervert_events = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        is_ruler = yes
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		age >= 18
+	}
+	random_events = {
+		chance_to_happen = 30
+		100 = deviants_gorandom.1340 # maxed look-alike, you find a strange phallic object
+		#dildo events
+		10 = deviants_gorandom.1341 # fucking dildo in the bedchamber
+		10 = deviants_maskgo.0510 # dildo fuck cyoa
+		10 = deviants_gorandom.1342 # dildo inside while in public
+		100 = deviants_gorandom.1350 # 50> dream fuck
+	} 
+}
+
+#saint pulse
+deviants_saintgo_events = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+        is_ruler = yes
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		age >= 50
+		has_trait = deviants_demonanalslut
+	}
+	random_events = {
+		chance_to_happen = 30
+		100 = deviants_maskgo.1500 # basic, priests show up past age 50
+		100 = deviants_maskgo.1600 # clergy members want to inspect your immortal body for taint
+		100 = deviants_maskgo.1800 # curing the "impotency" of some clergy members
+		100 = deviants_maskgo.1900 # commoner horde led by impotent men demand to be cured
+		100 = deviants_maskgo.2000 # have a dream, telling you to bath in the seed of your fatefull to be cured
+	} 
+}
+
+#canine lover pulse
+deviants_caninelover_events = {
+	trigger = {
+		is_adult = yes
+        is_ruler = yes
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		is_landed = yes
+		has_trait = deviants_canine_lover_three
+	}
+	random_events = {
+		chance_to_happen = 30
+		100 = deviantsgo_beast.9000 # basic leg hump
+		100 = deviantsgo_beast.9010 #
+		100 = deviantsgo_beast.9020 # 
+		100 = deviantsgo_beast.9030 # basic public mount up
+		100 = deviantsgo_beast.9040 # 
+		100 = deviantsgo_beast.9050 # 
+		100 = deviantsgo_beast.9100 # jealosy event with another dog
+		100 = deviantsgo_beast.9120 # wake up fuck at night
+		100 = deviantsgo_beast.9140 # male ask stuff 100 sus
+		100 = deviantsgo_beast.9150 # female ask stuff 100 sus
+	} 
+}
+

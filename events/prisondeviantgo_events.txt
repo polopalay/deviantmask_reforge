@@ -1,0 +1,2599 @@
+﻿namespace = deviantsgo_prison
+
+#0100-1000 sadist messing with a female prisoner
+#0100 basic female prisoner landing page 
+deviantsgo_prison.0100 = { 
+	type = character_event
+	title = deviantsgo_prison.0100.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { is_female = yes }
+			desc = deviantsgo_prison.0100.a.desc
+			}
+			triggered_desc = {
+				trigger = { is_female = no }
+			desc = deviantsgo_prison.0100.b.desc
+			}
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviantsgo_prison.0100.c.desc
+			}
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviantsgo_prison.0100.d.desc
+			}
+		}
+	}	
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = thinking 
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+	}
+    trigger = { 
+		is_in_army = no
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		has_trait = deviants_mask
+		has_trait = sadistic
+		has_prisoners = yes
+		any_prisoner = {
+			is_female = yes
+			age >= 18
+			is_ai = yes
+			is_adult = yes
+			is_incapable = no
+			is_in_prison_type = dungeon
+		}
+	}
+    immediate = {
+		random_prisoner = {
+			limit = {
+				age >= 18
+				is_female = yes
+				is_ai = yes
+				is_adult = yes
+				is_incapable = no
+				is_imprisoned = yes
+				is_in_prison_type = dungeon
+			}
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	# Deviancy Examination
+	option = {
+		trigger = {
+			scope:deviant_go_random_1 = {
+				NOT = { has_trait = deviant }
+			}
+		}
+		name = deviantsgo_prison.0100.a
+		custom_tooltip = deviantsgo_prison.0100.a.tt
+		trigger_event = deviantsgo_prison.0800
+	}	
+	# Fornicator Trial
+	option = {
+		trigger = {
+			scope:deviant_go_random_1 = {
+				NOT = { has_trait = fornicator }
+				NOT = { has_trait = pregnant }
+			}
+		}
+		name = deviantsgo_prison.0100.b
+		custom_tooltip = deviantsgo_prison.0100.b.tt
+		trigger_event = deviantsgo_prison.0500
+	}	
+	# Witch Investigation
+	option = {
+		name = deviantsgo_prison.0100.c
+		custom_tooltip = deviantsgo_prison.0100.c.tt
+		trigger_event = deviantsgo_prison.0200
+	}	
+	option = {
+		trigger = {
+			any_prisoner = {
+				is_female = yes
+				age >= 18
+				is_ai = yes
+				is_adult = yes
+				is_incapable = no
+				is_in_prison_type = dungeon
+				NOT = { this = scope:deviant_go_random_1 }
+			}
+		}
+		name = deviantsgo_prison.0100.d
+		custom_tooltip = deviantsgo_prison.0100.d.tt
+		trigger_event = deviantsgo_prison.0100
+	}	
+	# never mind, I got bored already
+	option = {
+		name = deviantsgo_prison.0100.e
+		custom_tooltip = deviantsgo_prison.0100.e.tt
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+		}
+	}			
+}
+#0200-0400 witch investigation events
+deviantsgo_prison.0200 = { 
+	type = character_event
+	title = deviantsgo_prison.0200.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { is_female = yes }
+			desc = deviantsgo_prison.0200.a.desc
+			}
+			triggered_desc = {
+				trigger = { is_female = no }
+			desc = deviantsgo_prison.0200.b.desc
+			}
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviantsgo_prison.0200.c.desc
+			}
+			triggered_desc = {
+				trigger = { is_ruler = yes }
+			desc = deviantsgo_prison.0200.d.desc
+			}
+		}
+	}
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+	}
+	# Start the investigation. 
+	option = {
+		trigger = {
+			scope:deviant_go_random_1 = {
+				NOT = { has_trait = witch }
+				NOT = { has_trait = deviants_clitclamp }
+			}
+		}
+		name = deviantsgo_prison.0200.a
+		custom_tooltip = deviantsgo_prison.0200.a.tt
+		trigger_event = deviantsgo_prison.0201
+	}		
+	# Time to check on the progress
+	option = {
+		trigger = {
+			scope:deviant_go_random_1 = {
+				has_trait = deviants_clitclamp
+				has_trait_xp = {
+					trait = deviants_clitclamp
+					track = clitgrowthsize
+					value < 100
+				}
+			}
+		}
+		name = deviantsgo_prison.0200.b
+		custom_tooltip = deviantsgo_prison.0200.b.tt
+		trigger_event = deviantsgo_prison.0210
+	}		
+	# Time to present the Devil's Teat to some priests, to make it official
+	option = {
+		trigger = {
+			scope:deviant_go_random_1 = {
+				NOT = { has_trait = witch }
+				has_trait = deviants_clitclamp
+				has_trait_xp = {
+					trait = deviants_clitclamp
+					track = clitgrowthsize
+					value >= 100
+				}
+			}
+		}
+		name = deviantsgo_prison.0200.c
+		custom_tooltip = deviantsgo_prison.0200.c.tt
+		trigger_event = deviantsgo_prison.0240
+	}	
+	# Time to play with my certified witch...
+	option = {
+		trigger = {
+			scope:deviant_go_random_1 = {
+				has_trait = deviants_clitclamp
+				has_trait = witch
+				has_trait_xp = {
+					trait = deviants_clitclamp
+					track = clitgrowthsize
+					value >= 100
+				}
+			}
+		}
+		name = deviantsgo_prison.0200.d
+		custom_tooltip = deviantsgo_prison.0200.d.tt
+		trigger_event = deviantsgo_prison.0250
+	}		
+	# just test her pussy, if it can fit a demon
+	option = {
+		name = deviantsgo_prison.0200.dd
+		custom_tooltip = deviantsgo_prison.0200.dd.tt
+		trigger_event = deviantsgo_prison.0230
+	}	
+	#never mind, I'm bored already
+	option = {
+		name = deviantsgo_prison.0200.e
+		custom_tooltip = deviantsgo_prison.0200.e.tt
+		trigger_event = deviantsgo_prison.0260
+	}	
+}
+#0201 strips her naked, examine her clit, 4 desc variants?
+deviantsgo_prison.0201 = { 
+	type = character_event
+	title = deviantsgo_prison.0201.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+					scope:deviant_go_random_1 = {
+						NOT = { has_trait = witch }
+					} 
+				}
+			desc = deviantsgo_prison.0201.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = no
+					scope:deviant_go_random_1 = {
+						NOT = { has_trait = witch }
+					}
+				 }
+			desc = deviantsgo_prison.0201.b.desc
+			}
+			triggered_desc = {
+				trigger = { 
+				is_ruler = yes
+				scope:deviant_go_random_1 = {
+						NOT = { has_trait = witch }
+					} 
+				}
+			desc = deviantsgo_prison.0201.c.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+					scope:deviant_go_random_1 = {
+						NOT = { has_trait = witch }
+						has_trait = sadistic
+					}
+				 }
+			desc = deviantsgo_prison.0201.d.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					scope:deviant_go_random_1 = {
+						has_trait = witch
+					}
+				}
+			desc = deviantsgo_prison.0201.e.desc
+			}
+		}
+	}
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# put on the clmap
+	option = {
+		name = deviantsgo_prison.0201.a
+		custom_tooltip = deviantsgo_prison.0201.a.tt
+		trigger_event = deviantsgo_prison.0202
+	}		
+	# just messing with you...
+	option = {
+		name = deviantsgo_prison.0201.c
+		custom_tooltip = deviantsgo_prison.0201.c.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -10
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = minor_stress_impact_loss 
+			}
+		}
+	}		
+}
+#0202 place the clamp and toy with it a bit,
+deviantsgo_prison.0202 = { 
+	type = character_event
+	title = deviantsgo_prison.0202.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+					scope:deviant_go_random_1 = {
+						NOT = { has_trait = witch }
+					} 
+				}
+			desc = deviantsgo_prison.0202.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = no
+					scope:deviant_go_random_1 = {
+						NOT = { has_trait = witch }
+					}
+				 }
+			desc = deviantsgo_prison.0202.b.desc
+			}
+			triggered_desc = {
+				trigger = { 
+				is_ruler = yes
+				scope:deviant_go_random_1 = {
+						NOT = { has_trait = witch }
+					} 
+				}
+			desc = deviantsgo_prison.0202.c.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+					scope:deviant_go_random_1 = {
+						NOT = { has_trait = witch }
+						has_trait = sadistic
+					}
+				 }
+			desc = deviantsgo_prison.0202.d.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					scope:deviant_go_random_1 = {
+						has_trait = witch
+					}
+				}
+			desc = deviantsgo_prison.0202.e.desc
+			}
+		}
+	}
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	immediate = {
+		scope:deviant_go_random_1 = {
+			add_trait = deviants_clitclamp
+		}
+
+	}
+	# leave, you did what you wanted
+	option = {
+		name = deviantsgo_prison.0202.a
+		custom_tooltip = deviantsgo_prison.0202.a.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -40
+			}
+			stress_impact = {
+			base = medium_stress_impact_gain
+			lustful = minor_stress_impact_loss 
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+	}		
+	# if male, also fuck her ass
+	option = {
+		trigger = {
+			is_female = no 
+		}
+		name = deviantsgo_prison.0202.b
+		custom_tooltip = deviantsgo_prison.0202.b.tt
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+			chaste = medium_stress_impact_gain 
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 2
+			}
+		}
+	}		
+}
+
+#0210 regular inspection, option to inspect the Devil's Teat, fist to see if she can fit a demon, with your fist...
+deviantsgo_prison.0210 = { 
+	type = character_event
+	title = deviantsgo_prison.0210.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+				}
+			desc = deviantsgo_prison.0210.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = no
+				 }
+			desc = deviantsgo_prison.0210.b.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+				}
+			desc = deviantsgo_prison.0210.c.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+					scope:deviant_go_random_1 = {
+						has_trait = sadistic
+					}
+				 }
+			desc = deviantsgo_prison.0210.d.desc
+			}
+		}
+	}
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# check on progress
+	option = {
+		name = deviantsgo_prison.0210.a
+		custom_tooltip = deviantsgo_prison.0210.a.tt
+		trigger_event = deviantsgo_prison.0220
+	}		
+	# examine signs of demon sex, as in if she could fit a demon with my fist
+	option = {
+		name = deviantsgo_prison.0210.b
+		custom_tooltip = deviantsgo_prison.0210.b.tt
+		trigger_event = deviantsgo_prison.0230
+	}	
+	# I'm bored already
+	option = {
+		name = deviantsgo_prison.0210.c
+		custom_tooltip = deviantsgo_prison.0210.c.tt
+	}		
+}
+
+#0220 basic inspecting the Devil's Teat progress, 
+deviantsgo_prison.0220 = { 
+	type = character_event
+	title = deviantsgo_prison.0220.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+				}
+			desc = deviantsgo_prison.0220.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = no
+				 }
+			desc = deviantsgo_prison.0220.b.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+				}
+			desc = deviantsgo_prison.0220.c.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+					scope:deviant_go_random_1 = {
+						has_trait = sadistic
+					}
+				 }
+			desc = deviantsgo_prison.0220.d.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+					scope:deviant_go_random_1 = {
+						has_trait = lustful
+					}
+				}
+			desc = deviantsgo_prison.0220.e.desc
+			}
+		}
+	}
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# basic pull
+	option = {
+		name = deviantsgo_prison.0220.a
+		custom_tooltip = deviantsgo_prison.0220.a.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -40
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = medium_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+			add_trait_xp = {
+			trait = deviants_clitclamp
+			track = clitgrowthsize
+			value = 20
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+	}		
+	# fuck ass and pull clit if male
+	option = {
+		trigger = {
+			is_female = no 
+		}
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+			chaste = medium_stress_impact_gain 
+		}
+		name = deviantsgo_prison.0220.b
+		custom_tooltip = deviantsgo_prison.0220.b.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+			add_trait_xp = {
+				trait = deviants_clitclamp
+				track = clitgrowthsize
+				value = 10
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 2
+			}
+		}
+	}	
+	# make it grow faster
+	option = {
+		name = deviantsgo_prison.0220.c
+		custom_tooltip = deviantsgo_prison.0220.c.tt
+		add_piety = medium_piety_loss
+		add_gold = tiny_gold_value
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -80
+			}
+			stress_impact = {
+				base = major_stress_impact_gain
+				lustful = medium_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+			add_trait_xp = {
+			trait = deviants_clitclamp
+			track = clitgrowthsize
+			value = 40
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 4
+			}
+		}
+	}		
+}
+
+#0230 fisting, multiple variants, 6? all medium stress relief
+deviantsgo_prison.0230 = { 
+	type = character_event
+	title = deviantsgo_prison.0230.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+				}
+			desc = deviantsgo_prison.0230.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = no
+				 }
+			desc = deviantsgo_prison.0230.b.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+				}
+			desc = deviantsgo_prison.0230.c.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+					scope:deviant_go_random_1 = {
+						has_trait = sadistic
+					}
+				 }
+			desc = deviantsgo_prison.0230.d.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+					scope:deviant_go_random_1 = {
+						has_trait = lustful
+					}
+				}
+			desc = deviantsgo_prison.0230.e.desc
+			}
+		}
+	}
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# basic play
+	option = {
+		name = deviantsgo_prison.0230.a
+		custom_tooltip = deviantsgo_prison.0230.a.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			sadistic = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -40
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = medium_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+		}
+	}		
+	# fuck ass and fist if male
+	option = {
+		trigger = {
+			is_female = no 
+		}
+		name = deviantsgo_prison.0230.b
+		custom_tooltip = deviantsgo_prison.0230.b.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 2
+			}
+		}
+	}	
+	# both hands
+	option = {
+		name = deviantsgo_prison.0230.c
+		custom_tooltip = deviantsgo_prison.0230.c.tt
+		stress_impact = {
+			base = minor_stress_impact_loss
+			sadistic = major_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -80
+			}
+			stress_impact = {
+				base = massive_stress_impact_gain
+				lustful = medium_stress_impact_loss
+				chaste = massive_stress_impact_gain 
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 3
+			}
+		}
+	}		
+}
+
+#0240 time to show to the priests 4 desc variants?
+deviantsgo_prison.0240 = { 
+	type = character_event
+	title = deviantsgo_prison.0240.t
+	desc = deviantsgo_prison.0240.a.desc
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# as you see, she is clearly a witch
+	option = {
+		name = deviantsgo_prison.0240.a
+		custom_tooltip = deviantsgo_prison.0240.a.tt
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+		}
+		add_piety = medium_piety_gain
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = medium_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+			add_trait = witch
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 2
+			}
+		}
+	}			
+}
+
+#0250 playing with my certified witch toy, either fuck the teat as female, or play with it
+deviantsgo_prison.0250 = { 
+	type = character_event
+	title = deviantsgo_prison.0250.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+				}
+			desc = deviantsgo_prison.0250.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = no
+				 }
+			desc = deviantsgo_prison.0250.b.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+				}
+			desc = deviantsgo_prison.0250.c.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_ruler = yes
+				 }
+			desc = deviantsgo_prison.0250.d.desc
+			}
+		}
+	}
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# play with the clit
+	option = {
+		name = deviantsgo_prison.0250.a
+		custom_tooltip = deviantsgo_prison.0250.a.tt
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+			lustful = minor_stress_impact_loss
+			chaste = minor_stress_impact_gain 
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -20
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+		}
+	}		
+	# fuck ass and pull clit if male
+	option = {
+		trigger = {
+			is_female = no 
+		}
+		name = deviantsgo_prison.0250.b
+		custom_tooltip = deviantsgo_prison.0250.b.tt
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+			chaste = medium_stress_impact_gain 
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+	}	
+	# fuck the teat as female
+	option = {
+		trigger = {
+			is_female = yes 
+		}
+		name = deviantsgo_prison.0250.c
+		custom_tooltip = deviantsgo_prison.0250.c.tt
+		trigger_event = deviantsgo_prison.0260
+	}	
+ 	#present the cerified witch to some paying customers
+	option = {
+		name = deviantsgo_prison.0250.d
+		custom_tooltip = deviantsgo_prison.0250.d.tt
+		add_gold = tiny_gold_value
+		add_piety = medium_piety_loss
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = medium_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+				shy = medium_stress_impact_gain
+			}
+		}
+	}		
+}
+
+#0260 female fucking the devil's teat
+deviantsgo_prison.0260 = { 
+	type = character_event
+	title = deviantsgo_prison.0260.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+				}
+			desc = deviantsgo_prison.0260.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+				 }
+			desc = deviantsgo_prison.0260.b.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+					scope:deviant_go_random_1 = {
+						has_trait = sadistic
+					}
+				}
+			desc = deviantsgo_prison.0260.c.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					is_female = yes
+					scope:deviant_go_random_1 = {
+						has_trait = lustful
+					}
+				 }
+			desc = deviantsgo_prison.0260.d.desc
+			}
+		}
+	}
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = flirtation
+		outfit_tags = { no_clothes }
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# until next time...
+	option = {
+		name = deviantsgo_prison.0260.a
+		custom_tooltip = deviantsgo_prison.0260.a.tt
+		stress_impact = {
+			base = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = confusion_opinion
+				opinion = 10
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = minor_stress_impact_gain 
+				shy = minor_stress_impact_gain 
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantlibido
+				value = 1
+			}
+		}
+	}			
+}
+
+#0500 fornicator trial
+deviantsgo_prison.0500 = { 
+	type = character_event
+	title = deviantsgo_prison.0500.t
+	desc = deviantsgo_prison.0500.a.desc
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# The only trial is my cock
+	option = {
+		trigger = {
+			is_female = no
+		}
+		name = deviantsgo_prison.0500.a
+		custom_tooltip = deviantsgo_prison.0500.a.tt
+		stress_impact = {
+			base = medium_stress_impact_loss
+			lustful = medium_stress_impact_loss
+			sadistic = medium_stress_impact_loss
+			chaste = medium_stress_impact_gain 
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = medium_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+			had_sex_with_effect = {
+				CHARACTER = root
+				PREGNANCY_CHANCE = pregnancy_chance
+			}
+			hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+		}
+	}		
+	# Modesty Trial
+	option = {
+		name = deviantsgo_prison.0500.b
+		custom_tooltip = deviantsgo_prison.0500.b.tt
+		trigger_event = deviantsgo_prison.0510
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+	}		
+	# Chastity trial
+	option = {
+		name = deviantsgo_prison.0500.c
+		custom_tooltip = deviantsgo_prison.0500.c.tt
+		trigger_event = deviantsgo_prison.0520
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+	}	
+	# Obediency Trial
+	option = {
+		name = deviantsgo_prison.0500.d
+		custom_tooltip = deviantsgo_prison.0500.d.tt
+		trigger_event = deviantsgo_prison.0530
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+	}		
+	# never mind, I just wanted to see you naked
+	option = {
+		name = deviantsgo_prison.0500.e
+		custom_tooltip = deviantsgo_prison.0500.e.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -10
+			}
+			stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss 
+			}
+		}
+	}	
+}
+#0510modesty trial, clean commoner criminal,  round up some ranomd guys for he night, they can leave once they done cock and balls with her tongue
+deviantsgo_prison.0510 = { 
+	type = character_event
+	title = deviantsgo_prison.0510.t
+	desc = deviantsgo_prison.0510.a.desc
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	lower_center_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	lower_right_portrait = {
+		character = scope:deviant_go_random_2
+		animation = love 
+		outfit_tags = { no_clothes }
+	}
+	lower_left_portrait = {
+		character = scope:deviant_go_random_3
+		animation = love 
+		outfit_tags = { no_clothes }
+	}
+	immediate = {
+		if = { 	
+			limit = {
+				any_pool_character = {
+					province = root.location
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+				}
+			}
+			random_pool_character = {
+				province = root.location
+				save_scope_as = deviant_go_random_2
+				limit = {
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+					}
+				}
+		}		
+        else = {
+		create_character = {
+				location = root.capital_province
+				template = servant_character
+				gender_female_chance = 0
+				age = { 20 30 }
+				save_scope_as = deviant_go_random_2
+			}
+		}
+		if = { 	
+			limit = {
+				any_pool_character = {
+					province = root.location
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+					NOT = { this = scope:deviant_go_random_2 }
+				}
+			}
+			random_pool_character = {
+				province = root.location
+				save_scope_as = deviant_go_random_3
+				limit = {
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+					NOT = { this = scope:deviant_go_random_2 }
+					}
+				}
+		}		
+        else = {
+		create_character = {
+				location = root.capital_province
+				template = servant_character
+				gender_female_chance = 0
+				age = { 20 30 }
+				save_scope_as = deviant_go_random_3
+			}
+		}
+	}
+	# this seems fun enough, proceed
+	option = {
+		name = deviantsgo_prison.0510.a
+		custom_tooltip = deviantsgo_prison.0510.a.tt
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = medium_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:deviant_go_random_2
+				PREGNANCY_CHANCE = 10
+			}
+		}
+	}		
+	# if she does not swallow all, the men get to rub what spills into her
+	option = {
+		name = deviantsgo_prison.0510.b
+		custom_tooltip = deviantsgo_prison.0510.b.tt
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = major_stress_impact_gain 
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:deviant_go_random_2
+				PREGNANCY_CHANCE = pregnancy_chance
+			}
+		}
+	}		
+	# collect all the semen into a bowl, then pour it into her pussy when done... 
+	option = {
+		name = deviantsgo_prison.0510.c
+		custom_tooltip = deviantsgo_prison.0510.c.tt
+		stress_impact = {
+			sadistic = major_stress_impact_loss
+		}
+		add_piety = medium_piety_loss
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -100
+			}
+			stress_impact = {
+				base = major_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = major_stress_impact_gain 
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:deviant_go_random_3
+				PREGNANCY_CHANCE = 70
+			}
+		}
+	}	
+}
+
+#0520chastity trial, a cell where everybody is bound... round up some ranomd guys for he night
+deviantsgo_prison.0520 = { 
+	type = character_event
+	title = deviantsgo_prison.0520.t
+	desc = deviantsgo_prison.0520.a.desc
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	lower_center_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisonhouse 
+		outfit_tags = { no_clothes }
+	}
+	lower_right_portrait = {
+		character = scope:deviant_go_random_2
+		animation = prisonhouse  
+		outfit_tags = { no_clothes }
+	}
+	lower_left_portrait = {
+		character = scope:deviant_go_random_3
+		animation = prisonhouse  
+		outfit_tags = { no_clothes }
+	}
+	immediate = {
+		if = { 	
+			limit = {
+				any_pool_character = {
+					province = root.location
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+				}
+			}
+			random_pool_character = {
+				province = root.location
+				save_scope_as = deviant_go_random_2
+				limit = {
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+					}
+				}
+		}		
+        else = {
+		create_character = {
+				location = root.capital_province
+				template = servant_character
+				gender_female_chance = 0
+				age = { 20 30 }
+				save_scope_as = deviant_go_random_2
+			}
+		}
+		if = { 	
+			limit = {
+				any_pool_character = {
+					province = root.location
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+					NOT = { this = scope:deviant_go_random_2 }
+				}
+			}
+			random_pool_character = {
+				province = root.location
+				save_scope_as = deviant_go_random_3
+				limit = {
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+					NOT = { this = scope:deviant_go_random_2 }
+					}
+				}
+		}		
+        else = {
+		create_character = {
+				location = root.capital_province
+				template = servant_character
+				gender_female_chance = 0
+				age = { 20 30 }
+				save_scope_as = deviant_go_random_3
+			}
+		}
+	}
+	# this seems fun enough, proceed
+	option = {
+		name = deviantsgo_prison.0520.a
+		custom_tooltip = deviantsgo_prison.0520.a.tt
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = medium_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:deviant_go_random_2
+				PREGNANCY_CHANCE = pregnancy_chance
+			}
+		}
+	}		
+	# add her a leg spreader
+	option = {
+		name = deviantsgo_prison.0520.b
+		custom_tooltip = deviantsgo_prison.0520.b.tt
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = major_stress_impact_gain 
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:deviant_go_random_2
+				PREGNANCY_CHANCE = 50
+			}
+		}
+	}		
+	# tie her up, let the men fight over her
+	option = {
+		name = deviantsgo_prison.0520.c
+		custom_tooltip = deviantsgo_prison.0520.c.tt
+		stress_impact = {
+			sadistic = major_stress_impact_loss
+		}
+		add_piety = medium_piety_loss
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -100
+			}
+			stress_impact = {
+				base = major_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = major_stress_impact_gain 
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:deviant_go_random_3
+				PREGNANCY_CHANCE = 80
+			}
+		}
+	}	
+}
+#0530obidince trial, cowgirl one guy, hands tied behdin her back until he cums, don't slip cock out of her pussy, or all the guys in nearby cell are let in...
+deviantsgo_prison.0530 = { 
+	type = character_event
+	title = deviantsgo_prison.0530.t
+	desc = deviantsgo_prison.0530.a.desc
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	lower_center_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	lower_right_portrait = {
+		character = scope:deviant_go_random_2
+		animation = love 
+		outfit_tags = { no_clothes }
+	}
+	lower_left_portrait = {
+		character = scope:deviant_go_random_3
+		animation = love 
+		outfit_tags = { no_clothes }
+	}
+	immediate = {
+		if = { 	
+			limit = {
+				any_pool_character = {
+					province = root.location
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+				}
+			}
+			random_pool_character = {
+				province = root.location
+				save_scope_as = deviant_go_random_2
+				limit = {
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+					}
+				}
+		}		
+        else = {
+		create_character = {
+				location = root.capital_province
+				template = servant_character
+				gender_female_chance = 0
+				age = { 20 30 }
+				save_scope_as = deviant_go_random_2
+			}
+		}
+		if = { 	
+			limit = {
+				any_pool_character = {
+					province = root.location
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+					NOT = { this = scope:deviant_go_random_2 }
+				}
+			}
+			random_pool_character = {
+				province = root.location
+				save_scope_as = deviant_go_random_3
+				limit = {
+					is_available_ai_adult = yes
+					age >= 18
+					is_female = no
+					NOT = { this = scope:deviant_go_random_2 }
+					}
+				}
+		}		
+        else = {
+		create_character = {
+				location = root.capital_province
+				template = servant_character
+				gender_female_chance = 0
+				age = { 20 30 }
+				save_scope_as = deviant_go_random_3
+			}
+		}
+	}
+	# this seems fun enough, proceed
+	option = {
+		name = deviantsgo_prison.0530.a
+		custom_tooltip = deviantsgo_prison.0530.a.tt
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = minor_stress_impact_gain
+				lustful = medium_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:deviant_go_random_2
+				PREGNANCY_CHANCE = pregnancy_chance
+			}
+		}
+	}		
+	# make her lick all she spills clean...
+	option = {
+		name = deviantsgo_prison.0530.b
+		custom_tooltip = deviantsgo_prison.0530.b.tt
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -80
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = major_stress_impact_gain 
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:deviant_go_random_2
+				PREGNANCY_CHANCE = pregnancy_chance
+			}
+		}
+	}		
+	# once she is done, let the other men in anyways
+	option = {
+		name = deviantsgo_prison.0530.c
+		custom_tooltip = deviantsgo_prison.0530.c.tt
+		stress_impact = {
+			sadistic = major_stress_impact_loss
+		}
+		add_piety = medium_piety_loss
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -100
+			}
+			stress_impact = {
+				base = major_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = major_stress_impact_gain 
+			}
+			had_sex_with_effect = {
+				CHARACTER = scope:deviant_go_random_3
+				PREGNANCY_CHANCE = 70
+			}
+		}
+	}	
+}
+
+#0800 deviancy trial
+deviantsgo_prison.0800 = { 
+	type = character_event
+	title = deviantsgo_prison.0800.t
+	desc = deviantsgo_prison.0800.a.desc
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# move to a cage with comon male prisoners
+	option = {
+		trigger = {
+			scope:deviant_go_random_1 = {
+				NOT = { has_trait = lustful }
+			}
+		}
+		name = deviantsgo_prison.0800.a
+		custom_tooltip = deviantsgo_prison.0800.a.tt
+		random_list = {
+			90 = {
+				scope:deviant_go_random_1 = {
+					add_opinion = {
+						target = root
+						modifier = hate_opinion
+						opinion = -60
+					}
+					stress_impact = {
+						base = medium_stress_impact_gain
+						lustful = medium_stress_impact_loss
+						chaste = medium_stress_impact_gain 
+					}
+				}
+			}
+			10 = {
+				scope:deviant_go_random_1 = {
+					add_opinion = {
+						target = root
+						modifier = confusion_opinion
+						opinion = -30
+					}
+					stress_impact = {
+						base = medium_stress_impact_loss
+						lustful = medium_stress_impact_loss
+						chaste = medium_stress_impact_gain 
+					}
+					if = {
+						limit = { has_trait = chaste }
+						remove_trait = chaste
+					}
+					else_if = {
+						limit = { has_trait = humble }
+						remove_trait = humble
+					}
+					else_if = {
+						limit = { has_trait = gregarious }
+						remove_trait = gregarious
+					}
+					else_if = {
+						limit = { has_trait = shy }
+						remove_trait = shy
+					}
+					else_if = {
+						limit = { has_trait = calm }
+						remove_trait = calm
+					}
+					else_if = {
+						limit = { has_trait = content }
+						remove_trait = content
+					}
+					else_if = {
+						limit = { has_trait = generous }
+						remove_trait = generous
+					}
+					else_if = {
+						limit = { has_trait = just }
+						remove_trait = just
+					}
+					else_if = {
+						limit = { has_trait = honest }
+						remove_trait = honest
+					}
+					else_if = {
+						limit = { has_trait = patient }
+						remove_trait = patient
+					}
+					else_if = {
+						limit = { has_trait = temperate }
+						remove_trait = temperate
+					}
+					else_if = {
+						limit = { has_trait = diligent }
+						remove_trait = diligent
+					}
+					else_if = {
+						limit = { has_trait = greedy }
+						remove_trait = greedy
+					}
+					else_if = {
+						limit = { has_trait = ambitious }
+						remove_trait = ambitious
+					}
+					else_if = {
+						limit = { has_trait = impatient }
+						remove_trait = impatient
+					}
+					else_if = {
+						limit = { has_trait = gluttonous }
+						remove_trait = gluttonous
+					}
+					else_if = {
+						limit = { has_trait = lazy }
+						remove_trait = lazy
+					}
+					else_if = {
+						limit = { has_trait = wrathful }
+						remove_trait = wrathful
+					}
+					else_if = {
+						limit = { has_trait = deceitful }
+						remove_trait = deceitful
+					}
+					else_if = {
+						limit = { has_trait = arrogant }
+						remove_trait = arrogant
+					}
+					else_if = {
+						limit = { has_trait = craven }
+						remove_trait = craven
+					}
+					else_if = {
+						limit = { has_trait = brave }
+						remove_trait = brave
+					}
+					else_if = {
+						limit = { has_trait = arbitrary }
+						remove_trait = arbitrary
+					}
+					else_if = {
+						limit = { has_trait = cynical }
+						remove_trait = cynical
+					}
+					else_if = {
+						limit = { has_trait = zealous }
+						remove_trait = zealous
+					}
+					else_if = {
+						limit = { has_trait = paranoid }
+						remove_trait = paranoid
+					}
+					else_if = {
+						limit = { has_trait = trusting }
+						remove_trait = trusting
+					}
+					else_if = {
+						limit = { has_trait = compassionate }
+						remove_trait = compassionate
+					}
+					else_if = {
+						limit = { has_trait = callous }
+						remove_trait = callous
+					}
+					else_if = {
+						limit = { has_trait = forgiving }
+						remove_trait = forgiving
+					}
+					else_if = {
+						limit = { has_trait = vengeful }
+						remove_trait = vengeful
+					}
+					else_if = {
+						limit = { has_trait = stubborn }
+						remove_trait = stubborn
+					}
+					else_if = {
+						limit = { has_trait = fickle }
+						remove_trait = fickle
+					}
+					add_trait = lustful
+				}
+			}	
+		}
+	}		
+	# being oralled for months by random man who is bound between her legs,
+	option = {
+		trigger = {
+			scope:deviant_go_random_1 = {
+				NOT = { has_trait = lustful }
+			}
+		}
+		name = deviantsgo_prison.0800.b
+		custom_tooltip = deviantsgo_prison.0800.b.tt
+		random_list = {
+			80 = {
+				scope:deviant_go_random_1 = {
+					add_opinion = {
+						target = root
+						modifier = hate_opinion
+						opinion = -60
+					}
+					stress_impact = {
+						base = medium_stress_impact_loss
+						chaste = medium_stress_impact_gain 
+					}
+				}
+			}
+			20 = {
+				scope:deviant_go_random_1 = {
+					add_opinion = {
+						target = root
+						modifier = confusion_opinion
+						opinion = -30
+					}
+					stress_impact = {
+						base = medium_stress_impact_loss
+						lustful = medium_stress_impact_loss
+						chaste = medium_stress_impact_gain 
+					}
+					if = {
+						limit = { has_trait = chaste }
+						remove_trait = chaste
+					}
+					else_if = {
+						limit = { has_trait = humble }
+						remove_trait = humble
+					}
+					else_if = {
+						limit = { has_trait = gregarious }
+						remove_trait = gregarious
+					}
+					else_if = {
+						limit = { has_trait = shy }
+						remove_trait = shy
+					}
+					else_if = {
+						limit = { has_trait = calm }
+						remove_trait = calm
+					}
+					else_if = {
+						limit = { has_trait = content }
+						remove_trait = content
+					}
+					else_if = {
+						limit = { has_trait = generous }
+						remove_trait = generous
+					}
+					else_if = {
+						limit = { has_trait = just }
+						remove_trait = just
+					}
+					else_if = {
+						limit = { has_trait = honest }
+						remove_trait = honest
+					}
+					else_if = {
+						limit = { has_trait = patient }
+						remove_trait = patient
+					}
+					else_if = {
+						limit = { has_trait = temperate }
+						remove_trait = temperate
+					}
+					else_if = {
+						limit = { has_trait = diligent }
+						remove_trait = diligent
+					}
+					else_if = {
+						limit = { has_trait = greedy }
+						remove_trait = greedy
+					}
+					else_if = {
+						limit = { has_trait = ambitious }
+						remove_trait = ambitious
+					}
+					else_if = {
+						limit = { has_trait = impatient }
+						remove_trait = impatient
+					}
+					else_if = {
+						limit = { has_trait = gluttonous }
+						remove_trait = gluttonous
+					}
+					else_if = {
+						limit = { has_trait = lazy }
+						remove_trait = lazy
+					}
+					else_if = {
+						limit = { has_trait = wrathful }
+						remove_trait = wrathful
+					}
+					else_if = {
+						limit = { has_trait = deceitful }
+						remove_trait = deceitful
+					}
+					else_if = {
+						limit = { has_trait = arrogant }
+						remove_trait = arrogant
+					}
+					else_if = {
+						limit = { has_trait = craven }
+						remove_trait = craven
+					}
+					else_if = {
+						limit = { has_trait = brave }
+						remove_trait = brave
+					}
+					else_if = {
+						limit = { has_trait = arbitrary }
+						remove_trait = arbitrary
+					}
+					else_if = {
+						limit = { has_trait = cynical }
+						remove_trait = cynical
+					}
+					else_if = {
+						limit = { has_trait = zealous }
+						remove_trait = zealous
+					}
+					else_if = {
+						limit = { has_trait = paranoid }
+						remove_trait = paranoid
+					}
+					else_if = {
+						limit = { has_trait = trusting }
+						remove_trait = trusting
+					}
+					else_if = {
+						limit = { has_trait = compassionate }
+						remove_trait = compassionate
+					}
+					else_if = {
+						limit = { has_trait = callous }
+						remove_trait = callous
+					}
+					else_if = {
+						limit = { has_trait = forgiving }
+						remove_trait = forgiving
+					}
+					else_if = {
+						limit = { has_trait = vengeful }
+						remove_trait = vengeful
+					}
+					else_if = {
+						limit = { has_trait = stubborn }
+						remove_trait = stubborn
+					}
+					else_if = {
+						limit = { has_trait = fickle }
+						remove_trait = fickle
+					}
+					add_trait = lustful
+				}
+			}	
+		}
+	}		
+	# have this deviant displayed
+	option = {
+		trigger = {
+			scope:deviant_go_random_1 = {
+				has_trait = lustful
+			}
+		}
+		name = deviantsgo_prison.0800.c
+		custom_tooltip = deviantsgo_prison.0800.c.tt
+		trigger_event = deviantsgo_prison.0900
+	}	
+	# never mind, I just wanted to see you naked
+	option = {
+		name = deviantsgo_prison.0800.d
+		custom_tooltip = deviantsgo_prison.0800.d.tt
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -10
+			}
+			stress_impact = {
+			base = minor_stress_impact_gain
+			lustful = minor_stress_impact_loss 
+			}
+		}
+	}			
+}
+
+#0900 public display of her perversion, starts as common public humiliation, she coudl barely walk carried by two guards with all the stimulus she had. hang from her hands, being stimulated by a stick with a leather tip
+deviantsgo_prison.0900 = { 
+	type = character_event
+	title = deviantsgo_prison.0900.t
+	desc = deviantsgo_prison.0900.a.desc
+	override_background = { reference =	gallows }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+	}
+	# strip her for examination
+	option = {
+		name = deviantsgo_prison.0900.a
+		custom_tooltip = deviantsgo_prison.0900.a.tt
+		trigger_event = deviantsgo_prison.0901
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+		}
+	}			
+}
+#0901 crowd demanded to investigate, so you strip her to show her red and swollen pussy, your knight is leading the opertaion... this is no punishment for this deviant, but clearly something she desires
+deviantsgo_prison.0901 = { 
+	type = character_event
+	title = deviantsgo_prison.0901.t
+	desc = deviantsgo_prison.0901.a.desc
+	override_background = { reference =	gallows }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# bring the test stick
+	option = {
+		name = deviantsgo_prison.0901.a
+		custom_tooltip = deviantsgo_prison.0901.a.tt
+		trigger_event = deviantsgo_prison.0902
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+		}
+	}			
+}
+#0902 brought the stick openly to test her, she starts moaning again...
+deviantsgo_prison.0902 = { 
+	type = character_event
+	title = deviantsgo_prison.0902.t
+	desc = deviantsgo_prison.0902.a.desc
+	override_background = { reference =	gallows }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# tie up this pevert on display
+	option = {
+		name = deviantsgo_prison.0902.a
+		custom_tooltip = deviantsgo_prison.0902.a.tt
+		trigger_event = deviantsgo_prison.0903
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+		}
+	}			
+}
+#0903 she getting thrown rotten fruit naked, stick set up so that she forced tos atdn on it, she moaning and cumming and even fucking the rod in some variants? with spread legs, and branded deviant...
+deviantsgo_prison.0903 = { 
+	type = character_event
+	title = deviantsgo_prison.0903.t
+	desc = deviantsgo_prison.0903.a.desc
+	override_background = { reference =	gallows }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# the crowd sure is having fun
+	option = {
+		name = deviantsgo_prison.0903.a
+		custom_tooltip = deviantsgo_prison.0903.a.tt
+		add_character_modifier = {
+			modifier = deviant_greatshow_modifier
+			days = 100
+		}
+		scope:deviant_go_random_1 = {
+			add_opinion = {
+				target = root
+				modifier = hate_opinion
+				opinion = -60
+			}
+			stress_impact = {
+				base = medium_stress_impact_gain
+				lustful = major_stress_impact_loss
+				chaste = medium_stress_impact_gain 
+			}
+			add_trait = deviant
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+	}			
+}
+
+##### 2000-3000 female only sadist events #######
+#2000 basic male prisoner
+deviantsgo_prison.2000 = { 
+	type = character_event
+	title = deviantsgo_prison.2000.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					scope:deviant_go_random_1 = { 
+						has_trait = lustful 
+					}
+				}	
+			desc = deviantsgo_prison.2000.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					scope:deviant_go_random_1 = { 
+						NOT = { has_trait = lustful }
+					}
+				}	
+			desc = deviantsgo_prison.2000.b.desc
+			}
+		}
+	}
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+	}
+	trigger = { 
+		is_in_army = no
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		has_trait = deviants_mask
+		has_trait = sadistic
+		has_prisoners = yes
+		is_female = yes
+		any_prisoner = {
+			is_female = no
+			age >= 18
+			is_ai = yes
+			is_adult = yes
+			is_incapable = no
+			is_in_prison_type = dungeon
+			NOT = { has_trait = eunuch }
+			NOT = { has_trait = blind }
+		}
+	}
+    immediate = {
+		random_prisoner = {
+			limit = {
+				age >= 18
+				is_female = no
+				is_ai = yes
+				is_adult = yes
+				is_incapable = no
+				is_imprisoned = yes
+				is_in_prison_type = dungeon
+				NOT = { has_trait = eunuch }
+				NOT = { has_trait = blind }
+			}
+			save_scope_as = deviant_go_random_1
+		}
+	}
+	#humiliate him, sexually
+	option = {
+		name = deviantsgo_prison.2000.a
+		custom_tooltip = deviantsgo_prison.2000.a.tt
+		trigger_event = deviantsgo_prison.2010
+	}	
+	#	see if other males to humiliate
+	option = {
+		trigger = {
+			any_prisoner = {
+				is_female = no
+				age >= 18
+				is_ai = yes
+				is_adult = yes
+				is_incapable = no
+				is_in_prison_type = dungeon
+				NOT = { this = scope:deviant_go_random_1 }
+				NOT = { has_trait = eunuch }
+				NOT = { has_trait = blind }
+			}
+		}
+		name = deviantsgo_prison.2000.b
+		custom_tooltip = deviantsgo_prison.2000.b.tt
+		trigger_event = deviantsgo_prison.2000
+	}	
+	#just seeing the sights
+	option = {
+		name = deviantsgo_prison.2000.c
+		custom_tooltip = deviantsgo_prison.2000.c.tt
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+		}
+	}		
+}
+
+# 2010 he bound, you alone with him
+deviantsgo_prison.2010 = { 
+	type = character_event
+	title = deviantsgo_prison.2010.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					scope:deviant_go_random_1 = { 
+						has_trait = lustful 
+					}
+				}	
+			desc = deviantsgo_prison.2010.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					scope:deviant_go_random_1 = { 
+						NOT = { has_trait = lustful }
+					}
+				}	
+			desc = deviantsgo_prison.2010.b.desc
+			}
+		}
+	}
+	override_background = { reference =	dungeon }
+	theme = deviantsmaskgo 
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:deviant_go_random_1
+		animation = prisondungeon 
+		outfit_tags = { no_clothes }
+	}
+	# play with his cock, with your feet
+	option = {
+		name = deviantsgo_prison.2010.a
+		custom_tooltip = deviantsgo_prison.2010.a.tt
+		trigger_event = deviantsgo_prison.2020
+	}	
+	#	bind his cock, to keep him constantly erect
+	option = {
+		name = deviantsgo_prison.2010.b
+		custom_tooltip = deviantsgo_prison.2010.b.tt
+		stress_impact = {
+			sadistic = medium_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = { 
+			stress_impact = {
+				base = medium_stress_impact_gain
+				chaste = medium_stress_impact_gain
+				lustful = medium_stress_impact_gain
+			}
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+		add_opinion = {
+			target = root
+			modifier = hate_opinion
+			opinion = -20
+		}
+		add_opinion = {
+			target = root
+			modifier = humiliated_opinion
+			opinion = -20
+		}
+	}	
+	# never mind, you just wanted to see him naked... and at your mercy
+	option = {
+		name = deviantsgo_prison.2010.c
+		custom_tooltip = deviantsgo_prison.2010.c.tt
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+		}
+	}		
+}
+
+
+#2020 play with his cock, with your feet, variant if he lustful or not
+deviantsgo_prison.2020 = { 
+	type = character_event
+	title = deviantsgo_prison.2020.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					scope:deviant_go_random_1 = { 
+						has_trait = lustful 
+					}
+				}	
+			desc = deviantsgo_prison.2020.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					scope:deviant_go_random_1 = { 
+						NOT = { has_trait = lustful }
+					}
+				}	
+			desc = deviantsgo_prison.2020.b.desc
+			}
+		}
+	}
+	override_background = { reference =	deviantfootjobtease }
+	theme = deviantsmaskgo 
+	# make him cum
+	option = {
+		name = deviantsgo_prison.2020.a
+		custom_tooltip = deviantsgo_prison.2020.a.tt
+		trigger_event = deviantsgo_prison.2021
+		stress_impact = {
+			lustful = medium_stress_impact_loss
+		}
+	}	
+	#	leave him, like that
+	option = {
+		name = deviantsgo_prison.2020.b
+		custom_tooltip = deviantsgo_prison.2020.b.tt
+		stress_impact = {
+				sadistic = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+		scope:deviant_go_random_1 = { 
+			stress_impact = {
+				base = minor_stress_impact_gain
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+				lustful = medium_stress_impact_gain
+			}
+			add_opinion = {
+				target = root
+				modifier = frustrated_opinion
+				opinion = -10
+			}
+		}
+	}		
+	#	leave him, with a erection ring
+	option = {
+		name = deviantsgo_prison.2020.c
+		custom_tooltip = deviantsgo_prison.2020.c.tt
+		stress_impact = {
+				sadistic = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+		scope:deviant_go_random_1 = { 
+			stress_impact = {
+				base = medium_stress_impact_gain
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+				lustful = medium_stress_impact_gain
+			}
+			add_opinion = {
+				target = root
+				modifier = frustrated_opinion
+				opinion = -40
+			}
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -20
+			}
+			add_opinion = {
+				target = root
+				modifier = humiliated_opinion
+				opinion = -20
+			}
+		}
+	}		
+}
+
+#2021you let him cum, and play with his seed, with your feet, variant if he lustful or not
+deviantsgo_prison.2021 = { 
+	type = character_event
+	title = deviantsgo_prison.2021.t
+	desc = { 
+		random_valid = {
+			triggered_desc = {
+				trigger = { 
+					scope:deviant_go_random_1 = { 
+						has_trait = lustful 
+					}
+				}	
+			desc = deviantsgo_prison.2021.a.desc
+			}
+			triggered_desc = {
+				trigger = { 
+					scope:deviant_go_random_1 = { 
+						NOT = { has_trait = lustful }
+					}
+				}	
+			desc = deviantsgo_prison.2021.b.desc
+			}
+		}
+	}
+	override_background = { reference =	deviantfootjobclimax }
+	theme = deviantsmaskgo 
+	# keep playing rubbing cum on him...
+	option = {
+		name = deviantsgo_prison.2021.a
+		custom_tooltip = deviantsgo_prison.2021.a.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 2
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_loss
+			sadistic = major_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = { 
+			stress_impact = {
+				base = minor_stress_impact_gain
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+				lustful = medium_stress_impact_loss
+			}
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -20
+			}
+			add_opinion = {
+				target = root
+				modifier = humiliated_opinion
+				opinion = -20
+			}
+		}
+	}	
+	# leave it at that
+	option = {
+		name = deviantsgo_prison.2021.b
+		custom_tooltip = deviantsgo_prison.2021.b.tt
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_mask
+				track = deviantsadism
+				value = 1
+			}
+		}
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+		}
+		scope:deviant_go_random_1 = { 
+			stress_impact = {
+				base = minor_stress_impact_loss
+				chaste = medium_stress_impact_gain
+				shy = medium_stress_impact_gain
+				lustful = medium_stress_impact_loss
+			}
+			add_opinion = {
+				target = root
+				modifier = confusion_opinion
+				opinion = 20
+			}
+		}
+	}			
+}
