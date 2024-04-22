@@ -36,15 +36,12 @@ deviant_yearly_random_player_pulse = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        is_ruler = yes
 		age >= 18
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
 		is_landed = yes
-		exists = capital_province
-		NOT = { has_trait = blind }
 	}
 	random_events = {
 		chance_to_happen = 50
@@ -92,7 +89,7 @@ deviant_yearly_random_player_pulse = {
 		100 = deviants_gorandom.2300 # urge to get stuck to a garden fence hole
 		200 = deviants_gorandom.2400 # urge to be spanked 
 		#other
-		100 = deviants_maskgo.1000 # jester shows up if no jester hired
+		10 = deviants_maskgo.1000 # jester shows up if no jester hired
 		300 = deviants_maskgo.4000 # if female lustful and deviant, horse fuck events start
 	} 
 }
@@ -101,7 +98,6 @@ deviantcampslut_quarterly_random_player_pulse = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        is_ruler = yes
 		age >= 18
 		is_incapable = no
 		is_imprisoned = no
@@ -109,12 +105,9 @@ deviantcampslut_quarterly_random_player_pulse = {
 		is_in_army = no
 		is_landed = yes
 		is_female = yes
-		exists = capital_province
-		NOT = { has_trait = blind }
-		NOT = { has_trait = pregnant }
 	}
 	random_events = {
-		chance_to_happen = 40
+		chance_to_happen = 10
 		#camp slut stuff
 		300 = deviants_campslut.1000 # is camp slut, basic request event
 	} 
@@ -124,14 +117,12 @@ deviants_slut_events_pulse = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        is_ruler = yes
 		age >= 18
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
 		is_landed = yes
-		exists = capital_province
 	}
 	random_events = {
 		chance_to_happen = 50
@@ -190,7 +181,6 @@ deviants_travel_events = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        is_ruler = yes
 		age >= 18
 		is_travelling = yes
 		NOT = { has_trait = blind }
@@ -209,9 +199,9 @@ deviants_travel_events = {
 		10 = deviantsgo_travel.0108
 		10 = deviantsgo_travel.0109
 		500 = deviantsgo_travel.0110 # bandit attack if female
-		10 = deviantsgo_travel.0200 # spot woman fucking a dog
+		500 = deviantsgo_travel.0200 # spot woman fucking a dog
 		500 = deviantsgo_travel.1000 # lustful female only perverted inn
-		500 = deviantsgo_travel.2000 # lustful female only perverted inn, the contributed story arch one
+		1000 = deviantsgo_travel.2000 # lustful female only perverted inn, the contributed story arch one
 	} 
 }
 #random army events
@@ -219,13 +209,12 @@ deviants_army_events = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        is_ruler = yes
 		is_in_army = yes
 		age >= 18
 		NOT = { has_trait = blind }
 	}
 	random_events = {
-		chance_to_happen = 30
+		chance_to_happen = 10
 		#army events
 		10 = deviantsgo_army.0100 # knight caught masturbating
 		10 = deviantsgo_army.0101 # training with random knight
@@ -245,7 +234,6 @@ deviants_sadistprisoner_events = {
 		is_adult = yes
 		has_trait = deviants_mask
 		has_trait = sadistic
-        is_ruler = yes
 		has_prisoners = yes
 		is_incapable = no
 		is_imprisoned = no
@@ -253,7 +241,6 @@ deviants_sadistprisoner_events = {
 		is_in_army = no
 		is_landed = yes
 		age >= 18
-		NOT = { has_trait = blind }
 	}
 	random_events = {
 		chance_to_happen = 100
@@ -268,7 +255,6 @@ deviants_quarterlyblackmail_events = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        	is_ruler = yes
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
@@ -311,7 +297,6 @@ deviants_jestergo_events = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        is_ruler = yes
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
@@ -320,7 +305,7 @@ deviants_jestergo_events = {
 		age >= 18
 	}
 	random_events = {
-		chance_to_happen = 20
+		chance_to_happen = 5
 		#jester shows up is a regular random event now to make it rarer
 		#basic jester events
 		200 = deviants_maskgo.1010 # weird but arousuing hip sway dance
@@ -340,7 +325,6 @@ deviants_specialgo_events = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        	is_ruler = yes
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
@@ -373,7 +357,6 @@ deviants_spouse_events = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        is_ruler = yes
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
@@ -382,7 +365,7 @@ deviants_spouse_events = {
 		age >= 18
 	}
 	random_events = {
-		chance_to_happen = 30
+		chance_to_happen = 5
 		#basic sadistic wife start
 		100 = deviants_gorandom.5000 #  
 		#basic sadistic wife events that can always trigger
@@ -399,7 +382,6 @@ deviants_pervert_events = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        is_ruler = yes
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
@@ -408,7 +390,7 @@ deviants_pervert_events = {
 		age >= 18
 	}
 	random_events = {
-		chance_to_happen = 30
+		chance_to_happen = 10
 		100 = deviants_gorandom.1340 # maxed look-alike, you find a strange phallic object
 		#dildo events
 		10 = deviants_gorandom.1341 # fucking dildo in the bedchamber
@@ -423,7 +405,6 @@ deviants_saintgo_events = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
-        is_ruler = yes
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
@@ -433,7 +414,7 @@ deviants_saintgo_events = {
 		has_trait = deviants_demonanalslut
 	}
 	random_events = {
-		chance_to_happen = 30
+		chance_to_happen = 20
 		100 = deviants_maskgo.1500 # basic, priests show up past age 50
 		100 = deviants_maskgo.1600 # clergy members want to inspect your immortal body for taint
 		100 = deviants_maskgo.1800 # curing the "impotency" of some clergy members
@@ -446,7 +427,6 @@ deviants_saintgo_events = {
 deviants_caninelover_events = {
 	trigger = {
 		is_adult = yes
-        is_ruler = yes
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
@@ -455,7 +435,7 @@ deviants_caninelover_events = {
 		has_trait = deviants_canine_lover_three
 	}
 	random_events = {
-		chance_to_happen = 30
+		chance_to_happen = 20
 		100 = deviantsgo_beast.9000 # basic leg hump
 		100 = deviantsgo_beast.9010 #
 		100 = deviantsgo_beast.9020 # 

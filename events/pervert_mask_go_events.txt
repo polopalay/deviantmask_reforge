@@ -57,6 +57,14 @@ deviants_maskgo.0021 = {
 		add_character_flag = {
 			flag = headgear_streak_modifier
 		}
+		random_list = {
+			80 = {
+				give_nickname = nick_the_lewd
+			}
+			20 = {
+				give_nickname = nick_the_lecher
+			}
+		}
 	}
 	#I was dreaming about letting go
 	option = {

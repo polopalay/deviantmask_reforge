@@ -1,0 +1,9 @@
+﻿l_english:
+ 
+ building_inn_slut_brothel: "Brothel"
+ building_inn_slut_brothel_desc: "Brothels are business locations where sexual activities between customers and prostitutes take place"
+ building_type_inn_slut_brothel: "$building_inn_slut_brothel$"
+ building_type_inn_slut_brothel_desc: "$building_inn_slut_brothel_desc$"
+
+ deviants_racketeers: "Racketeers"
+ deviants_racketeers_flavor: "Racketeers makes money from a dishonest or illegal business activity"

@@ -49,7 +49,7 @@ deviants_campslut = {
 	men_at_arms_maintenance = -0.2
 	monthly_prestige = 0.3
 	monthly_piety_gain_mult = -0.01
-	religious_vassal_opinion = -10
+	religious_vassal_opinion = -5
 	icon = {
 		first_valid = {
 			triggered_desc = { # If no character exists
@@ -158,7 +158,7 @@ deviants_campslut = {
 				monthly_prestige = 0.3
 				men_at_arms_recruitment_cost = -0.05
 				monthly_piety_gain_mult = -0.05
-				clergy_opinion = -10
+				clergy_opinion = -5
 				religious_vassal_opinion = -10
 			}
 			trait_third_level = {
@@ -167,11 +167,11 @@ deviants_campslut = {
 				attraction_opinion = 5
 				monthly_piety_gain_mult = -0.10
 				religious_vassal_opinion = -20
-				clergy_opinion = -20
-				religious_head_opinion = -15
-				spouse_opinion = -30
+				clergy_opinion = -10
+				religious_head_opinion = -10
+				spouse_opinion = -10
 				opinion_of_female_rulers = -10
-				vassal_limit = 5
+				vassal_limit = 1
 			}		
 		}
 		sexual_service_pleasure = {
@@ -207,17 +207,17 @@ deviants_campslut = {
 
 			65 = {
 				county_opinion_add = 10
-				opinion_of_vassal = -10
+				opinion_of_vassal = -5
 			}
 
 			100 = {
-				county_opinion_add = 20
+				county_opinion_add = 10
 				monthly_piety_gain_mult = -0.10
-				religious_vassal_opinion = -10
-				clergy_opinion = -10
+				religious_vassal_opinion = -5
+				clergy_opinion = -5
 				religious_head_opinion = -5
-				spouse_opinion = -10
-				opinion_of_vassal = -10
+				spouse_opinion = -5
+				opinion_of_vassal = -5
 			}			
 		}
 	}	
@@ -309,7 +309,7 @@ deviants_hiredcampslut = {
 		pimpslutfame = {
 			30 = {
 				men_at_arms_recruitment_cost = -0.05
-				religious_vassal_opinion = -10
+				religious_vassal_opinion = -5
 			}
 
 			65 = {
@@ -324,13 +324,13 @@ deviants_hiredcampslut = {
 			100 = {
 				intrigue = 2
 				diplomacy = 2
-				religious_vassal_opinion = -20
+				religious_vassal_opinion = -10
 				men_at_arms_recruitment_cost = -0.05
 				monthly_piety_gain_mult = -0.05
 				monthly_piety = -0.2
 				opinion_of_female_rulers = -10
-				clergy_opinion = -40
-				religious_head_opinion = -25
+				clergy_opinion = -10
+				religious_head_opinion = -5
 				county_opinion_add = 5
 			}			
 		}
@@ -420,10 +420,10 @@ deviants_clitclamp = {
 	tracks = {
 		clitgrowthsize = {
 			trait_second_level = {
-				spouse_opinion = -10
+				spouse_opinion = -5
 			}
 			trait_third_level = {
-				spouse_opinion = -20
+				spouse_opinion = -10
 			}		
 		}
 	}	
@@ -511,9 +511,9 @@ deviants_blackmailvictim = {
 	tracks = {
 		deviantblackmailfame = {
 			trait_second_level = {
-				opinion_of_vassal = 10
-				monthly_prestige = -1
-				domain_limit = 1
+				opinion_of_vassal = 5
+				monthly_prestige = -0.1
+				# domain_limit = 1
 				county_opinion_add = -5
 				vassal_tax_contribution_mult = -0.1
 				vassal_levy_contribution_mult = -0.1
@@ -521,15 +521,15 @@ deviants_blackmailvictim = {
 			trait_third_level = {
 				opinion_of_vassal = 30
 				powerful_vassal_opinion = 20
-				spouse_opinion = -20
-				monthly_prestige = -2
-				domain_limit = 2
-				county_opinion_add = -10
+				spouse_opinion = -10
+				monthly_prestige = -0.2
+				# domain_limit = 2
+				county_opinion_add = -5
 				development_growth_factor = 0.05
 				tax_mult = -0.1
 				dread_decay_mult = 0.20
-				vassal_tax_contribution_mult = -0.3
-				vassal_levy_contribution_mult = -0.3
+				vassal_tax_contribution_mult = -0.2
+				vassal_levy_contribution_mult = -0.2
 			}		
 		}
 	}	
@@ -920,13 +920,13 @@ deviants_demonanalslut = {
 	tracks = {
 		demonanalslutcorruption = {
 			50 = {
-				attraction_opinion = -10
+				attraction_opinion = -5
 			}
 
 			100 = {
-				attraction_opinion = -40
-				monthly_prestige = -1
-				monthly_piety = -1
+				attraction_opinion = -10
+				monthly_prestige = -0.1
+				monthly_piety = -0.1
 				monthly_piety_gain_mult = -0.05
 				legitimacy_gain_mult = -0.25
 			}			
@@ -967,13 +967,13 @@ deviants_demonanalslut = {
 				men_at_arms_maintenance = -0.05
 				knight_effectiveness_mult = 0.10
 				men_at_arms_limit = 1
-				vassal_opinion = -10
+				vassal_opinion = -5
 			}
 
 			100 = {
 				men_at_arms_maintenance = -0.10
 				knight_effectiveness_mult = 0.15
-				vassal_opinion = -20
+				vassal_opinion = -10
 			}			
 		}
 	}	
@@ -1368,10 +1368,10 @@ deviants_virility_saint = {
 	monthly_prestige = -1
 	monthly_piety = -1
 	monthly_piety_gain_mult = -0.05
-	religious_vassal_opinion = -10
-	county_opinion_add = -10
-	opinion_of_same_faith = -20
-	clergy_opinion = -10
+	religious_vassal_opinion = -5
+	county_opinion_add = -5
+	opinion_of_same_faith = -5
+	clergy_opinion = -5
 	build_speed = 0.15
 	icon = {
 		first_valid = {

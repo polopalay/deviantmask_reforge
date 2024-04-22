@@ -1,0 +1,30 @@
+deviants_racketeers = {
+	icon = skirmishers
+	type = skirmishers 
+	can_recruit = {
+		any_sub_realm_barony = {
+			title_province = { 
+				has_building_or_higher = inn_slut_brothel 
+			}
+		}
+	}
+
+	damage = 35
+	toughness = 30
+	pursuit = 0
+	screen = 0
+
+	counters = {
+		pikemen = 1
+		heavy_infantry = 1
+	}
+
+	max_sub_regiments = 5
+	stack = 100
+	buy_cost = { gold = 100  }
+	low_maintenance_cost = { gold = 0.005 }
+	high_maintenance_cost = { gold = 0.01 }
+
+	ai_quality = { value = 60 }
+}
+

@@ -1,0 +1,48 @@
+inn_slut_brothel = {
+	type_icon = "icon_building_longhouses.dds"
+	construction_time = 30
+	cost = { gold = 75 }
+	type = duchy_capital
+	levy = 100
+
+	can_construct_potential = {
+		is_capital_barony = yes
+		scope:holder = {
+			has_trait = lustful_inn_slut
+		}
+		NOT = {
+			any_sub_realm_barony = {
+				title_province = { 
+					has_building_or_higher = inn_slut_brothel 
+				}
+			}
+		}
+	}
+	can_construct_showing_failures_only = {
+		building_requirement_tribal = no
+	}
+	can_construct = { 
+ 	}
+	is_enabled = {
+		scope:holder = {
+			has_trait = lustful_inn_slut
+		}
+	}
+
+	province_modifier = {
+		monthly_income = 1
+	}
+	
+	character_modifier = {
+		flag = can_not_marry
+	}
+	
+	county_modifier = {
+		development_growth = 0.5
+	}
+	
+	ai_value = {
+		base = 50
+	}
+}
+

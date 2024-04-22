@@ -58,7 +58,7 @@ deviantsgo_blackmail.0100 = {
 	}
 	# just deliver the sum to the specified location
 	option = {
-		ai_chance = { base = 1 }
+		ai_chance = { base = 20 }
 		name = deviantsgo_blackmail.0100.a
 		custom_tooltip = deviantsgo_blackmail.0100.a.tt
         remove_short_term_gold = tiny_gold_value
@@ -74,7 +74,7 @@ deviantsgo_blackmail.0100 = {
 	}		
 	# ignore, get rumors spread... about maybe the look-alike is too similar
 	option = {
-		ai_chance = { base = 90 }
+		ai_chance = { base = 80 }
 		name = deviantsgo_blackmail.0100.b
 		custom_tooltip = deviantsgo_blackmail.0100.b.tt
 		add_piety = minor_piety_loss

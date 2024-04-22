@@ -2262,12 +2262,14 @@ deviantsgo_travel.2000 = {
 	}
 	#investigate
 	option = {
+		ai_chance = { base = 80 }
 		name = deviantsgo_travel.2000.a
 		custom_tooltip = deviantsgo_travel.2000.a.tt
 		trigger_event = deviantsgo_travel.2010
 	}	
 	# stay in bed
 	option = {
+		ai_chance = { base = 20 }
 		name = deviantsgo_travel.2000.b
 		custom_tooltip = deviantsgo_travel.2000.b.tt
 		stress_impact = {
@@ -2289,6 +2291,7 @@ deviantsgo_travel.2010 = {
 	override_background = { reference =	deviantgrouptablegrope }
 	#yes
 	option = {
+		ai_chance = { base = 80 }
 		trigger = {
 			has_trait = lustful
 		}
@@ -2298,6 +2301,7 @@ deviantsgo_travel.2010 = {
 	}	
 	# no
 	option = {
+		ai_chance = { base = 20 }
 		name = deviantsgo_travel.2010.b
 		custom_tooltip = deviantsgo_travel.2010.b.tt
 		trigger_event = deviantsgo_travel.2012
@@ -2316,6 +2320,7 @@ deviantsgo_travel.2012 = {
 	}
 	#ask to work here
 	option = {
+		ai_chance = { base = 80 }
 		trigger = {
 			has_trait = lustful
 		}
@@ -2325,6 +2330,7 @@ deviantsgo_travel.2012 = {
 	}	
 	# burn this heretic
 	option = {
+		ai_chance = { base = 1 }
 		name = deviantsgo_travel.2012.b
 		custom_tooltip = deviantsgo_travel.2012.b.tt
 		add_piety = minor_piety_gain
@@ -2332,6 +2338,7 @@ deviantsgo_travel.2012 = {
 	}		
 	# leave
 	option = {
+		ai_chance = { base = 1 }
 		name = deviantsgo_travel.2012.c
 		custom_tooltip = deviantsgo_travel.2012.c.tt
 	}	
@@ -2391,6 +2398,7 @@ deviantsgo_travel.2021 = {
 	}
 	#accept
 	option = {
+		ai_chance = { base = 80 }
 		trigger = {
 			has_trait = lustful
 		}
@@ -2406,6 +2414,7 @@ deviantsgo_travel.2021 = {
 	}	
 	#refuse	
 	option = {
+		ai_chance = { base = 1 }
 		name = deviantsgo_travel.2021.a
 		custom_tooltip = deviantsgo_travel.2021.a.tt
 	}	
@@ -2466,6 +2475,7 @@ deviantsgo_travel.2103 = {
 	override_background = { reference =	deviantasspresent }
 	#accept
 	option = {
+		ai_chance = { base = 80 }
 		name = deviantsgo_travel.2103.a
 		custom_tooltip = deviantsgo_travel.2103.a.tt
 		add_trait_force_tooltip = lustful_inn_slut
@@ -2475,6 +2485,7 @@ deviantsgo_travel.2103 = {
 	}	
 	#refuse, I was here just for the lols
 	option = {
+		ai_chance = { base = 1 }
 		name = deviantsgo_travel.2103.b
 		custom_tooltip = deviantsgo_travel.2103.b.tt
 	}	

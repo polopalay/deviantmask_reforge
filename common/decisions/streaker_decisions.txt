@@ -5,7 +5,11 @@ deviants_maskgo_decision = {
    	major = no
 	ai_check_interval = 12
 	ai_will_do = {
-		base = 1
+		base = 0
+		modifier = {
+			has_character_modifier = reforge_slut
+			add = 100
+		}
 	}
 	is_shown = {
 		is_ruler = yes
@@ -100,9 +104,9 @@ deviants_getdog_decision = {
 	desc = deviants_getdog_decision_desc
 	selection_tooltip = deviants_getdog_decision_tooltip
     	major = no
-	ai_check_interval = 2
+	ai_check_interval = 120
 	ai_will_do = {
-		base = 50
+		base = 5
 	}
 	is_shown = {
 		is_ruler = yes
@@ -140,9 +144,9 @@ deviants_getdogagain_decision = {
 	desc = deviants_getdogagain_decision_desc
 	selection_tooltip = deviants_getdogagain_decision_tooltip
     	major = no
-	ai_check_interval = 2
+	ai_check_interval = 120
 	ai_will_do = {
-		base = 80
+		base = 10
 	}
 	is_shown = {
 		is_ruler = yes
@@ -184,9 +188,9 @@ deviants_playdog_decision = {
 	desc = deviants_playdog_decision_desc
 	selection_tooltip = deviants_playdog_decision_tooltip
     	major = no
-	ai_check_interval = 120
+	ai_check_interval = 1
 	ai_will_do = {
-		base = 5
+		base = 50
 	}
 	is_shown = {
 		is_ruler = yes
@@ -540,6 +544,11 @@ deviants_innslut_decision = {
 		is_female = yes
 		has_trait = lustful_inn_slut
 		has_trait = deviants_mask
+		any_sub_realm_barony = {
+			title_province = { 
+				has_building_or_higher = inn_slut_brothel 
+			}
+		}
 	}
 	is_valid = {
 		age >= 18
