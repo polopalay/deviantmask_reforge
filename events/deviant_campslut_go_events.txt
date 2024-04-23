@@ -806,22 +806,22 @@ deviants_campslut.0111 = {
 			add_trait_xp = {
 				trait = deviants_campslut
 				track = sexual_service_pleasure
-				value = 5
+				value = 10
 			}
 			add_trait_xp = {
 				trait = deviants_campslut
 				track = campslutfame
-				value = 5
+				value = 10
 			}
 			add_trait_xp = {
 				trait = deviants_campslut
 				track = seenonthestreets
-				value = 5
+				value = 10
 			}
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 5
+				value = 10
 			}
 		}	
 		add_gold = minor_gold_value
@@ -842,22 +842,22 @@ deviants_campslut.0112 = {
 			add_trait_xp = {
 				trait = deviants_campslut
 				track = sexual_service_pleasure
-				value = 5
+				value = 10
 			}
 			add_trait_xp = {
 				trait = deviants_campslut
 				track = campslutfame
-				value = 5
+				value = 10
 			}
 			add_trait_xp = {
 				trait = deviants_campslut
 				track = seenonthestreets
-				value = 5
+				value = 10
 			}
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 5
+				value = 10
 			}
 		}	
 		stress_impact = {
@@ -882,22 +882,22 @@ deviants_campslut.0113 = {
 			add_trait_xp = {
 				trait = deviants_campslut
 				track = sexual_service_pleasure
-				value = 10
+				value = 20
 			}
 			add_trait_xp = {
 				trait = deviants_campslut
 				track = campslutfame
-				value = 10
+				value = 20
 			}
 			add_trait_xp = {
 				trait = deviants_campslut
 				track = seenonthestreets
-				value = 10
+				value = 20
 			}
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 10
+				value = 20
 			}
 		}	
 		stress_impact = {
@@ -12615,7 +12615,7 @@ deviants_campslut.9001 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 10
+				value = 30
 			}
 		}
 	}	
@@ -12640,7 +12640,7 @@ deviants_campslut.9002 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -12664,7 +12664,7 @@ deviants_campslut.9003 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -12722,7 +12722,7 @@ deviants_campslut.9011 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 10
+				value = 30
 			}
 		}
 	}	
@@ -12825,7 +12825,7 @@ deviants_campslut.9013 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -12845,7 +12845,7 @@ deviants_campslut.9014 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 10
+				value = 30
 			}
 		}
 	}	
@@ -12866,7 +12866,7 @@ deviants_campslut.9015 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -12886,7 +12886,7 @@ deviants_campslut.9016 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 10
+				value = 30
 			}
 		}
 	}	
@@ -12989,7 +12989,7 @@ deviants_campslut.9021 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -13009,7 +13009,7 @@ deviants_campslut.9022 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 10
+				value = 30
 			}
 		}
 	}	
@@ -13030,7 +13030,7 @@ deviants_campslut.9023 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -13105,7 +13105,7 @@ deviants_campslut.9031 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 10
+				value = 30
 			}
 		}
 	}	
@@ -13208,7 +13208,7 @@ deviants_campslut.9033 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -13243,7 +13243,7 @@ deviants_campslut.9035 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -13327,7 +13327,7 @@ deviants_campslut.9041 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -13348,7 +13348,7 @@ deviants_campslut.9042 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 20
+				value = 60
 			}
 		}
 	}	
@@ -13369,7 +13369,7 @@ deviants_campslut.9043 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -13390,7 +13390,7 @@ deviants_campslut.9044 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 25
+				value = 75
 			}
 		}
 	}	
@@ -13411,7 +13411,7 @@ deviants_campslut.9045 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 15
+				value = 45
 			}
 		}
 	}	
@@ -13432,7 +13432,7 @@ deviants_campslut.9046 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_experince
-				value = 20
+				value = 60
 			}
 		}
 	}	
@@ -13486,12 +13486,12 @@ deviants_campslut.9101 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_status
-				value = 30
+				value = 90
 			}
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 5
+				value = 30
 			}
 		}
 	}	
@@ -13750,7 +13750,7 @@ deviants_campslut.9204 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 5
+				value = 30
 			}
 		}
 		add_gold = 5
@@ -13771,7 +13771,7 @@ deviants_campslut.9205 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 20
+				value = 60
 			}
 		}
 		add_gold = 15
@@ -13792,7 +13792,7 @@ deviants_campslut.9206 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 10
+				value = 30
 			}
 		}
 		add_gold = 10
@@ -13813,7 +13813,7 @@ deviants_campslut.9207 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 25
+				value = 75
 			}
 		}
 		add_gold = 25
@@ -13834,7 +13834,7 @@ deviants_campslut.9208 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 5
+				value = 15
 			}
 		}
 		add_gold = 5
@@ -13892,7 +13892,7 @@ deviants_campslut.9221 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 5
+				value = 15
 			}
 		}
 		add_gold = 10
@@ -13913,7 +13913,7 @@ deviants_campslut.9222 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 5
+				value = 15
 			}
 		}
 		add_gold = 10
@@ -13934,7 +13934,7 @@ deviants_campslut.9223 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 5
+				value = 15
 			}
 		}
 		add_gold = 10
@@ -14055,7 +14055,7 @@ deviants_campslut.9233 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 10
+				value = 30
 			}
 			had_sex_with_effect = {
 				CHARACTER = scope:deviant_randoman_1
@@ -14085,7 +14085,7 @@ deviants_campslut.9234 = {
 			add_trait_xp = {
 				trait = lustful_inn_slut
 				track = lustful_inn_slut_daring
-				value = 5
+				value = 15
 			}
 		}
 		add_gold = 10

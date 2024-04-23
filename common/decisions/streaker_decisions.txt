@@ -71,396 +71,33 @@ deviants_gettraitback_decision = {
 	}	
 }
 #burn the mask
-deviants_burnmask_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_personal_perversion.dds"
-	desc = deviants_burnmask_decision_desc
-	selection_tooltip = deviants_burnmask_decision_tooltip
-    	major = no
-	ai_check_interval = 120
-	ai_will_do = {
-		base = 1
-	}
-	is_shown = {
-		is_ruler = yes
-		has_trait = deviants_mask
-	}
-	is_valid = {
-		age >= 45
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_landed = yes
-		exists = capital_province
-	}
-	effect = {
-        	custom_tooltip = deviants_burnmask_decision_tooltip
-		remove_trait = deviants_mask
-	}	
-}
-
-deviants_getdog_decision = {
-	picture = "gfx/interface/illustrations/decisions/deviants_dog_kennel.dds"
-	desc = deviants_getdog_decision_desc
-	selection_tooltip = deviants_getdog_decision_tooltip
-    	major = no
-	ai_check_interval = 120
-	ai_will_do = {
-		base = 5
-	}
-	is_shown = {
-		is_ruler = yes
-		is_female = yes
-		has_trait = deviants_mask
-		NOT = { has_character_modifier = dog_story_modifier }
-		NOT = { has_trait = deviants_canine_lover_one }
-		NOT = { has_trait = deviants_canine_lover_two }
-		NOT = { has_trait = deviants_canine_lover_three }
-	}
-	is_valid = {
-		age >= 18
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_female = yes
-		NOT = { has_character_modifier = dog_story_modifier }
-		NOT = { has_trait = deviants_canine_lover_one }
-		NOT = { has_trait = deviants_canine_lover_two }
-		NOT = { has_trait = deviants_canine_lover_three }
-	}
-	cooldown = { months = 2 }
-	effect = {
-        	custom_tooltip = deviants_getdog_decision_tooltip
-		trigger_event = {
-			id = deviantsgo_beast.0100
-			days = 2 
-		}
-	}	
-}
-
-deviants_getdogagain_decision = {
-	picture = "gfx/interface/illustrations/decisions/deviants_dog_kennel.dds"
-	desc = deviants_getdogagain_decision_desc
-	selection_tooltip = deviants_getdogagain_decision_tooltip
-    	major = no
-	ai_check_interval = 120
-	ai_will_do = {
-		base = 10
-	}
-	is_shown = {
-		is_ruler = yes
-		has_trait = deviants_mask
-		is_female = yes
-		NOT = { has_character_modifier = dog_story_modifier }
-		OR = { 	
-			has_trait = deviants_canine_lover_one 
-			has_trait = deviants_canine_lover_two 
-			has_trait = deviants_canine_lover_three 
-		}
-	}
-	is_valid = {
-		age >= 18
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_female = yes
-		NOT = { has_character_modifier = dog_story_modifier }
-		OR = { 	
-			has_trait = deviants_canine_lover_one 
-			has_trait = deviants_canine_lover_two 
-			has_trait = deviants_canine_lover_three 
-		}
-	}
-	cooldown = { months = 2 }
-	effect = {
-        custom_tooltip = deviants_getdogagain_decision_tooltip
-		trigger_event = {
-				id = deviantsgo_beast.0101
-				days = 2 
-		}
-	}	
-}
-
-deviants_playdog_decision = {
-	picture = "gfx/interface/illustrations/decisions/deviants_dog_kennel.dds"
-	desc = deviants_playdog_decision_desc
-	selection_tooltip = deviants_playdog_decision_tooltip
-    	major = no
-	ai_check_interval = 1
-	ai_will_do = {
-		base = 50
-	}
-	is_shown = {
-		is_ruler = yes
-		is_female = yes
-		has_character_modifier = dog_story_modifier
-		NOT = { has_trait = deviants_canine_lover_two }
-		NOT = { has_trait = deviants_canine_lover_three }
-	}
-	is_valid = {
-		age >= 18
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_female = yes
-		has_character_modifier = dog_story_modifier
-		NOT = { has_trait = deviants_canine_lover_two }
-		NOT = { has_trait = deviants_canine_lover_three }
-	}
-	cooldown = { days = 30 }
-	effect = {
-        custom_tooltip = deviants_playdog_decision_tooltip
-		if = {
-			limit = { NOT = { has_trait = deviants_canine_lover_one } }
-			add_trait = deviants_canine_lover_one
-		}
-		hidden_effect = {
-			random_list = {
-				40 = {
-					trigger_event = deviantsgo_beast.0210
-				}
-				20 = {
-					trigger_event = deviantsgo_beast.0220
-				}
-                		40 = {
-					trigger_event = deviantsgo_beast.0230
-				}
-				10 = {
-					trigger_event = deviantsgo_beast.0240
-				}
-				20 = {
-					trigger_event = deviantsgo_beast.0250
-				}
-				40 = {
-					trigger_event = deviantsgo_beast.0260
-				}
-				10 = {
-					trigger_event = deviantsgo_beast.0270
-				}
-				10 = {
-					trigger_event = deviantsgo_beast.0280
-				}
-				10 = {
-					trigger_event = deviantsgo_beast.0290
-				}
-				40 = {
-					trigger_event = deviantsgo_beast.0300
-				}
-			}	
-		}
-		hidden_effect = {
-			trigger_event = {
-				id = deviantsgo_beast.0500
-				days = 2 
-			}
-		}
-	}	
-}
-
-
-deviants_fonddog_decision = {
-	picture = "gfx/interface/illustrations/decisions/deviants_dog_kennel.dds"
-	desc = deviants_fonddog_decision_desc
-	selection_tooltip = deviants_fonddog_decision_tooltip
-    	major = no
-	ai_check_interval = 1
-	ai_will_do = {
-		base = 80
-	}
-	is_shown = {
-		is_ruler = yes
-		is_female = yes
-		has_character_modifier = dog_story_modifier
-		has_trait = deviants_canine_lover_two
-	}
-	is_valid = {
-		age >= 18
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_female = yes
-		has_character_modifier = dog_story_modifier
-		has_trait = deviants_canine_lover_two
-	}
-	cooldown = { days = 30 }
-	effect = {
-        custom_tooltip = deviants_fonddog_decision_tooltip
-		hidden_effect = {
-			random_list = {
-				40 = {
-					trigger = { 
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value < 20
-						}
-					 }
-					trigger_event = deviantsgo_beast.1000
-				}
-				40 = {
-					trigger = { 
-						has_character_flag = deviant_dog_exercise_field_one
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value >= 20
-						}
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value < 40
-						}
-					 }
-					trigger_event = deviantsgo_beast.1010
-				}
-                		40 = {
-					trigger = { 
-						has_character_flag = deviant_dog_exercise_field_two
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value >= 40
-						}
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value < 70
-						}
-					 }
-					trigger_event = deviantsgo_beast.1020
-				}
-				40 = {
-					trigger = { 
-						has_character_flag = deviant_dog_exercise_field_three
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value >= 70
-						}
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value < 100
-						}
-					 }
-					trigger_event = deviantsgo_beast.1030
-				}
-				40 = {
-					trigger = { 
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value < 20
-						}
-					 }
-					trigger_event = deviantsgo_beast.1100
-				}
-				40 = {
-					trigger = { 
-						has_character_flag = deviant_dog_study_business_one
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value >= 20
-						}
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value < 40
-						}
-					 }
-					trigger_event = deviantsgo_beast.1110
-				}
-                		40 = {
-					trigger = { 
-						has_character_flag = deviant_dog_study_business_two
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value >= 40
-						}
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value < 70
-						}
-					 }
-					trigger_event = deviantsgo_beast.1120
-				}
-				40 = {
-					trigger = { 
-						has_character_flag = deviant_dog_study_business_three
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value >= 70
-						}
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value < 100
-						}
-					 }
-					trigger_event = deviantsgo_beast.1130
-				}
-				40 = {
-					trigger = { 
-						has_trait_xp = {
-							trait = deviants_canine_lover_two
-							track = deviant_canine_lover_fame_two
-							value >= 100
-						}
-					 }
-					trigger_event = deviantsgo_beast.1900
-				}
-			}	
-		}
-	}	
-}
-
-deviants_lovedog_decision = {
-	picture = "gfx/interface/illustrations/decisions/deviants_dog_kennel.dds"
-	desc = deviants_lovedog_decision_desc
-	selection_tooltip = deviants_lovedog_decision_tooltip
-    	major = no
-	ai_check_interval = 1
-	ai_will_do = {
-	        base = 80
-	}
-	is_shown = {
-		is_ruler = yes
-		is_female = yes
-		has_character_modifier = dog_story_modifier
-		has_trait = deviants_canine_lover_three
-	}
-	is_valid = {
-		age >= 18
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_female = yes
-		has_character_modifier = dog_story_modifier
-		has_trait = deviants_canine_lover_three
-	}
-	cooldown = { days = 30 }
-	effect = {
-        custom_tooltip = deviants_lovedog_decision_tooltip
-		trigger_event = deviantsgo_beast.3000
-		if = {
-			limit = { has_trait = deviants_canine_lover_one }
-			remove_trait = deviants_canine_lover_one
-		}
-		if = {
-			limit = { has_trait = deviants_canine_lover_two }
-			remove_trait = deviants_canine_lover_two
-		}
-	}	
-}
+#deviants_burnmask_decision = {
+#	picture = "gfx/interface/illustrations/decisions/decision_personal_perversion.dds"
+#	desc = deviants_burnmask_decision_desc
+#	selection_tooltip = deviants_burnmask_decision_tooltip
+#    	major = no
+#	ai_check_interval = 120
+#	ai_will_do = {
+#		base = 1
+#	}
+#	is_shown = {
+#		is_ruler = yes
+#		has_trait = deviants_mask
+#	}
+#	is_valid = {
+#		age >= 45
+#		is_incapable = no
+#		is_imprisoned = no
+#		is_travelling = no
+#		is_in_army = no
+#		is_landed = yes
+#		exists = capital_province
+#	}
+#	effect = {
+#        	custom_tooltip = deviants_burnmask_decision_tooltip
+#		remove_trait = deviants_mask
+#	}	
+#}
 
 deviants_startstreetslut_decision = {
 	picture = "gfx/interface/illustrations/decisions/deviants_street_slut.dds"
@@ -513,6 +150,12 @@ deviants_startmerchant_decision = {
 		is_female = yes
 		has_trait = lustful
 		has_trait = deviants_mask
+		NOT = {
+			has_trait = deviants_campslut 
+			has_trait = deviants_hiredcampslut
+			has_trait = deviants_strange_dildo
+			has_trait = deviants_demonanalslut
+		}
 	}
 	is_valid = {
 		age >= 18
@@ -530,68 +173,68 @@ deviants_startmerchant_decision = {
 	}	
 }
 
-deviants_innslut_decision = {
-	picture = "gfx/interface/illustrations/event_scenes/deviantorgyroombackground.dds"
-	desc = deviants_innslut_decision_desc
-	selection_tooltip = deviants_innslut_decision_tooltip
-    	major = no
-	ai_check_interval = 1
-	ai_will_do = {
-		base = 80
-	}
-	is_shown = {
-		is_ruler = yes
-		is_female = yes
-		has_trait = lustful_inn_slut
-		has_trait = deviants_mask
-		any_sub_realm_barony = {
-			title_province = { 
-				has_building_or_higher = inn_slut_brothel 
-			}
-		}
-	}
-	is_valid = {
-		age >= 18
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_female = yes
-		has_trait = lustful_inn_slut
-		has_trait = deviants_mask
-	}
-	cooldown = { days = 30 }
-	effect = {
-        custom_tooltip = deviants_innslut_decision_tooltip
-		trigger_event = deviants_campslut.8999
-	}	
-}
+#deviants_innslut_decision = {
+#	picture = "gfx/interface/illustrations/event_scenes/deviantorgyroombackground.dds"
+#	desc = deviants_innslut_decision_desc
+#	selection_tooltip = deviants_innslut_decision_tooltip
+#   	major = no
+#	ai_check_interval = 1
+#	ai_will_do = {
+#		base = 80
+#	}
+#	is_shown = {
+#		is_ruler = yes
+#		is_female = yes
+#		has_trait = lustful_inn_slut
+#		has_trait = deviants_mask
+#		any_sub_realm_barony = {
+#			title_province = { 
+#				has_building_or_higher = inn_slut_brothel 
+#			}
+#		}
+#	}
+#	is_valid = {
+#		age >= 18
+#		is_incapable = no
+#		is_imprisoned = no
+#		is_travelling = no
+#		is_in_army = no
+#		is_female = yes
+#		has_trait = lustful_inn_slut
+#		has_trait = deviants_mask
+#	}
+#	cooldown = { days = 30 }
+#	effect = {
+#       custom_tooltip = deviants_innslut_decision_tooltip
+#		trigger_event = deviants_campslut.8999
+#	}	
+#}
 
-deviants_godealwithstress_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_personal_perversion.dds"
-	desc = deviants_godealwithstress_decision_desc
-	selection_tooltip = deviants_godealwithstress_decision_tooltip
-    	major = no
-	ai_check_interval = 1
-	ai_will_do = {
-		base = 100
-	}
-	is_shown = {
-		is_ruler = yes
-		has_trait = deviants_mask
-	}
-	is_valid = {
-		stress_level >= 1
-		age >= 18
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		has_trait = deviants_mask
-	}
-	cooldown = { days = 30 }
-	effect = {
-        custom_tooltip = deviants_godealwithstress_decision_tooltip
-		trigger_event = deviants_gorandom.1307
-	}	
-}
+#deviants_godealwithstress_decision = {
+#	picture = "gfx/interface/illustrations/decisions/decision_personal_perversion.dds"
+#	desc = deviants_godealwithstress_decision_desc
+#	selection_tooltip = deviants_godealwithstress_decision_tooltip
+ #   	major = no
+#	ai_check_interval = 1
+#	ai_will_do = {
+#		base = 100
+#	}
+#	is_shown = {
+#		is_ruler = yes
+#		has_trait = deviants_mask
+#	}
+#	is_valid = {
+#		stress_level >= 1
+#		age >= 18
+#		is_incapable = no
+#		is_imprisoned = no
+#		is_travelling = no
+#		is_in_army = no
+#		has_trait = deviants_mask
+#	}
+#	cooldown = { days = 30 }
+#	effect = {
+#       custom_tooltip = deviants_godealwithstress_decision_tooltip
+#		trigger_event = deviants_gorandom.1307
+#	}	
+#}

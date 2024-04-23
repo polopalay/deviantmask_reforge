@@ -57,14 +57,6 @@ deviants_maskgo.0021 = {
 		add_character_flag = {
 			flag = headgear_streak_modifier
 		}
-		random_list = {
-			80 = {
-				give_nickname = nick_the_lewd
-			}
-			20 = {
-				give_nickname = nick_the_lecher
-			}
-		}
 	}
 	#I was dreaming about letting go
 	option = {
@@ -444,7 +436,6 @@ deviants_maskgo.0100 = {
 			triggered_desc = {
 				trigger = {
 					NOT = { has_trait = deviants_demonanalslut }
-					has_trait = deviants_strange_dildo
 				}
 				desc = deviants_maskgo.0100.sleeppotion
 			}
@@ -552,7 +543,6 @@ deviants_maskgo.0100 = {
 		ai_chance = { base = 1 }
 		trigger = {
 			NOT = { has_trait = deviants_demonanalslut }
-			has_trait = deviants_strange_dildo
 		}
 		name = deviants_maskgo.0100.d
 		custom_tooltip = deviants_maskgo.0100.d.tt	
@@ -10424,14 +10414,14 @@ deviants_maskgo.8000 = {
 	}
 	# 
 	option = {
-		ai_chance = { base = 80 }
+		ai_chance = { base = 90 }
 		name = deviants_maskgo.8000.a
 		custom_tooltip = deviants_maskgo.8000.a.tt
 		trigger_event = deviants_maskgo.8001
 	}		
 	# 
 	option = {
-		ai_chance = { base = 80 }
+		ai_chance = { base = 10 }
 		name = deviants_maskgo.8000.b
 		custom_tooltip = deviants_maskgo.8000.b.tt
 		remove_short_term_gold = massive_gold_value
@@ -11710,6 +11700,13 @@ deviants_maskgo.8901 = {
 		add_character_modifier = {
 			modifier = deviant_knownslut_modifier
 			days = 340
+		}
+		hidden_effect = {
+			add_trait_xp = {
+				trait = deviants_demonanalslut
+				track = menatarmstwistedloyalty
+				value = 10
+			}
 		}
 	}		
 }

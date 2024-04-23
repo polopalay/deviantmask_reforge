@@ -7,6 +7,13 @@ deviantsgo_beast.0100 = {
 	desc = deviantsgo_beast.0100.a.desc
 	override_background = { reference =	ep2_dog_kennels }
 	theme = deviantsmaskgo 
+	trigger = {
+		NOR = { 
+			has_trait = deviants_canine_lover_one
+			has_trait = deviants_canine_lover_two 
+			has_trait = deviants_canine_lover_three
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -23,7 +30,7 @@ deviantsgo_beast.0100 = {
 			}
 			add_trait = deviants_canine_lover_one
 		}
-        start_dog_story_cycle_effect = yes
+        	start_dog_story_cycle_effect = yes
 	}		
 	# 
 	option = {
@@ -38,6 +45,13 @@ deviantsgo_beast.0101 = {
 	desc = deviantsgo_beast.0101.a.desc
 	override_background = { reference =	ep2_dog_kennels }
 	theme = deviantsmaskgo 
+	trigger = {
+		OR = { 
+			has_trait = deviants_canine_lover_one
+			has_trait = deviants_canine_lover_two 
+			has_trait = deviants_canine_lover_three
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -62,6 +76,11 @@ deviantsgo_beast.0210 = {
 	desc = deviantsgo_beast.0210.a.desc
 	override_background = { reference =	farmland }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		NOT = { has_trait = deviants_canine_lover_two }
+		NOT = { has_trait = deviants_canine_lover_three }
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -77,7 +96,7 @@ deviantsgo_beast.0210 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 10
+				value = 30
 			}
         }
 	}					
@@ -89,6 +108,11 @@ deviantsgo_beast.0220 = {
 	desc = deviantsgo_beast.0220.a.desc
 	override_background = { reference =	wilderness }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		NOT = { has_trait = deviants_canine_lover_two }
+		NOT = { has_trait = deviants_canine_lover_three }
+	}
 	right_portrait = {
 		character = root
 		animation = thinking
@@ -139,7 +163,7 @@ deviantsgo_beast.0221 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 10
+				value = 90
 			}
         }
 	}					
@@ -166,7 +190,7 @@ deviantsgo_beast.0222 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 15
+				value = 45
 			}
         }
 	}					
@@ -193,7 +217,7 @@ deviantsgo_beast.0223 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 5
+				value = 15
 			}
         }
 	}					
@@ -206,6 +230,11 @@ deviantsgo_beast.0230 = {
 	desc = deviantsgo_beast.0230.a.desc
 	override_background = { reference =	bp1_kitchen_western }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		NOT = { has_trait = deviants_canine_lover_two }
+		NOT = { has_trait = deviants_canine_lover_three }
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -218,7 +247,7 @@ deviantsgo_beast.0230 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 10
+				value = 30
 			}
         }
         stress_impact = {
@@ -233,6 +262,11 @@ deviantsgo_beast.0240 = {
 	desc = deviantsgo_beast.0240.a.desc
 	override_background = { reference =	market }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		NOT = { has_trait = deviants_canine_lover_two }
+		NOT = { has_trait = deviants_canine_lover_three }
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -246,7 +280,7 @@ deviantsgo_beast.0240 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 10
+				value = 30
 			}
         }
         stress_impact = {
@@ -262,6 +296,11 @@ deviantsgo_beast.0250 = {
 	desc = deviantsgo_beast.0250.a.desc
 	override_background = { reference =	army_camp }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		NOT = { has_trait = deviants_canine_lover_two }
+		NOT = { has_trait = deviants_canine_lover_three }
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -276,7 +315,7 @@ deviantsgo_beast.0250 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 5
+				value = 15
 			}
         }
         stress_impact = {
@@ -291,6 +330,11 @@ deviantsgo_beast.0260 = {
 	desc = deviantsgo_beast.0260.a.desc
 	override_background = { reference =	courtyard }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		NOT = { has_trait = deviants_canine_lover_two }
+		NOT = { has_trait = deviants_canine_lover_three }
+	}
 	right_portrait = {
 		character = root
 		animation = aggressive_unarmed
@@ -352,7 +396,7 @@ deviantsgo_beast.0261 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 5
+				value = 15
 			}
         }
 	}						
@@ -380,7 +424,7 @@ deviantsgo_beast.0262 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 10
+				value = 30
 			}
         }
 	}						
@@ -393,6 +437,11 @@ deviantsgo_beast.0270 = {
 	desc = deviantsgo_beast.0270.a.desc
 	override_background = { reference =	market }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		NOT = { has_trait = deviants_canine_lover_two }
+		NOT = { has_trait = deviants_canine_lover_three }
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -406,7 +455,7 @@ deviantsgo_beast.0270 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 10
+				value = 30
 			}
         }
         stress_impact = {
@@ -421,6 +470,11 @@ deviantsgo_beast.0280 = {
 	desc = deviantsgo_beast.0280.a.desc
 	override_background = { reference =	armory }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		NOT = { has_trait = deviants_canine_lover_two }
+		NOT = { has_trait = deviants_canine_lover_three }
+	}
 	right_portrait = {
 		character = root
 		animation = disapproval
@@ -434,7 +488,7 @@ deviantsgo_beast.0280 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 5
+				value = 15
 			}
         }
         stress_impact = {
@@ -449,6 +503,11 @@ deviantsgo_beast.0290 = {
 	desc = deviantsgo_beast.0290.a.desc
 	override_background = { reference =	bedchamber }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		NOT = { has_trait = deviants_canine_lover_two }
+		NOT = { has_trait = deviants_canine_lover_three }
+	}
 	right_portrait = {
 		character = root
 		animation = disbelief
@@ -462,7 +521,7 @@ deviantsgo_beast.0290 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 10
+				value = 30
 			}
         }
 	}						
@@ -474,6 +533,11 @@ deviantsgo_beast.0300 = {
 	desc = deviantsgo_beast.0300.a.desc
 	override_background = { reference =	sitting_room }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		NOT = { has_trait = deviants_canine_lover_two }
+		NOT = { has_trait = deviants_canine_lover_three }
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -486,7 +550,7 @@ deviantsgo_beast.0300 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_one
 				track = deviant_canine_lover_fame_one
-				value = 5
+				value = 15
 			}
         }
         stress_impact = {
@@ -699,6 +763,15 @@ deviantsgo_beast.1000 = {
 	desc = deviantsgo_beast.1000.a.desc
 	override_background = { reference =	wilderness }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait = deviants_canine_lover_two
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value < 20
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = shock
@@ -743,7 +816,7 @@ deviantsgo_beast.1001 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 5
+				value = 15
 			}
         }
 	}					
@@ -776,6 +849,20 @@ deviantsgo_beast.1010 = {
 	desc = deviantsgo_beast.1010.a.desc
 	override_background = { reference =	wilderness }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait = deviants_canine_lover_two
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value >= 20
+		}
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value < 40
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -829,7 +916,7 @@ deviantsgo_beast.1011 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 10
+				value = 30
 			}
         }
 	}					
@@ -856,7 +943,7 @@ deviantsgo_beast.1012 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 5
+				value = 15
 			}
         }
 	}					
@@ -890,6 +977,20 @@ deviantsgo_beast.1020 = {
 	desc = deviantsgo_beast.1020.a.desc
 	override_background = { reference =	wilderness }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait = deviants_canine_lover_two
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value >= 40
+		}
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value < 70
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -935,7 +1036,7 @@ deviantsgo_beast.1021 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 10
+				value = 30
 			}
         }
 	}					
@@ -968,6 +1069,20 @@ deviantsgo_beast.1030 = {
 	desc = deviantsgo_beast.1030.a.desc
 	override_background = { reference =	wilderness }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait = deviants_canine_lover_two
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value >= 70
+		}
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value < 100
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = personality_content
@@ -1009,7 +1124,7 @@ deviantsgo_beast.1031 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 10
+				value = 30
 			}
         }
 	}					
@@ -1036,7 +1151,7 @@ deviantsgo_beast.1032 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 2
+				value = 6
 			}
         }
 	}					
@@ -1049,6 +1164,15 @@ deviantsgo_beast.1100 = {
 	desc = deviantsgo_beast.1100.a.desc
 	override_background = { reference =	study }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait = deviants_canine_lover_two
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value < 20
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = shock
@@ -1067,7 +1191,7 @@ deviantsgo_beast.1100 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 4
+				value = 12
 			}
         }
 	}
@@ -1088,6 +1212,20 @@ deviantsgo_beast.1110 = {
 	desc = deviantsgo_beast.1110.a.desc
 	override_background = { reference =	study }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait = deviants_canine_lover_two
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value >= 20
+		}
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value < 40
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = thinking
@@ -1131,7 +1269,7 @@ deviantsgo_beast.1111 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 5
+				value = 15
 			}
         }
 	} 					
@@ -1164,6 +1302,20 @@ deviantsgo_beast.1120 = {
 	desc = deviantsgo_beast.1120.a.desc
 	override_background = { reference =	study }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait = deviants_canine_lover_two
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value >= 40
+		}
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value < 70
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = thinking
@@ -1213,7 +1365,7 @@ deviantsgo_beast.1121 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 5
+				value = 15
 			}
         }
 	} 		
@@ -1229,7 +1381,7 @@ deviantsgo_beast.1121 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 3
+				value = 9
 			}
         }
 	} 			
@@ -1257,7 +1409,7 @@ deviantsgo_beast.1122 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 2
+				value = 6
 			}
         }
 	} 		 			
@@ -1290,6 +1442,20 @@ deviantsgo_beast.1130 = {
 	desc = deviantsgo_beast.1130.a.desc
 	override_background = { reference =	study }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait = deviants_canine_lover_two
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value >= 70
+		}
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value < 100
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = thinking
@@ -1352,7 +1518,7 @@ deviantsgo_beast.1132 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 5
+				value = 15
 			}
         }
 	} 					
@@ -1376,7 +1542,7 @@ deviantsgo_beast.1133 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 5
+				value = 15
 			}
         }
 	} 					
@@ -1404,7 +1570,7 @@ deviantsgo_beast.1135 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_two
 				track = deviant_canine_lover_fame_two
-				value = 2
+				value = 6
 			}
         }
 	} 		 			
@@ -1436,6 +1602,15 @@ deviantsgo_beast.1900 = {
 	desc = deviantsgo_beast.1900.a.desc
 	override_background = { reference =	bedchamber }
 	theme = deviantsmaskgo 
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait = deviants_canine_lover_two
+		has_trait_xp = {
+			trait = deviants_canine_lover_two
+			track = deviant_canine_lover_fame_two
+			value >= 100
+		}
+	}
 	right_portrait = {
 		character = root
 		animation = thinking
@@ -1531,6 +1706,10 @@ deviantsgo_beast.3000 = {
 	title = deviantsgo_beast.3000.t
 	desc = deviantsgo_beast.3000.a.desc
 	override_background = { reference =	throne_room }
+	trigger = {
+		has_character_modifier = dog_story_modifier
+		has_trait = deviants_canine_lover_three
+	}
 	theme = deviantsmaskgo 
 		right_portrait = {
 		character = root
@@ -1706,7 +1885,7 @@ deviantsgo_beast.3110 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 5
+				value = 15
 			}
         }
 	} 	 			
@@ -1816,12 +1995,12 @@ deviantsgo_beast.3121 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 3
+				value = 12
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 4
+				value = 16
 			}
         }
 	} 	 			
@@ -1850,12 +2029,12 @@ deviantsgo_beast.3122 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 3
+				value = 9
 			}
         }
 	} 		 			
@@ -1879,12 +2058,12 @@ deviantsgo_beast.3123 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 5
+				value = 15
 			}
         }
 	} 		 			
@@ -1908,12 +2087,12 @@ deviantsgo_beast.3125 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 5
+				value = 15
 			}
         }
 	} 		 			
@@ -1941,12 +2120,12 @@ deviantsgo_beast.3130 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 3
+				value = 9
 			}
         }
 	} 		 			
@@ -1971,7 +2150,7 @@ deviantsgo_beast.3131 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 5
+				value = 15
 			}
         }
 	} 		 			
@@ -1996,7 +2175,7 @@ deviantsgo_beast.3140 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 4
+				value = 12
 			}
         }
 	} 	 			
@@ -2061,12 +2240,12 @@ deviantsgo_beast.3151 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 3
+				value = 9
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 2
+				value = 6
 			}
         }
 	} 	 			
@@ -2095,7 +2274,7 @@ deviantsgo_beast.3152 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 3
+				value = 9
 			}
         }
 	} 		 			
@@ -2120,12 +2299,12 @@ deviantsgo_beast.3155 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
         }
 	} 		 			
@@ -2149,12 +2328,12 @@ deviantsgo_beast.3156 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 4
+				value = 12
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
         }
 	} 		 			
@@ -2183,7 +2362,7 @@ deviantsgo_beast.3160 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 4
+				value = 12
 			}
         }
 	} 		 			
@@ -2234,7 +2413,7 @@ deviantsgo_beast.3191 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 5
+				value = 15
 			}
         }
 	} 		
@@ -2336,12 +2515,12 @@ deviantsgo_beast.4010 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
         }
 	} 		
@@ -2370,12 +2549,12 @@ deviantsgo_beast.4011 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 1
+				value = 3
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 4
+				value = 12
 			}
         }
 	} 		
@@ -2404,12 +2583,12 @@ deviantsgo_beast.4020 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 3
+				value = 9
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
         }
 	} 		
@@ -2438,7 +2617,7 @@ deviantsgo_beast.4021 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 4
+				value = 12
 			}
         }
 	} 		
@@ -2467,12 +2646,12 @@ deviantsgo_beast.4030 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
         }
 	} 		
@@ -2502,12 +2681,12 @@ deviantsgo_beast.4031 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 1
+				value = 3
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 2
+				value = 6
 			}
         }
 	} 		
@@ -2535,12 +2714,12 @@ deviantsgo_beast.4040 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
         }
 	} 		
@@ -2711,12 +2890,12 @@ deviantsgo_beast.5011 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 	} 		 			
@@ -2774,12 +2953,12 @@ deviantsgo_beast.5013 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 	} 		 			
@@ -2840,17 +3019,17 @@ deviantsgo_beast.5021 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 3
+				value = 9
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 	} 		 			
@@ -2874,17 +3053,17 @@ deviantsgo_beast.5022 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 1
+				value = 3
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 3
+				value = 9
 			}
         }
 	} 		 			
@@ -2913,7 +3092,7 @@ deviantsgo_beast.5023 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
@@ -3026,17 +3205,17 @@ deviantsgo_beast.9000 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 1
+				value = 3
 			}
         }
 		add_prestige = -10
@@ -3143,17 +3322,17 @@ deviantsgo_beast.9001 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 1
+				value = 3
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 	} 		 			
@@ -3181,12 +3360,12 @@ deviantsgo_beast.9002 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 2
+				value = 6
 			}
         }
 		add_prestige = -10
@@ -3212,12 +3391,12 @@ deviantsgo_beast.9003 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 2
+				value = 6
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 	} 		 			
@@ -3303,7 +3482,7 @@ deviantsgo_beast.9010 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 2
+				value = 6
 			}
         }
 		add_prestige = -10
@@ -3459,7 +3638,7 @@ deviantsgo_beast.9011 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 3
+				value = 9
 			}
         }
 		scope:deviant_go_random_1 = {
@@ -3486,12 +3665,12 @@ deviantsgo_beast.9012 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 3
+				value = 9
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 3
+				value = 9
 			}
         }
 		pay_short_term_gold = {
@@ -3589,7 +3768,7 @@ deviantsgo_beast.9020 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 2
+				value = 6
 			}
         }
 		add_prestige = -10
@@ -3597,7 +3776,7 @@ deviantsgo_beast.9020 = {
 			add_opinion = {
 				target = root
 				modifier = confusion_opinion
-				opinion = 5
+				opinion = 15
 			}
 			stress_impact = {
 				lustful = minor_stress_impact_loss
@@ -3744,7 +3923,7 @@ deviantsgo_beast.9021 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 3
+				value = 9
 			}
         }
 		scope:deviant_go_random_1 = {
@@ -3771,12 +3950,12 @@ deviantsgo_beast.9022 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 3
+				value = 9
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 3
+				value = 9
 			}
         }
 		pay_short_term_gold = {
@@ -3930,17 +4109,17 @@ deviantsgo_beast.9031 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 1
+				value = 3
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 	} 		 			
@@ -3964,12 +4143,12 @@ deviantsgo_beast.9032 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 2
+				value = 6
 			}
         }
 		remove_short_term_gold = 1
@@ -3995,12 +4174,12 @@ deviantsgo_beast.9033 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 2
+				value = 6
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 2
+				value = 6
 			}
         }
 	} 		 			
@@ -4026,12 +4205,12 @@ deviantsgo_beast.9034 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 3
+				value = 9
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 	} 		 			
@@ -4072,7 +4251,7 @@ deviantsgo_beast.9035 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 4
+				value = 12
 			}
         }
 		add_prestige = minor_prestige_loss
@@ -4292,12 +4471,12 @@ deviantsgo_beast.9041 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 3
+				value = 9
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 3
+				value = 9
 			}
         }
 		scope:deviant_go_random_1 = {
@@ -4332,12 +4511,12 @@ deviantsgo_beast.9042 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 10
+				value = 30
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 		pay_short_term_gold = {
@@ -4378,12 +4557,12 @@ deviantsgo_beast.9043 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 10
+				value = 30
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 		pay_short_term_gold = {
@@ -4445,7 +4624,7 @@ deviantsgo_beast.9044 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 4
+				value = 12
 			}
         }
 		add_prestige = minor_prestige_loss
@@ -4519,7 +4698,7 @@ deviantsgo_beast.9045 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 10
+				value = 30
 			}
         }
 		add_prestige = -7
@@ -4552,12 +4731,12 @@ deviantsgo_beast.9046 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 10
+				value = 30
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 1
+				value = 3
 			}
         }
 		add_prestige = -10
@@ -4594,12 +4773,12 @@ deviantsgo_beast.9047 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 15
+				value = 45
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 		add_prestige = -15
@@ -4632,12 +4811,12 @@ deviantsgo_beast.9048 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 15
+				value = 45
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 3
+				value = 9
 			}
         }
 		add_prestige = -25
@@ -4856,12 +5035,12 @@ deviantsgo_beast.9051 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 5
+				value = 15
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 1
+				value = 3
 			}
         }
 		scope:deviant_go_random_1 = {
@@ -4896,12 +5075,12 @@ deviantsgo_beast.9052 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 10
+				value = 30
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 		pay_short_term_gold = {
@@ -4942,12 +5121,12 @@ deviantsgo_beast.9053 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 10
+				value = 30
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 		pay_short_term_gold = {
@@ -5000,7 +5179,7 @@ deviantsgo_beast.9054 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 4
+				value = 12
 			}
         }
 		add_prestige = minor_prestige_loss
@@ -5107,12 +5286,12 @@ deviantsgo_beast.9056 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 3
+				value = 9
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 		add_prestige = -5
@@ -5145,12 +5324,12 @@ deviantsgo_beast.9057 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 5
+				value = 15
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 2
+				value = 6
 			}
         }
 		add_prestige = -10
@@ -5183,12 +5362,12 @@ deviantsgo_beast.9058 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_exposure_fame
-				value = 1
+				value = 3
 			}
 			add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_sub_fame
-				value = 3
+				value = 9
 			}
         }
 		add_prestige = -10
@@ -5426,7 +5605,7 @@ deviantsgo_beast.9103 = {
             add_trait_xp = {
 				trait = deviants_canine_lover_three
 				track = deviant_canine_lover_fame_three
-				value = 2
+				value = 6
 			}
             add_trait_xp = {
 				trait = deviants_canine_lover_three

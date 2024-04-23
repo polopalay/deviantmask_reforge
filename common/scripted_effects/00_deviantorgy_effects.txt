@@ -1,8 +1,4 @@
-﻿
-
-
-
-disburse_deviantgo_orgy_host_rewards_effect = {
+﻿disburse_deviantgo_orgy_host_rewards_effect = {
 	scope:activity = {
 		add_activity_log_entry = {
 			key = host_smalldeviant_orgy
