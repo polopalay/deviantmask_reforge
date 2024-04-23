@@ -12352,7 +12352,7 @@ deviants_campslut.6329 = {
 deviants_campslut.8999 = { 
 	type = character_event
 	title = deviants_campslut.8999.t
-    desc = {
+    	desc = {
 		desc = deviants_maskgo.0100.basic
 		first_valid = {
 			triggered_desc = {
@@ -12374,6 +12374,14 @@ deviants_campslut.8999 = {
 					}
 				}
 				desc = deviants_maskgo.0100.bronze
+			}
+		}
+	}
+	trigger = {
+		has_trait = lustful_inn_slut
+		any_sub_realm_barony = {
+			title_province = { 
+				has_building_or_higher = inn_slut_brothel 
 			}
 		}
 	}

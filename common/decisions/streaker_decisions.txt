@@ -70,35 +70,7 @@ deviants_gettraitback_decision = {
 		trigger_event = deviants_maskgo.0021
 	}	
 }
-#burn the mask
-#deviants_burnmask_decision = {
-#	picture = "gfx/interface/illustrations/decisions/decision_personal_perversion.dds"
-#	desc = deviants_burnmask_decision_desc
-#	selection_tooltip = deviants_burnmask_decision_tooltip
-#    	major = no
-#	ai_check_interval = 120
-#	ai_will_do = {
-#		base = 1
-#	}
-#	is_shown = {
-#		is_ruler = yes
-#		has_trait = deviants_mask
-#	}
-#	is_valid = {
-#		age >= 45
-#		is_incapable = no
-#		is_imprisoned = no
-#		is_travelling = no
-#		is_in_army = no
-#		is_landed = yes
-#		exists = capital_province
-#	}
-#	effect = {
-#        	custom_tooltip = deviants_burnmask_decision_tooltip
-#		remove_trait = deviants_mask
-#	}	
-#}
-
+ 
 deviants_startstreetslut_decision = {
 	picture = "gfx/interface/illustrations/decisions/deviants_street_slut.dds"
 	desc = deviants_startstreetslut_decision_desc
@@ -172,69 +144,3 @@ deviants_startmerchant_decision = {
 		trigger_event = deviants_maskgo.0099
 	}	
 }
-
-#deviants_innslut_decision = {
-#	picture = "gfx/interface/illustrations/event_scenes/deviantorgyroombackground.dds"
-#	desc = deviants_innslut_decision_desc
-#	selection_tooltip = deviants_innslut_decision_tooltip
-#   	major = no
-#	ai_check_interval = 1
-#	ai_will_do = {
-#		base = 80
-#	}
-#	is_shown = {
-#		is_ruler = yes
-#		is_female = yes
-#		has_trait = lustful_inn_slut
-#		has_trait = deviants_mask
-#		any_sub_realm_barony = {
-#			title_province = { 
-#				has_building_or_higher = inn_slut_brothel 
-#			}
-#		}
-#	}
-#	is_valid = {
-#		age >= 18
-#		is_incapable = no
-#		is_imprisoned = no
-#		is_travelling = no
-#		is_in_army = no
-#		is_female = yes
-#		has_trait = lustful_inn_slut
-#		has_trait = deviants_mask
-#	}
-#	cooldown = { days = 30 }
-#	effect = {
-#       custom_tooltip = deviants_innslut_decision_tooltip
-#		trigger_event = deviants_campslut.8999
-#	}	
-#}
-
-#deviants_godealwithstress_decision = {
-#	picture = "gfx/interface/illustrations/decisions/decision_personal_perversion.dds"
-#	desc = deviants_godealwithstress_decision_desc
-#	selection_tooltip = deviants_godealwithstress_decision_tooltip
- #   	major = no
-#	ai_check_interval = 1
-#	ai_will_do = {
-#		base = 100
-#	}
-#	is_shown = {
-#		is_ruler = yes
-#		has_trait = deviants_mask
-#	}
-#	is_valid = {
-#		stress_level >= 1
-#		age >= 18
-#		is_incapable = no
-#		is_imprisoned = no
-#		is_travelling = no
-#		is_in_army = no
-#		has_trait = deviants_mask
-#	}
-#	cooldown = { days = 30 }
-#	effect = {
-#       custom_tooltip = deviants_godealwithstress_decision_tooltip
-#		trigger_event = deviants_gorandom.1307
-#	}	
-#}

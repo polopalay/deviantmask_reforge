@@ -30,7 +30,7 @@ quarterly_playable_pulse = {
 		deviants_caninelover_events
 		delay = { days = { 180 365 } }
 		deviants_innslut_events
-		delay = { days = { 30 31 } }
+		delay = { days = { 30 90 } }
 		deviants_stress_events
 	}
 }
@@ -45,6 +45,12 @@ deviant_yearly_random_player_pulse = {
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 	}
 	random_events = {
 		chance_to_happen = 20
@@ -106,12 +112,18 @@ deviantcampslut_quarterly_random_player_pulse = {
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
+		is_landed = yes
 		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 	}
 	random_events = {
 		chance_to_happen = 10
 		#camp slut stuff
-		300 = deviants_campslut.1000 # is camp slut, basic request event
+		100 = deviants_campslut.1000 # is camp slut, basic request event
+		100 = deviants_campslut.8999
 	} 
 }
 #hired campslutORcomplaints about camp slut random events while in the castle and leasure time
@@ -124,6 +136,12 @@ deviants_slut_events_pulse = {
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 	}
 	random_events = {
 		chance_to_happen = 5
@@ -183,6 +201,12 @@ deviants_travel_events = {
 		has_trait = deviants_mask
 		age >= 18
 		is_travelling = yes
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 	}
 	random_events = {
 		chance_to_happen = 5
@@ -198,7 +222,7 @@ deviants_travel_events = {
 		10 = deviantsgo_travel.0108
 		10 = deviantsgo_travel.0109
 		100 = deviantsgo_travel.0110 # bandit attack if female
-		100 = deviantsgo_travel.0200 # spot woman fucking a dog
+		50 = deviantsgo_travel.0200 # spot woman fucking a dog
 		100 = deviantsgo_travel.1000 # lustful female only perverted inn
 		100 = deviants_maskgo.0099
 		1000 = deviantsgo_travel.2000 # lustful female only perverted inn, the contributed story arch one
@@ -207,10 +231,19 @@ deviants_travel_events = {
 #random army events
 deviants_army_events = {
 	trigger = {
+		age >= 18
 		is_adult = yes
 		has_trait = deviants_mask
 		is_in_army = yes
-		age >= 18
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 	}
 	random_events = {
 		chance_to_happen = 5
@@ -230,14 +263,20 @@ deviants_army_events = {
 #stress event
 deviants_stress_events = {
 	trigger = {
+		age >= 18
 		is_adult = yes
 		has_trait = deviants_mask
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 		stress_level >= 1
-		age >= 18
 	}
 	random_events = {
 		chance_to_happen = 100
@@ -256,6 +295,12 @@ deviants_sadistprisoner_events = {
 		is_travelling = no
 		is_in_army = no
 		age >= 18
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 	}
 	random_events = {
 		chance_to_happen = 10
@@ -268,13 +313,19 @@ deviants_sadistprisoner_events = {
 #quarterly blackmail
 deviants_quarterlyblackmail_events = {
 	trigger = {
+		age >= 18
 		is_adult = yes
 		has_trait = deviants_mask
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
-		age >= 18
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 		NOT = { 
 			has_trait_xp = {
 				trait = deviants_demonanalslut
@@ -316,6 +367,12 @@ deviants_jestergo_events = {
 		is_travelling = no
 		is_in_army = no
 		age >= 18
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 	}
 	random_events = {
 		chance_to_happen = 5
@@ -343,6 +400,12 @@ deviants_specialgo_events = {
 		is_travelling = no
 		is_in_army = no
 		age >= 18
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 	}
 	random_events = {
 		chance_to_happen = 20
@@ -374,6 +437,12 @@ deviants_spouse_events = {
 		is_travelling = no
 		is_in_army = no
 		age >= 18
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 	}
 	random_events = {
 		chance_to_happen = 5
@@ -398,6 +467,12 @@ deviants_pervert_events = {
 		is_travelling = no
 		is_in_army = no
 		age >= 18
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 	}
 	random_events = {
 		chance_to_happen = 10
@@ -415,12 +490,18 @@ deviants_saintgo_events = {
 	trigger = {
 		is_adult = yes
 		has_trait = deviants_mask
+		has_trait = deviants_demonanalslut
 		is_incapable = no
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 		age >= 50
-		has_trait = deviants_demonanalslut
 	}
 	random_events = {
 		chance_to_happen = 20
@@ -440,6 +521,12 @@ deviants_caninelover_events = {
 		is_imprisoned = no
 		is_travelling = no
 		is_in_army = no
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
 		has_trait_xp = {
 			trait = deviants_demonanalslut
 			track = demonanalslutcorruption
@@ -489,23 +576,3 @@ deviants_caninelover_events = {
 	} 
 }
 
-#inn slut pulse
-deviants_innslut_events = {
-	trigger = {
-		is_adult = yes
-		is_incapable = no
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		has_trait = lustful_inn_slut
-		any_sub_realm_barony = {
-			title_province = { 
-				has_building_or_higher = inn_slut_brothel 
-			}
-		}
-	}
-	random_events = {
-		chance_to_happen = 10
-		100 = deviants_campslut.8999
-	} 
-}
