@@ -8,6 +8,12 @@
 				value = 1
 				template = lust_tattoo
 			}
+            		morph = {
+				mode = replace
+				gene = gene_face_markings
+				value = 1
+				template = lust_eyeliner
+			}
 		}
 	}
 }

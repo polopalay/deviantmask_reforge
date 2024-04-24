@@ -71,42 +71,6 @@ deviants_gettraitback_decision = {
 	}	
 }
  
-deviants_startstreetslut_decision = {
-	picture = "gfx/interface/illustrations/decisions/deviants_street_slut.dds"
-	desc = deviants_startstreetslut_decision_desc
-	selection_tooltip = deviants_startstreetslut_decision_tooltip
-    	major = no
-	ai_check_interval = 6
-	ai_will_do = {
-		base = 100
-	}
-	is_shown = {
-		is_ruler = yes
-		is_female = yes
-		has_trait = lustful
-		has_trait = deviants_mask
-		NOT = { has_trait = deviants_campslut }
-		NOT = { has_trait = deviants_hiredcampslut }
-		has_character_modifier = deviants_strangebook_modifier
-	}
-	is_valid = {
-		age >= 18
-		is_imprisoned = no
-		is_travelling = no
-		is_in_army = no
-		is_female = yes
-		has_trait = lustful
-		has_trait = deviants_mask
-		NOT = { has_trait = deviants_campslut }
-		NOT = { has_trait = deviants_hiredcampslut }
-		has_character_modifier = deviants_strangebook_modifier
-	}
-	cooldown = { days = 120 }
-	effect = {
-        custom_tooltip = deviants_startstreetslut_decision_tooltip
-		trigger_event = deviants_campslut.6000
-	}	
-}
 
 deviants_startmerchant_decision = {
 	picture = "gfx/interface/illustrations/event_scenes/deviant_black_market.dds"

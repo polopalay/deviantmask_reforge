@@ -17,7 +17,7 @@ deviant_woncocks_modifier = {
 
 deviant_motivatedknights_modifier = {
 	icon = love_positive
-    knight_effectiveness_mult = 0.1
+    	knight_effectiveness_mult = 0.1
 }
 deviant_demotivatedknights_modifier = {
 	icon = love_negative

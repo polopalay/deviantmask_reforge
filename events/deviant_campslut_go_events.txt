@@ -11463,6 +11463,15 @@ deviants_campslut.6000 = {
 	title = deviants_campslut.6000.t
 	desc = deviants_campslut.6000.a.desc
 	theme = deviantsmaskgo
+	trigger = {
+		is_ruler = yes
+		is_female = yes
+		has_trait = lustful
+		has_trait = deviants_mask
+		NOT = { has_trait = deviants_campslut }
+		NOT = { has_trait = deviants_hiredcampslut }
+		has_character_modifier = deviants_strangebook_modifier
+	}
 	override_background = { reference = study }
 	right_portrait = {
 		character = root
