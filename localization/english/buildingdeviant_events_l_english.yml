@@ -1,9 +1,19 @@
 ﻿l_english:
  
  building_inn_slut_brothel: "Brothel"
- building_inn_slut_brothel_desc: "Brothels are business locations where sexual activities between customers and prostitutes take place"
+ building_inn_slut_brothel_desc: "Brothels are business locations where sexual activities between customers and prostitutes take place."
  building_type_inn_slut_brothel: "$building_inn_slut_brothel$"
  building_type_inn_slut_brothel_desc: "$building_inn_slut_brothel_desc$"
+
+ building_inn_slut_slave_market: "Sex slave market"
+ building_inn_slut_slave_market_desc: "The scale of the brothel was so large that it began trading in sex slaves."
+ building_type_inn_slut_slave_market: "$building_inn_slut__slave_market$"
+ building_type_inn_slut_slave_market_desc: "$building_inn_slut__slave_market_desc$"
+
+ building_inn_slut_noble_slave_brothel: "Noble brothel"
+ building_inn_slut_noble_slave_brothel_desc: "The brothel has a special area, the surrounding female nobles are forced to perform sexual slavery for a period of time."
+ building_type_inn_slut_noble_slave_brothel: "$building_inn_slut_brothel_3$"
+ building_type_inn_slut_noble_slave_brothel_desc: "$building_inn_slut_brothel_desc_3$"
 
  deviants_racketeers: "Racketeers"
  deviants_racketeers_flavor: "Racketeers makes money from a dishonest or illegal business activity"

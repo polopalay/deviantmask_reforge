@@ -1,5 +1,4 @@
-﻿
-DeviantFemaleDance = {
+﻿DeviantFemaleDance = {
 	type = character
 
 	random_valid = yes

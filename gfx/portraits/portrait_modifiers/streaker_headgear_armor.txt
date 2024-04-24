@@ -4,12 +4,18 @@ headgear_streak_modifier = {
     usage = game
     headgear_streak_modifier = {
         dna_modifiers = {
-            accessory = {
-                mode = add
-                gene = special_headgear_face_mask
-                template = face_mask
-                value = 1.0
-            }
+            	morph = {
+			mode = replace
+			gene = gene_body_markings
+			value = 1
+			template = lust_paint
+		}
+		morph = {
+			mode = replace
+			gene = gene_face_markings
+			value = 1
+			template = lust_marking
+		}
         }
         weight = {
             base = 0

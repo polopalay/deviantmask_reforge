@@ -1,5 +1,4 @@
-﻿
-deviant_fuckedsilly_modifier = {
+﻿deviant_fuckedsilly_modifier = {
 	icon = love_negative
     intrigue = -3
     stewardship = -3
