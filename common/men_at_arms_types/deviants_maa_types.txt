@@ -21,7 +21,7 @@ deviants_racketeers = {
 
 	max_sub_regiments = 5
 	stack = 100
-	buy_cost = { gold = 100  }
+	buy_cost = { gold = 0  }
 	low_maintenance_cost = { gold = 0.005 }
 	high_maintenance_cost = { gold = 0.01 }
 

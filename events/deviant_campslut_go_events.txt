@@ -12388,10 +12388,8 @@ deviants_campslut.8999 = {
 	}
 	trigger = {
 		has_trait = lustful_inn_slut
-		any_sub_realm_barony = {
-			title_province = { 
-				has_building_or_higher = inn_slut_brothel 
-			}
+		any_county_province = {
+			has_building_or_higher = inn_slut_brothel 
 		}
 	}
 	theme = deviantsmaskgo
