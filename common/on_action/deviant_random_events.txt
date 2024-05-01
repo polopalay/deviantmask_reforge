@@ -8,28 +8,28 @@ quarterly_playable_pulse = {
 	on_actions = {
 		delay = { days = { 180 365 } }
 		deviants_pervert_events
-		delay = { days = { 90 180 } }
+		delay = { days = { 180 365 } }
 		deviants_saintgo_events
 		delay = { days = { 180 365 } }
-		deviants_spouse_events
-		delay = { days = { 90 180 } }
 		deviants_specialgo_events
 		delay = { days = { 365 1000 } }
-		deviants_jestergo_events
-		delay = { days = { 90 180 } }
-		deviants_quarterlyblackmail_events
-		delay = { days = { 180 365 } }
-		deviants_sadistprisoner_events
-		delay = { days = { 180 365 } }
-		deviants_army_events
-		delay = { days = { 180 365 } }
 		deviants_slut_events_pulse
-		delay = { days = { 90 365 } }
-		deviantcampslut_quarterly_random_player_pulse
+		delay = { days = { 365 1000 } }
+		deviants_spouse_events
+		delay = { days = { 365 1000 } }
+		deviants_jestergo_events
+		delay = { days = { 365 1000 } }
+		deviants_sadistprisoner_events
+		delay = { days = { 1200 3650 } }
+		deviants_army_events
 		delay = { days = { 180 365 } }
 		deviants_caninelover_events
 		delay = { days = { 180 365 } }
-		deviants_innslut_events
+		deviantcampslut_quarterly_random_player_pulse
+		delay = { days = { 180 365 } }
+		deviants_loyalty_events
+		delay = { days = { 180 365 } }
+		deviants_quarterlyblackmail_events
 		delay = { days = { 3 30 } }
 		deviants_stress_events
 	}
@@ -123,7 +123,7 @@ deviantcampslut_quarterly_random_player_pulse = {
 		1000 = deviants_campslut.6000
 		#camp slut stuff
 		100 = deviants_campslut.1000 # is camp slut, basic request event
-		100 = deviants_campslut.8999
+		100 = deviants_campslut.8999 # inn slut events
 	} 
 }
 #hired campslutORcomplaints about camp slut random events while in the castle and leasure time
@@ -221,10 +221,10 @@ deviants_travel_events = {
 		10 = deviantsgo_travel.0107
 		10 = deviantsgo_travel.0108
 		10 = deviantsgo_travel.0109
-		100 = deviantsgo_travel.0110 # bandit attack if female
-		50 = deviantsgo_travel.0200 # spot woman fucking a dog
-		100 = deviantsgo_travel.1000 # lustful female only perverted inn
-		100 = deviants_maskgo.0099
+		50 = deviantsgo_travel.0110 # bandit attack if female
+		20 = deviantsgo_travel.0200 # spot woman fucking a dog
+		50 = deviantsgo_travel.1000 # lustful female only perverted inn
+		50 = deviants_maskgo.0099 # merchant event
 		1000 = deviantsgo_travel.2000 # lustful female only perverted inn, the contributed story arch one
 	} 
 }
@@ -326,6 +326,14 @@ deviants_quarterlyblackmail_events = {
 		NOT = { has_trait = blind }
 		NOT = { has_trait = celibate }
 		NOT = { has_trait = pregnant }
+        	any_vassal = {
+          		is_female = no
+ 		        age >= 18
+			is_ai = yes
+        		is_adult = yes
+        		is_incapable = no
+        		is_imprisoned = no
+        	}
 		NOT = { 
 			has_trait_xp = {
 				trait = deviants_demonanalslut
@@ -369,6 +377,7 @@ deviants_jestergo_events = {
 		age >= 18
 		is_landed = yes
 		is_female = yes
+		primary_title.tier >= tier_duchy
 		exists = capital_province
 		NOT = { has_trait = blind }
 		NOT = { has_trait = celibate }
@@ -411,17 +420,39 @@ deviants_specialgo_events = {
 	random_events = {
 		chance_to_happen = 20
 		#special deviant lunatic events
-		1 = deviants_maskgo.1200 # the multipath dream
-		1 = deviants_maskgo.1250 # basic dream anal
-		1 = deviants_maskgo.1251 # basic dream vaginal
-		1 = deviants_maskgo.1252 # basic dream in public 
-		1 = deviants_maskgo.1300 # special dream
-		1 = deviants_maskgo.1390 # servant facial
-		1 = deviants_maskgo.1400 # servant fucking ass
+		10 = deviants_maskgo.1200 # the multipath dream
+		10 = deviants_maskgo.1250 # basic dream anal
+		10 = deviants_maskgo.1251 # basic dream vaginal
+		10 = deviants_maskgo.1252 # basic dream in public 
+		10 = deviants_maskgo.1300 # special dream
+		10 = deviants_maskgo.1390 # servant facial
+		10 = deviants_maskgo.1400 # servant fucking ass
+		10 = deviants_maskgo.1450 # urge to fuck doorknob
 		20 = deviants_maskgo.1410 # gremlin fuck
-		10 = deviants_maskgo.1440 # urge to expose at high submission
-		2 = deviants_maskgo.1450 # urge to fuck doorknob
-		20 = deviants_maskgo.1460 # high deviancy, vassals want to fuck since you were doing naked court again
+	} 
+}
+
+#quarterly specialgo/demon events
+deviants_loyalty_events = {
+	trigger = {
+		is_adult = yes
+		has_trait = deviants_mask
+		is_incapable = no
+		is_imprisoned = no
+		is_travelling = no
+		is_in_army = no
+		age >= 18
+		is_landed = yes
+		is_female = yes
+		exists = capital_province
+		NOT = { has_trait = blind }
+		NOT = { has_trait = celibate }
+		NOT = { has_trait = pregnant }
+	}
+	random_events = {
+		chance_to_happen = 50
+		50 = deviants_maskgo.1440 # urge to expose at high submission
+		50 = deviants_maskgo.1460 # high deviancy, vassals want to fuck since you were doing naked court again
 		50 = deviants_maskgo.8000 # start men at arms blackmail at max deviancy
 		50 = deviants_maskgo.8099 # basic men at arms event request
 		50 = deviants_maskgo.8900 # 0 loyalty punishment event
@@ -537,7 +568,7 @@ deviants_caninelover_events = {
 	random_events = {
 		chance_to_happen = 10
 		# get dog
-		10 = deviantsgo_beast.0100
+		#10 = deviantsgo_beast.0100
 		10 = deviantsgo_beast.0101
 		# lv1
 		40 = deviantsgo_beast.0210

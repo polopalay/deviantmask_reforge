@@ -6,13 +6,13 @@ headgear_streak_modifier = {
         dna_modifiers = {
             	morph = {
 			mode = replace
-			gene = gene_body_markings
+			gene = deviants_body_markings
 			value = 1
 			template = lust_paint
 		}
 		morph = {
 			mode = replace
-			gene = gene_face_markings
+			gene = deviants_face_markings
 			value = 1
 			template = lust_marking
 		}

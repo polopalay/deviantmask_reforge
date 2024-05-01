@@ -5,11 +5,7 @@ deviants_maskgo_decision = {
    	major = no
 	ai_check_interval = 12
 	ai_will_do = {
-		base = 0
-		modifier = {
-			has_character_modifier = reforge_slut
-			add = 100
-		}
+		base = 10
 	}
 	is_shown = {
 		is_ruler = yes

@@ -4,15 +4,15 @@
 		dna_modifiers = {
             		morph = {
 				mode = replace
-				gene = gene_body_markings
+				gene = deviants_body_markings
 				value = 1
 				template = lust_tattoo
 			}
             		morph = {
 				mode = replace
-				gene = gene_face_markings
+				gene = deviants_face_markings
 				value = 1
-				template = lust_eyeliner
+				template = lust_markings
 			}
 		}
 	}
